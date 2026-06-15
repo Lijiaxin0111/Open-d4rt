@@ -241,7 +241,7 @@ def _run_full_clip_queries(
     query_src_indices: np.ndarray | None,
     query_chunk_size: int,
     num_frames: int,
-) -> tuple[dict[str, np.ndarray], dict[str, np.ndarray]]:
+) -> dict[str, np.ndarray]:
     num_queries = int(query_uv_norm.shape[0])
     repeated_uv = np.repeat(query_uv_norm, num_frames, axis=0)
     if query_src_indices is None:
@@ -254,27 +254,15 @@ def _run_full_clip_queries(
     t_src = np.repeat(query_src, num_frames, axis=0)
     t_tgt = np.tile(np.arange(num_frames, dtype=np.int64), num_queries)
     memory = _encode_model_memory(model=model, video_b=video_clip, aspect_b=aspect_ratio)
-    query_local = _build_query_for_targets(
-        query_uv_norm=repeated_uv,
-        t_src=t_src,
-        t_tgt=t_tgt,
-        t_cam=t_tgt.copy(),
-        device=video_clip.device,
-    )
+    # A single ref0 pass (t_cam == 0) provides world-frame xyz plus the uv /
+    # visibility / confidence heads. The former local-frame pass (t_cam == t_tgt)
+    # only differed in the camera frame of its xyz output, which is never consumed.
     query_ref = _build_query_for_targets(
         query_uv_norm=repeated_uv,
         t_src=t_src,
         t_tgt=t_tgt,
         t_cam=np.zeros_like(t_tgt),
         device=video_clip.device,
-    )
-    pred_local = _run_model_for_queries(
-        model=model,
-        video_b=video_clip,
-        aspect_b=aspect_ratio,
-        query=query_local,
-        chunk_size=max(1, int(query_chunk_size)),
-        memory_b=memory,
     )
     pred_ref = _run_model_for_queries(
         model=model,
@@ -295,7 +283,7 @@ def _run_full_clip_queries(
                 out[key] = arr.reshape(num_queries, num_frames, *arr.shape[1:])
         return out
 
-    return _reshape(pred_local), _reshape(pred_ref)
+    return _reshape(pred_ref)
 
 
 def _run_clip_queries_for_target_indices(
@@ -308,12 +296,12 @@ def _run_clip_queries_for_target_indices(
     query_src_indices: np.ndarray | None,
     local_target_indices: np.ndarray,
     query_chunk_size: int,
-) -> tuple[dict[str, np.ndarray], dict[str, np.ndarray]]:
+) -> dict[str, np.ndarray]:
     target_ids = np.asarray(local_target_indices, dtype=np.int64).reshape(-1)
     num_queries = int(query_uv_norm.shape[0])
     num_targets = int(target_ids.shape[0])
     if num_targets <= 0:
-        return {}, {}
+        return {}
 
     repeated_uv = np.repeat(query_uv_norm, num_targets, axis=0)
     if query_src_indices is None:
@@ -325,27 +313,12 @@ def _run_clip_queries_for_target_indices(
 
     t_src = np.repeat(query_src, num_targets)
     t_tgt = np.tile(target_ids, num_queries)
-    query_local = _build_query_for_targets(
-        query_uv_norm=repeated_uv,
-        t_src=t_src,
-        t_tgt=t_tgt,
-        t_cam=t_tgt.copy(),
-        device=video_clip.device,
-    )
     query_ref = _build_query_for_targets(
         query_uv_norm=repeated_uv,
         t_src=t_src,
         t_tgt=t_tgt,
         t_cam=np.zeros_like(t_tgt),
         device=video_clip.device,
-    )
-    pred_local = _run_model_for_queries(
-        model=model,
-        video_b=video_clip,
-        aspect_b=aspect_ratio,
-        query=query_local,
-        chunk_size=max(1, int(query_chunk_size)),
-        memory_b=memory,
     )
     pred_ref = _run_model_for_queries(
         model=model,
@@ -366,7 +339,7 @@ def _run_clip_queries_for_target_indices(
                 out[key] = arr.reshape(num_queries, num_targets, *arr.shape[1:])
         return out
 
-    return _reshape(pred_local), _reshape(pred_ref)
+    return _reshape(pred_ref)
 
 
 def _infer_tracks(
@@ -390,8 +363,7 @@ def _infer_tracks(
     )
     aspect_tensor = torch.from_numpy(aspect_value).to(device=device, dtype=torch.float32)
 
-    tracks_xyz_local = np.full((num_queries, num_frames, 3), np.nan, dtype=np.float32)
-    tracks_xyz_ref0 = np.full_like(tracks_xyz_local, np.nan)
+    tracks_xyz_ref0 = np.full((num_queries, num_frames, 3), np.nan, dtype=np.float32)
     tracks_uv = np.full((num_queries, num_frames, 2), np.nan, dtype=np.float32)
     tracks_visibility = np.zeros((num_queries, num_frames), dtype=bool)
     tracks_visibility_logits = np.full((num_queries, num_frames), np.nan, dtype=np.float32)
@@ -420,7 +392,7 @@ def _infer_tracks(
 
     with torch.no_grad():
         if num_frames <= clip_frames:
-            pred_local, pred_ref = _run_full_clip_queries(
+            pred_ref = _run_full_clip_queries(
                 model=model,
                 video_clip=video_tensor,
                 aspect_ratio=aspect_tensor,
@@ -429,12 +401,11 @@ def _infer_tracks(
                 query_chunk_size=query_chunk_size,
                 num_frames=num_frames,
             )
-            tracks_xyz_local[:] = pred_local["xyz_3d"].astype(np.float32)
             tracks_xyz_ref0[:] = pred_ref["xyz_3d"].astype(np.float32)
-            tracks_uv[:] = pred_local["uv_2d"].astype(np.float32)
-            tracks_visibility_logits[:] = pred_local["visibility"].astype(np.float32)
+            tracks_uv[:] = pred_ref["uv_2d"].astype(np.float32)
+            tracks_visibility_logits[:] = pred_ref["visibility"].astype(np.float32)
             tracks_visibility[:] = 1.0 / (1.0 + np.exp(-tracks_visibility_logits)) > 0.5
-            tracks_confidence[:] = pred_local["confidence"].astype(np.float32)
+            tracks_confidence[:] = pred_ref["confidence"].astype(np.float32)
         else:
             clip_groups: dict[tuple[int, ...], list[tuple[int, int, int, int]]] = {}
             for frame_idx in range(num_frames):
@@ -469,7 +440,7 @@ def _infer_tracks(
                     if valid_idx.size <= 0:
                         continue
                     local_src_ids = np.full((valid_idx.shape[0],), local_src_idx, dtype=np.int64)
-                    pred_local, pred_ref = _run_clip_queries_for_target_indices(
+                    pred_ref = _run_clip_queries_for_target_indices(
                         model=model,
                         video_clip=video_clip,
                         aspect_ratio=aspect_tensor,
@@ -480,18 +451,16 @@ def _infer_tracks(
                         query_chunk_size=query_chunk_size,
                     )
 
-                    tracks_xyz_local[valid_idx[:, None], global_frame_ids[None, :]] = pred_local["xyz_3d"].astype(np.float32)
                     tracks_xyz_ref0[valid_idx[:, None], global_frame_ids[None, :]] = pred_ref["xyz_3d"].astype(np.float32)
-                    tracks_uv[valid_idx[:, None], global_frame_ids[None, :]] = pred_local["uv_2d"].astype(np.float32)
-                    pred_vis_logits = pred_local["visibility"].astype(np.float32)
+                    tracks_uv[valid_idx[:, None], global_frame_ids[None, :]] = pred_ref["uv_2d"].astype(np.float32)
+                    pred_vis_logits = pred_ref["visibility"].astype(np.float32)
                     tracks_visibility_logits[valid_idx[:, None], global_frame_ids[None, :]] = pred_vis_logits
                     tracks_visibility[valid_idx[:, None], global_frame_ids[None, :]] = (
                         1.0 / (1.0 + np.exp(-pred_vis_logits)) > 0.5
                     )
-                    tracks_confidence[valid_idx[:, None], global_frame_ids[None, :]] = pred_local["confidence"].astype(np.float32)
+                    tracks_confidence[valid_idx[:, None], global_frame_ids[None, :]] = pred_ref["confidence"].astype(np.float32)
 
     return {
-        "tracks_xyz_local": tracks_xyz_local,
         "tracks_xyz_ref0": tracks_xyz_ref0,
         "tracks_uv_norm": tracks_uv,
         "tracks_visibility": tracks_visibility,
