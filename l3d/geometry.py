@@ -99,9 +99,32 @@ def invert_se3(T: np.ndarray) -> np.ndarray:
     return out
 
 
+def nearest_rotation(R: np.ndarray) -> np.ndarray:
+    """Closest proper rotation (Frobenius norm) to each ``R[..., 3, 3]``, via SVD."""
+    u, _, vt = np.linalg.svd(_f64(R))
+    d = np.sign(np.linalg.det(u @ vt))
+    u = u.copy()
+    u[..., :, 2] *= d[..., None]
+    return u @ vt
+
+
+def rigidify(T: np.ndarray) -> np.ndarray:
+    """``T[..., 4, 4]`` with its rotation block replaced by :func:`nearest_rotation`.
+
+    WorldTrack ``po_mini`` extrinsics are off from orthonormal by up to ~1e-3, enough to
+    clip rotation angles to 0 and to distort GT mappings.
+    """
+    T = _f64(T).copy()
+    T[..., :3, :3] = nearest_rotation(T[..., :3, :3])
+    return T
+
+
 def relative_pose(T_w2c: np.ndarray, t: np.ndarray | int, c: np.ndarray | int) -> np.ndarray:
-    """``T_w2c[c] @ inv(T_w2c[t])``: maps camera-``t`` coordinates to camera ``c``."""
-    T_w2c = _f64(T_w2c)
+    """``T_w2c[c] @ inv(T_w2c[t])``: maps camera-``t`` coordinates to camera ``c``.
+
+    Rotations are projected to SO(3) first (:func:`rigidify`).
+    """
+    T_w2c = rigidify(T_w2c)
     t = np.asarray(t)
     c = np.asarray(c)
     return T_w2c[c] @ invert_se3(T_w2c[t])

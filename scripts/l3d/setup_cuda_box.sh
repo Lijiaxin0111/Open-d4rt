@@ -30,7 +30,7 @@ if [[ "${SKIP_ENV:-0}" == "0" ]]; then
     conda env create -n "$ENV_NAME" -f environment.yml
   fi
   conda activate "$ENV_NAME"
-  pip install "huggingface_hub==2.3.0" "gdown==6.4.2" pytest
+  pip install "huggingface_hub==2.3.0" "gdown==6.4.2" "scipy==1.15.3" pytest
   python -c "import torch; print('[setup] torch', torch.__version__, 'cuda', torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else '')"
 fi
 

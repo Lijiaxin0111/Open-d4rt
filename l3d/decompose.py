@@ -77,7 +77,7 @@ def self_frame_errors(p_xyz: np.ndarray, g_xyz: np.ndarray, K: np.ndarray | None
 
 def world_trajectories(gt_xyz_cam: np.ndarray, T_w2c: np.ndarray) -> np.ndarray:
     """GT tracks ``[T, N, 3]`` from own-camera to world (= clip frame 0) coordinates."""
-    T_c2w = geo.invert_se3(np.asarray(T_w2c, dtype=np.float64))
+    T_c2w = geo.invert_se3(geo.rigidify(T_w2c))
     return geo.apply_transform(T_c2w[:, None], np.asarray(gt_xyz_cam, dtype=np.float64))
 
 
@@ -374,6 +374,7 @@ def from_table(
     sq_sum = float(sq[fin].sum())
     self_summary = {
         "n": int(fin.sum()),
+        "sq_mean": sq_sum / max(int(fin.sum()), 1),
         "radial_share": float((err["radial"][fin] ** 2).sum() / sq_sum) if sq_sum > 0 else float("nan"),
         "perp_share": float((np.linalg.norm(err["perp"][fin], axis=-1) ** 2).sum() / sq_sum) if sq_sum > 0 else float("nan"),
         "e_d_rms": float(np.sqrt(np.nanmean(err["e_d"] ** 2))),

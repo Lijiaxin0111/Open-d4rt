@@ -1,0 +1,5717 @@
+{
+ "args": {
+  "dump": "/Users/aliciayang/l3d-d4rt/output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48",
+  "subsets": "adt_mini,po_mini,pstudio_mini,ds_mini",
+  "limit": "0",
+  "out": "/Users/aliciayang/l3d-d4rt/results/l3d/a1_decompose"
+ },
+ "per_subset": {
+  "adt_mini": {
+   "n_clips": 50,
+   "self_n": 1064976,
+   "radial_share": 0.8044365437038711,
+   "perp_share": 0.19556345629612903,
+   "e_d_rms": 0.24992244241443454,
+   "e_d_mean_median_clip": -0.013784404985145568,
+   "px_median_median_clip": 16.018608996041785,
+   "depth_shares": {
+    "offset": 0.4397750725136751,
+    "jitter": 0.224810616333737,
+    "residual": 0.3354143111525881
+   },
+   "camera_nonrigid_share": 0.021202516755433543,
+   "camera_gauge_share": 0.9787974832445665,
+   "camera_n_pairs": 20760,
+   "pair_median": {
+    "gauge_rot_deg": 0.8139140317503555,
+    "gauge_trans_rel": 0.02154726645790079,
+    "gauge_log_scale": 0.0025385834810389874,
+    "total_rms_rel": 0.023263487262744742,
+    "nonrigid_rms_rel": 0.006237568202968849
+   }
+  },
+  "po_mini": {
+   "n_clips": 50,
+   "self_n": 2566464,
+   "radial_share": 0.9277582331616143,
+   "perp_share": 0.0722417668383858,
+   "e_d_rms": 0.0974760040049129,
+   "e_d_mean_median_clip": -0.0004698419974007667,
+   "px_median_median_clip": 14.053195217220589,
+   "depth_shares": {
+    "offset": 0.10392593104322705,
+    "jitter": 0.02682906137457628,
+    "residual": 0.8692450075821968
+   },
+   "camera_nonrigid_share": 0.27263582916318546,
+   "camera_gauge_share": 0.7273641708368146,
+   "camera_n_pairs": 20800,
+   "pair_median": {
+    "gauge_rot_deg": 0.4428917005479919,
+    "gauge_trans_rel": 0.008802547527137362,
+    "gauge_log_scale": 0.0018128020709174569,
+    "total_rms_rel": 0.013268281627662904,
+    "nonrigid_rms_rel": 0.0058937393121505696
+   }
+  },
+  "pstudio_mini": {
+   "n_clips": 50,
+   "self_n": 418560,
+   "radial_share": 0.6631355008343494,
+   "perp_share": 0.3368644991656508,
+   "e_d_rms": 0.05391141017320572,
+   "e_d_mean_median_clip": 0.0030107113817483874,
+   "px_median_median_clip": 15.502950475754567,
+   "depth_shares": {
+    "offset": 0.6528818455983207,
+    "jitter": 0.10896152390800658,
+    "residual": 0.23815663049367233
+   },
+   "camera_nonrigid_share": 0.12511226114910412,
+   "camera_gauge_share": 0.8748877388508959,
+   "camera_n_pairs": 20794,
+   "pair_median": {
+    "gauge_rot_deg": 0.6528740867467698,
+    "gauge_trans_rel": 0.01490989096050287,
+    "gauge_log_scale": 0.003166926537876503,
+    "total_rms_rel": 0.00736295028352184,
+    "nonrigid_rms_rel": 0.0023636151650865004
+   }
+  },
+  "ds_mini": {
+   "n_clips": 50,
+   "self_n": 2518176,
+   "radial_share": 0.8422401673045059,
+   "perp_share": 0.157759832695494,
+   "e_d_rms": 0.13709818529977055,
+   "e_d_mean_median_clip": 0.004566518961080461,
+   "px_median_median_clip": 4.967463326021125,
+   "depth_shares": {
+    "offset": 0.1660989379467982,
+    "jitter": 0.01002368969411656,
+    "residual": 0.8238773723590853
+   },
+   "camera_nonrigid_share": 0.6778991950573338,
+   "camera_gauge_share": 0.32210080494266624,
+   "camera_n_pairs": 20800,
+   "pair_median": {
+    "gauge_rot_deg": 0.19864523963636804,
+    "gauge_trans_rel": 0.00322384851531459,
+    "gauge_log_scale": 0.0007488454608123915,
+    "total_rms_rel": 0.005170949105678295,
+    "nonrigid_rms_rel": 0.0028448297888739793
+   }
+  }
+ },
+ "clips": {
+  "adt_mini": [
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq131_0",
+    "file": "adt_mini/Apartment_release_clean_seq131_0__c0.npz",
+    "scale": 0.5543460392102675,
+    "n_groups": 2,
+    "self": {
+     "n": 27120,
+     "sq_mean": 0.6492367642323152,
+     "radial_share": 0.9969540624662075,
+     "perp_share": 0.003045937533792472,
+     "e_d_rms": 0.21217352899334352,
+     "e_d_mean": -0.1113532558516694,
+     "angle_rms": 0.024325618770620346,
+     "px_median": 7.8606717419408465,
+     "px_mean": 9.050989853448158
+    },
+    "depth_shares": {
+     "offset": 0.3897191832966987,
+     "jitter": 0.0017714031399148785,
+     "residual": 0.6085094135633866
+    },
+    "depth_ms_total": 0.045017606405489186,
+    "camera_nonrigid_share": 0.09865105494045061,
+    "camera_n_pairs": 416,
+    "camera_tot2": 65.23723178851316,
+    "camera_nr2": 6.435721737331522
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq133_0",
+    "file": "adt_mini/Apartment_release_clean_seq133_0__c0.npz",
+    "scale": 1.086522704017374,
+    "n_groups": 1,
+    "self": {
+     "n": 24048,
+     "sq_mean": 0.25989087199704897,
+     "radial_share": 0.2641800095896664,
+     "perp_share": 0.7358199904103335,
+     "e_d_rms": 0.05472560768543144,
+     "e_d_mean": 0.011032638824281843,
+     "angle_rms": 0.0941389110019502,
+     "px_median": 21.51453241421106,
+     "px_mean": 31.914585071931807
+    },
+    "depth_shares": {
+     "offset": 0.040642238143402135,
+     "jitter": 0.0020655113279723558,
+     "residual": 0.9572922505286255
+    },
+    "depth_ms_total": 0.002994892136539753,
+    "camera_nonrigid_share": 0.0727894140286093,
+    "camera_n_pairs": 416,
+    "camera_tot2": 23.344554690887506,
+    "camera_nr2": 1.6992364567085243
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq133_8",
+    "file": "adt_mini/Apartment_release_clean_seq133_8__c0.npz",
+    "scale": 0.9604670175783975,
+    "n_groups": 2,
+    "self": {
+     "n": 14688,
+     "sq_mean": 0.07153759416473736,
+     "radial_share": 0.25249138708720226,
+     "perp_share": 0.7475086129127978,
+     "e_d_rms": 0.06856326450291117,
+     "e_d_mean": -0.013784404985145568,
+     "angle_rms": 0.08074005070240195,
+     "px_median": 17.713201988974625,
+     "px_mean": 31.801028086437956
+    },
+    "depth_shares": {
+     "offset": 0.08871419699063494,
+     "jitter": 0.5796196530485677,
+     "residual": 0.33166614996079735
+    },
+    "depth_ms_total": 0.004700921239296159,
+    "camera_nonrigid_share": 0.20553096121578146,
+    "camera_n_pairs": 416,
+    "camera_tot2": 46.26127302434283,
+    "camera_nr2": 9.508123911758883
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq134_7",
+    "file": "adt_mini/Apartment_release_clean_seq134_7__c0.npz",
+    "scale": 0.6183733497784697,
+    "n_groups": 2,
+    "self": {
+     "n": 20640,
+     "sq_mean": 0.07760711557850446,
+     "radial_share": 0.5984586087698711,
+     "perp_share": 0.401541391230129,
+     "e_d_rms": 0.1307349295525725,
+     "e_d_mean": 0.05125377250660716,
+     "angle_rms": 0.08665952648042416,
+     "px_median": 29.801726982705645,
+     "px_mean": 28.916223338430147
+    },
+    "depth_shares": {
+     "offset": 0.1593887154699007,
+     "jitter": 0.0016259350115280689,
+     "residual": 0.8389853495185714
+    },
+    "depth_ms_total": 0.01709162180511609,
+    "camera_nonrigid_share": 0.22370749134142248,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.543335143008857,
+    "camera_nr2": 1.0163781071658344
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq135_7",
+    "file": "adt_mini/Apartment_release_clean_seq135_7__c0.npz",
+    "scale": 0.9004679399151898,
+    "n_groups": 2,
+    "self": {
+     "n": 23232,
+     "sq_mean": 0.19472314156109538,
+     "radial_share": 0.9401834729430837,
+     "perp_share": 0.059816527056916466,
+     "e_d_rms": 0.4737424855054731,
+     "e_d_mean": -0.29423157202305616,
+     "angle_rms": 0.06386348836581009,
+     "px_median": 16.791794621499314,
+     "px_mean": 58.81154659633183
+    },
+    "depth_shares": {
+     "offset": 0.9550082743920117,
+     "jitter": 0.010541922380501209,
+     "residual": 0.034449803227486024
+    },
+    "depth_ms_total": 0.22443194257290344,
+    "camera_nonrigid_share": 0.12610934470480306,
+    "camera_n_pairs": 416,
+    "camera_tot2": 98.07423038308971,
+    "camera_nr2": 12.368076926039329
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq136_6",
+    "file": "adt_mini/Apartment_release_clean_seq136_6__c0.npz",
+    "scale": 0.3771521996316354,
+    "n_groups": 3,
+    "self": {
+     "n": 13488,
+     "sq_mean": 0.6935601291657969,
+     "radial_share": 0.9941522661051588,
+     "perp_share": 0.005847733894841316,
+     "e_d_rms": 0.5919266602627213,
+     "e_d_mean": -0.4619034726129583,
+     "angle_rms": 0.033316872987661804,
+     "px_median": 12.421612898562337,
+     "px_mean": 15.003336483153868
+    },
+    "depth_shares": {
+     "offset": 0.8588735826032864,
+     "jitter": 0.00031144924557477535,
+     "residual": 0.14081496815113878
+    },
+    "depth_ms_total": 0.35037717112977906,
+    "camera_nonrigid_share": 0.2657833018238752,
+    "camera_n_pairs": 416,
+    "camera_tot2": 21.82727504032396,
+    "camera_nr2": 5.801325230035162
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq138_5",
+    "file": "adt_mini/Apartment_release_clean_seq138_5__c0.npz",
+    "scale": 0.7032795726794255,
+    "n_groups": 2,
+    "self": {
+     "n": 10224,
+     "sq_mean": 0.08679031463009568,
+     "radial_share": 0.9044261100358032,
+     "perp_share": 0.09557388996419659,
+     "e_d_rms": 0.11950915270199354,
+     "e_d_mean": -0.09643971833867279,
+     "angle_rms": 0.06718246951124462,
+     "px_median": 13.84001972915628,
+     "px_mean": 51.005022180294006
+    },
+    "depth_shares": {
+     "offset": 0.7001609775294453,
+     "jitter": 0.006636338283125846,
+     "residual": 0.2932026841874284
+    },
+    "depth_ms_total": 0.014282437579548415,
+    "camera_nonrigid_share": 0.2290358032127428,
+    "camera_n_pairs": 416,
+    "camera_tot2": 148.3204624978715,
+    "camera_nr2": 33.97069626108549
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq140_4",
+    "file": "adt_mini/Apartment_release_clean_seq140_4__c0.npz",
+    "scale": 0.7621467922978548,
+    "n_groups": 1,
+    "self": {
+     "n": 18672,
+     "sq_mean": 0.016654852926292922,
+     "radial_share": 0.8655834313449681,
+     "perp_share": 0.1344165686550321,
+     "e_d_rms": 0.05849009648105974,
+     "e_d_mean": 0.03076211118738372,
+     "angle_rms": 0.02929861313114936,
+     "px_median": 8.87346038629059,
+     "px_mean": 18.51288781103625
+    },
+    "depth_shares": {
+     "offset": 0.2766098235425395,
+     "jitter": 0.02233342148825657,
+     "residual": 0.701056754969204
+    },
+    "depth_ms_total": 0.003421091386363676,
+    "camera_nonrigid_share": 0.18566051146298473,
+    "camera_n_pairs": 416,
+    "camera_tot2": 155.19697318339217,
+    "camera_nr2": 28.813949418735717
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq141_4",
+    "file": "adt_mini/Apartment_release_clean_seq141_4__c0.npz",
+    "scale": 1.1254891184235654,
+    "n_groups": 1,
+    "self": {
+     "n": 20256,
+     "sq_mean": 0.18075515556282334,
+     "radial_share": 0.9547412190606341,
+     "perp_share": 0.045258780939365924,
+     "e_d_rms": 0.1113064434943273,
+     "e_d_mean": 0.002023608456582372,
+     "angle_rms": 0.02761618304908288,
+     "px_median": 4.415620663430106,
+     "px_mean": 8.67759435805969
+    },
+    "depth_shares": {
+     "offset": 0.0003305311227372703,
+     "jitter": 0.0034150824794549166,
+     "residual": 0.9962543863978077
+    },
+    "depth_ms_total": 0.01238912436335588,
+    "camera_nonrigid_share": 0.1602477719541331,
+    "camera_n_pairs": 416,
+    "camera_tot2": 30.769229576017754,
+    "camera_nr2": 4.9307004843020605
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq142_3",
+    "file": "adt_mini/Apartment_release_clean_seq142_3__c0.npz",
+    "scale": 0.9307412723663581,
+    "n_groups": 2,
+    "self": {
+     "n": 13200,
+     "sq_mean": 0.06207891707492263,
+     "radial_share": 0.9051758141848307,
+     "perp_share": 0.09482418581516934,
+     "e_d_rms": 0.1342710160736504,
+     "e_d_mean": -0.07070411650900152,
+     "angle_rms": 0.04248314972235457,
+     "px_median": 17.94401664951009,
+     "px_mean": 77.72628611668084
+    },
+    "depth_shares": {
+     "offset": 0.7277640168810086,
+     "jitter": 0.015115862283130572,
+     "residual": 0.25712012083586094
+    },
+    "depth_ms_total": 0.01802870575745049,
+    "camera_nonrigid_share": 0.37603833886756877,
+    "camera_n_pairs": 416,
+    "camera_tot2": 47.38459437091022,
+    "camera_nr2": 17.81842415515063
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq143_2",
+    "file": "adt_mini/Apartment_release_clean_seq143_2__c0.npz",
+    "scale": 0.7931881238201726,
+    "n_groups": 67,
+    "self": {
+     "n": 3264,
+     "sq_mean": 0.07270734896343145,
+     "radial_share": 0.8346506136890711,
+     "perp_share": 0.16534938631092885,
+     "e_d_rms": 0.25858395755620583,
+     "e_d_mean": -0.06696997923731085,
+     "angle_rms": 0.08836761050134498,
+     "px_median": 12.193996998244916,
+     "px_mean": 127.23237190230437
+    },
+    "depth_shares": {
+     "offset": 0.916026595300909,
+     "jitter": 0.006413590215331935,
+     "residual": 0.07755981448375905
+    },
+    "depth_ms_total": 0.06686566310542966,
+    "camera_nonrigid_share": 0.1815615435444437,
+    "camera_n_pairs": 416,
+    "camera_tot2": 239.91549220215072,
+    "camera_nr2": 43.55942708444743
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq144_1",
+    "file": "adt_mini/Apartment_release_clean_seq144_1__c0.npz",
+    "scale": 1.0242798729686327,
+    "n_groups": 1,
+    "self": {
+     "n": 21456,
+     "sq_mean": 0.06436230407755754,
+     "radial_share": 0.9196054202031704,
+     "perp_share": 0.08039457979682939,
+     "e_d_rms": 0.06082198177739781,
+     "e_d_mean": 0.015795465874623136,
+     "angle_rms": 0.027255031050757612,
+     "px_median": 8.034070862031612,
+     "px_mean": 8.528348780642306
+    },
+    "depth_shares": {
+     "offset": 0.06744406614896899,
+     "jitter": 0.013739467525785967,
+     "residual": 0.9188164663252449
+    },
+    "depth_ms_total": 0.003699313467330112,
+    "camera_nonrigid_share": 0.12470974069225615,
+    "camera_n_pairs": 416,
+    "camera_tot2": 31.355231026385674,
+    "camera_nr2": 3.9103027306463423
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq145_1",
+    "file": "adt_mini/Apartment_release_clean_seq145_1__c0.npz",
+    "scale": 0.9709204715121589,
+    "n_groups": 2,
+    "self": {
+     "n": 15792,
+     "sq_mean": 0.35433481810826095,
+     "radial_share": 0.7023500334996722,
+     "perp_share": 0.29764996650032777,
+     "e_d_rms": 0.5369492757138801,
+     "e_d_mean": -0.2452649005809494,
+     "angle_rms": 0.0780257681333898,
+     "px_median": 27.698936765221028,
+     "px_mean": 34.93310957334307
+    },
+    "depth_shares": {
+     "offset": 0.9411905705025599,
+     "jitter": 0.011470124936929851,
+     "residual": 0.047339304560509936
+    },
+    "depth_ms_total": 0.28831452468966035,
+    "camera_nonrigid_share": 0.11498017975268039,
+    "camera_n_pairs": 416,
+    "camera_tot2": 27.578021397730797,
+    "camera_nr2": 3.1709258575343533
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq146_0",
+    "file": "adt_mini/Apartment_release_clean_seq146_0__c0.npz",
+    "scale": 0.8779034133815606,
+    "n_groups": 1,
+    "self": {
+     "n": 26112,
+     "sq_mean": 0.026196446851451494,
+     "radial_share": 0.640268793300968,
+     "perp_share": 0.359731206699032,
+     "e_d_rms": 0.044867820726192165,
+     "e_d_mean": -0.002712731136774881,
+     "angle_rms": 0.047461625573813435,
+     "px_median": 16.018608996041785,
+     "px_mean": 17.044576132190436
+    },
+    "depth_shares": {
+     "offset": 0.003655472765703347,
+     "jitter": 0.041581807274614614,
+     "residual": 0.9547627199596822
+    },
+    "depth_ms_total": 0.002013121336717719,
+    "camera_nonrigid_share": 0.0755385200823454,
+    "camera_n_pairs": 416,
+    "camera_tot2": 34.53685711627031,
+    "camera_nr2": 2.608863074858479
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq146_8",
+    "file": "adt_mini/Apartment_release_clean_seq146_8__c0.npz",
+    "scale": 0.571430509311349,
+    "n_groups": 2,
+    "self": {
+     "n": 13056,
+     "sq_mean": 0.12694890765185285,
+     "radial_share": 0.9343391044320899,
+     "perp_share": 0.06566089556791026,
+     "e_d_rms": 0.09337107133576263,
+     "e_d_mean": -0.0378192299282888,
+     "angle_rms": 0.05701042149505028,
+     "px_median": 23.777096472414428,
+     "px_mean": 22.32823351680173
+    },
+    "depth_shares": {
+     "offset": 0.19434637207313843,
+     "jitter": 0.009379167186540893,
+     "residual": 0.7962744607403207
+    },
+    "depth_ms_total": 0.008718156962388073,
+    "camera_nonrigid_share": 0.13947748637849983,
+    "camera_n_pairs": 416,
+    "camera_tot2": 49.07572828403313,
+    "camera_nr2": 6.84495922325119
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq147_7",
+    "file": "adt_mini/Apartment_release_clean_seq147_7__c0.npz",
+    "scale": 0.9548535643108192,
+    "n_groups": 2,
+    "self": {
+     "n": 11616,
+     "sq_mean": 0.2343830026080848,
+     "radial_share": 0.9114579488565872,
+     "perp_share": 0.08854205114341301,
+     "e_d_rms": 0.2098221831349613,
+     "e_d_mean": -0.09363224675470841,
+     "angle_rms": 0.15790113778823187,
+     "px_median": 14.383333100749994,
+     "px_mean": 72.57209429691298
+    },
+    "depth_shares": {
+     "offset": 0.7030588368070361,
+     "jitter": 0.022126268256601717,
+     "residual": 0.27481489493636174
+    },
+    "depth_ms_total": 0.044025348535521244,
+    "camera_nonrigid_share": 0.2994751340129166,
+    "camera_n_pairs": 416,
+    "camera_tot2": 134.98982117341762,
+    "camera_nr2": 40.426094786288886
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq148_7",
+    "file": "adt_mini/Apartment_release_clean_seq148_7__c0.npz",
+    "scale": 1.0376519001460944,
+    "n_groups": 1,
+    "self": {
+     "n": 14160,
+     "sq_mean": 0.14628625683336363,
+     "radial_share": 0.7670260657461551,
+     "perp_share": 0.232973934253845,
+     "e_d_rms": 0.10559115253238649,
+     "e_d_mean": 0.037104673104796204,
+     "angle_rms": 0.0504302831820664,
+     "px_median": 13.213000854165838,
+     "px_mean": 16.079161850019382
+    },
+    "depth_shares": {
+     "offset": 0.12348157465868492,
+     "jitter": 0.000860864418170093,
+     "residual": 0.875657560923145
+    },
+    "depth_ms_total": 0.011149491493117709,
+    "camera_nonrigid_share": 0.2180592275270914,
+    "camera_n_pairs": 416,
+    "camera_tot2": 30.722409884840225,
+    "camera_nr2": 6.699304967258937
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq149_6",
+    "file": "adt_mini/Apartment_release_clean_seq149_6__c0.npz",
+    "scale": 0.9190262074568615,
+    "n_groups": 1,
+    "self": {
+     "n": 3168,
+     "sq_mean": 0.059698263569955,
+     "radial_share": 0.8837121020639008,
+     "perp_share": 0.11628789793609932,
+     "e_d_rms": 0.10541870929771326,
+     "e_d_mean": 0.0039613384441966795,
+     "angle_rms": 0.037783142148800714,
+     "px_median": 10.234131595946677,
+     "px_mean": 559.8331531824377
+    },
+    "depth_shares": {
+     "offset": 0.0014120449055659344,
+     "jitter": 0.003663867373137168,
+     "residual": 0.9949240877212968
+    },
+    "depth_ms_total": 0.011113104269995774,
+    "camera_nonrigid_share": 0.11018964312406904,
+    "camera_n_pairs": 416,
+    "camera_tot2": 293.90403217180574,
+    "camera_nr2": 32.38518041773618
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_clean_seq150_5",
+    "file": "adt_mini/Apartment_release_clean_seq150_5__c0.npz",
+    "scale": 0.70556510199873,
+    "n_groups": 2,
+    "self": {
+     "n": 14736,
+     "sq_mean": 0.024287989910126807,
+     "radial_share": 0.808240723044126,
+     "perp_share": 0.1917592769558742,
+     "e_d_rms": 0.08068878607814733,
+     "e_d_mean": 0.026731129595762744,
+     "angle_rms": 0.050118977414486836,
+     "px_median": 10.286302224500115,
+     "px_mean": 13.79013597783318
+    },
+    "depth_shares": {
+     "offset": 0.10975094270503455,
+     "jitter": 0.009545065739442709,
+     "residual": 0.8807039915555226
+    },
+    "depth_ms_total": 0.006510680198765025,
+    "camera_nonrigid_share": 0.2768348931246422,
+    "camera_n_pairs": 416,
+    "camera_tot2": 72.98708751719322,
+    "camera_nr2": 20.20537257230109
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq131_5",
+    "file": "adt_mini/Apartment_release_decoration_seq131_5__c0.npz",
+    "scale": 1.5841320659235283,
+    "n_groups": 2,
+    "self": {
+     "n": 22560,
+     "sq_mean": 0.21903642786028416,
+     "radial_share": 0.7423312081342053,
+     "perp_share": 0.2576687918657949,
+     "e_d_rms": 0.2303710462540455,
+     "e_d_mean": -0.03747722651904545,
+     "angle_rms": 0.3945905827145685,
+     "px_median": 62.8097420962212,
+     "px_mean": 114.13604626135019
+    },
+    "depth_shares": {
+     "offset": 0.09672066170531286,
+     "jitter": 0.2037031039396749,
+     "residual": 0.6995762343550121
+    },
+    "depth_ms_total": 0.05307081895218357,
+    "camera_nonrigid_share": 0.022103584625391578,
+    "camera_n_pairs": 416,
+    "camera_tot2": 8.800967499381765e+27,
+    "camera_nr2": 1.9453292990790574e+26
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq132_4",
+    "file": "adt_mini/Apartment_release_decoration_seq132_4__c0.npz",
+    "scale": 0.4573587886126365,
+    "n_groups": 1,
+    "self": {
+     "n": 16704,
+     "sq_mean": 0.10686492756638095,
+     "radial_share": 0.14212464432297273,
+     "perp_share": 0.8578753556770274,
+     "e_d_rms": 0.06435412179762216,
+     "e_d_mean": -0.01960525325031451,
+     "angle_rms": 0.15351685695144926,
+     "px_median": 57.26479622318711,
+     "px_mean": 58.16339663431056
+    },
+    "depth_shares": {
+     "offset": 0.09280944531293532,
+     "jitter": 0.0010156202714211235,
+     "residual": 0.9061749344156437
+    },
+    "depth_ms_total": 0.00414145299234319,
+    "camera_nonrigid_share": 0.024596507789548555,
+    "camera_n_pairs": 416,
+    "camera_tot2": 32.05975842130654,
+    "camera_nr2": 0.7885580977407112
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq133_3",
+    "file": "adt_mini/Apartment_release_decoration_seq133_3__c0.npz",
+    "scale": 0.8555962584616933,
+    "n_groups": 2,
+    "self": {
+     "n": 1584,
+     "sq_mean": 0.3791928758208074,
+     "radial_share": 0.1786215357632742,
+     "perp_share": 0.8213784642367257,
+     "e_d_rms": 0.08611380638590274,
+     "e_d_mean": -0.03108021499388927,
+     "angle_rms": 0.16163079286407422,
+     "px_median": 57.73661738590175,
+     "px_mean": 360.838040292274
+    },
+    "depth_shares": {
+     "offset": 0.1302634139900392,
+     "jitter": 0.08833995878917873,
+     "residual": 0.7813966272207818
+    },
+    "depth_ms_total": 0.007415587650268745,
+    "camera_nonrigid_share": 0.03064039708761426,
+    "camera_n_pairs": 416,
+    "camera_tot2": 2161.3331621319962,
+    "camera_nr2": 66.22410632635334
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq134_2",
+    "file": "adt_mini/Apartment_release_decoration_seq134_2__c0.npz",
+    "scale": 0.5089189688808654,
+    "n_groups": 1,
+    "self": {
+     "n": 48576,
+     "sq_mean": 0.0012225809374524414,
+     "radial_share": 0.30606358668744793,
+     "perp_share": 0.693936413312552,
+     "e_d_rms": 0.015258443178164525,
+     "e_d_mean": -0.000397490705603101,
+     "angle_rms": 0.023317124015473728,
+     "px_median": 4.863886055599705,
+     "px_mean": 5.711713593382387
+    },
+    "depth_shares": {
+     "offset": 0.0006786307068601691,
+     "jitter": 0.10599928281809982,
+     "residual": 0.8933220864750399
+    },
+    "depth_ms_total": 0.00023282008822127554,
+    "camera_nonrigid_share": 0.003435962537222306,
+    "camera_n_pairs": 416,
+    "camera_tot2": 46.075347752727566,
+    "camera_nr2": 0.1583131687678619
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq135_2",
+    "file": "adt_mini/Apartment_release_decoration_seq135_2__c0.npz",
+    "scale": 0.30821624904921047,
+    "n_groups": 2,
+    "self": {
+     "n": 46368,
+     "sq_mean": 0.0011470556612774732,
+     "radial_share": 0.15813003638311318,
+     "perp_share": 0.8418699636168868,
+     "e_d_rms": 0.01615612398661025,
+     "e_d_mean": -0.003527881856999478,
+     "angle_rms": 0.03793796865341852,
+     "px_median": 9.242711744248599,
+     "px_mean": 9.651775131902333
+    },
+    "depth_shares": {
+     "offset": 0.10138688797530812,
+     "jitter": 0.05943533322668947,
+     "residual": 0.8391777787980023
+    },
+    "depth_ms_total": 0.0002610203422707231,
+    "camera_nonrigid_share": 0.011995232902823437,
+    "camera_n_pairs": 416,
+    "camera_tot2": 50.28535460937769,
+    "camera_nr2": 0.6031845401405515
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq136_1",
+    "file": "adt_mini/Apartment_release_decoration_seq136_1__c0.npz",
+    "scale": 1.2229156659606477,
+    "n_groups": 1,
+    "self": {
+     "n": 33120,
+     "sq_mean": 0.02855081394589327,
+     "radial_share": 0.9261658096242993,
+     "perp_share": 0.07383419037570088,
+     "e_d_rms": 0.02835277800735281,
+     "e_d_mean": 0.002863425301069222,
+     "angle_rms": 0.019152605576934555,
+     "px_median": 5.453711083954261,
+     "px_mean": 9.022522409612687
+    },
+    "depth_shares": {
+     "offset": 0.01019953754705156,
+     "jitter": 0.03894703706127672,
+     "residual": 0.9508534253916716
+    },
+    "depth_ms_total": 0.0008038800207342293,
+    "camera_nonrigid_share": 0.24659563404015764,
+    "camera_n_pairs": 416,
+    "camera_tot2": 78.41198652292948,
+    "camera_nr2": 19.33605353297009
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq137_0",
+    "file": "adt_mini/Apartment_release_decoration_seq137_0__c0.npz",
+    "scale": 1.114814174938759,
+    "n_groups": 1,
+    "self": {
+     "n": 9744,
+     "sq_mean": 0.14746243402969952,
+     "radial_share": 0.6014074955049312,
+     "perp_share": 0.39859250449506883,
+     "e_d_rms": 0.07205818745793953,
+     "e_d_mean": -0.0034864151272752213,
+     "angle_rms": 0.06351799690705782,
+     "px_median": 19.432254309835663,
+     "px_mean": 27.98356224137273
+    },
+    "depth_shares": {
+     "offset": 0.002340946708231578,
+     "jitter": 0.030973702435938572,
+     "residual": 0.96668535085583
+    },
+    "depth_ms_total": 0.005192382379723552,
+    "camera_nonrigid_share": 0.07697485019681266,
+    "camera_n_pairs": 416,
+    "camera_tot2": 55.97680517211987,
+    "camera_nr2": 4.308806192620095
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq137_8",
+    "file": "adt_mini/Apartment_release_decoration_seq137_8__c0.npz",
+    "scale": 0.7507810639050464,
+    "n_groups": 1,
+    "self": {
+     "n": 26640,
+     "sq_mean": 0.02986902397597643,
+     "radial_share": 0.8790562878249177,
+     "perp_share": 0.1209437121750824,
+     "e_d_rms": 0.06655873357487067,
+     "e_d_mean": 0.002248610970093762,
+     "angle_rms": 0.022476060070555474,
+     "px_median": 7.482617362974519,
+     "px_mean": 8.01537853755151
+    },
+    "depth_shares": {
+     "offset": 0.0011413492302262713,
+     "jitter": 0.0014891526337158178,
+     "residual": 0.997369498136058
+    },
+    "depth_ms_total": 0.004430065015090617,
+    "camera_nonrigid_share": 0.09070150500214624,
+    "camera_n_pairs": 416,
+    "camera_tot2": 17.326979006492138,
+    "camera_nr2": 1.5715830730294296
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq138_8",
+    "file": "adt_mini/Apartment_release_decoration_seq138_8__c0.npz",
+    "scale": 1.0192921227567349,
+    "n_groups": 1,
+    "self": {
+     "n": 35280,
+     "sq_mean": 0.13701614323295108,
+     "radial_share": 0.42745503931898865,
+     "perp_share": 0.5725449606810114,
+     "e_d_rms": 0.8409606911000084,
+     "e_d_mean": -0.4316264480996921,
+     "angle_rms": 0.5729627177230594,
+     "px_median": 99.93447438234601,
+     "px_mean": 1648.5093372815866
+    },
+    "depth_shares": {
+     "offset": 0.2634296801729016,
+     "jitter": 0.3426801371608766,
+     "residual": 0.39389018266622233
+    },
+    "depth_ms_total": 0.7072148839754037,
+    "camera_nonrigid_share": 0.011520766703003645,
+    "camera_n_pairs": 416,
+    "camera_tot2": 8.160719841354187e+26,
+    "camera_nr2": 9.401774942081451e+24
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq139_7",
+    "file": "adt_mini/Apartment_release_decoration_seq139_7__c0.npz",
+    "scale": 1.193047198587773,
+    "n_groups": 1,
+    "self": {
+     "n": 31488,
+     "sq_mean": 0.11684609741574381,
+     "radial_share": 0.6887949445188942,
+     "perp_share": 0.3112050554811059,
+     "e_d_rms": 0.07686169325454716,
+     "e_d_mean": 0.019572328218348017,
+     "angle_rms": 0.07093516122779853,
+     "px_median": 23.30812923121286,
+     "px_mean": 25.662133746027504
+    },
+    "depth_shares": {
+     "offset": 0.06484329640239404,
+     "jitter": 0.0007084404892835905,
+     "residual": 0.9344482631083224
+    },
+    "depth_ms_total": 0.0059077198899561,
+    "camera_nonrigid_share": 0.09604516117504017,
+    "camera_n_pairs": 416,
+    "camera_tot2": 63.82497071112196,
+    "camera_nr2": 6.1300795989419266
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_seq140_6",
+    "file": "adt_mini/Apartment_release_decoration_seq140_6__c0.npz",
+    "scale": 0.4151054665949595,
+    "n_groups": 1,
+    "self": {
+     "n": 18144,
+     "sq_mean": 0.06884682006240078,
+     "radial_share": 0.16450359965425193,
+     "perp_share": 0.8354964003457482,
+     "e_d_rms": 0.0604443410234095,
+     "e_d_mean": -0.020296602040560063,
+     "angle_rms": 0.14338878322179902,
+     "px_median": 49.620061050283304,
+     "px_mean": 50.93957071377672
+    },
+    "depth_shares": {
+     "offset": 0.11275488819360131,
+     "jitter": 0.00360251509711775,
+     "residual": 0.8836425967092812
+    },
+    "depth_ms_total": 0.003653518361754225,
+    "camera_nonrigid_share": 0.010145005290797215,
+    "camera_n_pairs": 416,
+    "camera_tot2": 142.17610919870214,
+    "camera_nr2": 1.4423773800457957
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq131_5",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq131_5__c0.npz",
+    "scale": 0.40487882181515267,
+    "n_groups": 1,
+    "self": {
+     "n": 43344,
+     "sq_mean": 0.0014368003641272134,
+     "radial_share": 0.2570252024094056,
+     "perp_share": 0.7429747975905946,
+     "e_d_rms": 0.021359068406560367,
+     "e_d_mean": 0.00435317797522811,
+     "angle_rms": 0.03445614319339875,
+     "px_median": 8.119519557151628,
+     "px_mean": 8.957664064594546
+    },
+    "depth_shares": {
+     "offset": 0.041538253565025655,
+     "jitter": 0.29581423199638046,
+     "residual": 0.6626475144385938
+    },
+    "depth_ms_total": 0.0004562098031961253,
+    "camera_nonrigid_share": 0.022587194239286512,
+    "camera_n_pairs": 416,
+    "camera_tot2": 42.59133598003597,
+    "camera_nr2": 0.9620187786917849
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq132_5",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq132_5__c0.npz",
+    "scale": 0.39513300729971523,
+    "n_groups": 1,
+    "self": {
+     "n": 45744,
+     "sq_mean": 0.0014900846006384169,
+     "radial_share": 0.20547867132613493,
+     "perp_share": 0.794521328673865,
+     "e_d_rms": 0.014909264425617437,
+     "e_d_mean": -0.007562675969346958,
+     "angle_rms": 0.033203591379762164,
+     "px_median": 9.374402720773542,
+     "px_mean": 9.74784902463554
+    },
+    "depth_shares": {
+     "offset": 0.2572992684177544,
+     "jitter": 0.4100844602251637,
+     "residual": 0.3326162713570816
+    },
+    "depth_ms_total": 0.0002222861657129817,
+    "camera_nonrigid_share": 0.008380033698921355,
+    "camera_n_pairs": 416,
+    "camera_tot2": 73.66704866164613,
+    "camera_nr2": 0.6173323502846739
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq133_4",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq133_4__c0.npz",
+    "scale": 0.23562878388144262,
+    "n_groups": 1,
+    "self": {
+     "n": 11904,
+     "sq_mean": 0.0076782599439584945,
+     "radial_share": 0.10404059103895012,
+     "perp_share": 0.8959594089610498,
+     "e_d_rms": 0.03795685712137497,
+     "e_d_mean": 0.0024946940413563823,
+     "angle_rms": 0.10821918582786186,
+     "px_median": 38.438731922845236,
+     "px_mean": 39.44246473372761
+    },
+    "depth_shares": {
+     "offset": 0.0043197050016134265,
+     "jitter": 0.15351863143706015,
+     "residual": 0.8421616635613265
+    },
+    "depth_ms_total": 0.0014407230025324735,
+    "camera_nonrigid_share": 0.01701123031350031,
+    "camera_n_pairs": 416,
+    "camera_tot2": 396.78710778839854,
+    "camera_nr2": 6.749836876016121
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq134_3",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq134_3__c0.npz",
+    "scale": 1.098129322297921,
+    "n_groups": 2,
+    "self": {
+     "n": 37056,
+     "sq_mean": 0.10190721054602385,
+     "radial_share": 0.8794884476032458,
+     "perp_share": 0.12051155239675415,
+     "e_d_rms": 0.1323760888665327,
+     "e_d_mean": -0.01473340012879709,
+     "angle_rms": 0.1649960203522201,
+     "px_median": 59.1333819522917,
+     "px_mean": 61.64508805870359
+    },
+    "depth_shares": {
+     "offset": 0.69356939785732,
+     "jitter": 0.040252871779823673,
+     "residual": 0.26617773036285636
+    },
+    "depth_ms_total": 0.01752342890360016,
+    "camera_nonrigid_share": 0.005835977682381643,
+    "camera_n_pairs": 416,
+    "camera_tot2": 159091.76246541325,
+    "camera_nr2": 928.4559751989134
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq135_3",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq135_3__c0.npz",
+    "scale": 1.2246841894792178,
+    "n_groups": 2,
+    "self": {
+     "n": 42864,
+     "sq_mean": 0.08073506106994581,
+     "radial_share": 0.6107315589690849,
+     "perp_share": 0.389268441030915,
+     "e_d_rms": 0.2442569709666374,
+     "e_d_mean": -0.10147760188097935,
+     "angle_rms": 0.3032525927024625,
+     "px_median": 43.34529971492835,
+     "px_mean": 51.47171628203551
+    },
+    "depth_shares": {
+     "offset": 0.17260225153491585,
+     "jitter": 0.3208054552270582,
+     "residual": 0.5065922932380259
+    },
+    "depth_ms_total": 0.059661467865796756,
+    "camera_nonrigid_share": 0.02128310135178705,
+    "camera_n_pairs": 416,
+    "camera_tot2": 63724.69624088068,
+    "camera_nr2": 1356.2591687065067
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq136_2",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq136_2__c0.npz",
+    "scale": 0.585705233463845,
+    "n_groups": 2,
+    "self": {
+     "n": 30528,
+     "sq_mean": 0.12854541231802874,
+     "radial_share": 0.8960355438001572,
+     "perp_share": 0.10396445619984304,
+     "e_d_rms": 0.6260174630592334,
+     "e_d_mean": -0.0008514070620137545,
+     "angle_rms": 0.16021982555797298,
+     "px_median": 79.09065692678224,
+     "px_mean": 156.93967529150913
+    },
+    "depth_shares": {
+     "offset": 0.40034179191679753,
+     "jitter": 0.4134968530946977,
+     "residual": 0.18616135498850503
+    },
+    "depth_ms_total": 0.3918978640551188,
+    "camera_nonrigid_share": 0.11787391069467598,
+    "camera_n_pairs": 416,
+    "camera_tot2": 8373.582218905882,
+    "camera_nr2": 987.0268826658387
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq137_1",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq137_1__c0.npz",
+    "scale": 0.3914850823065025,
+    "n_groups": 1,
+    "self": {
+     "n": 38640,
+     "sq_mean": 0.0012363490802182668,
+     "radial_share": 0.3553554957604058,
+     "perp_share": 0.6446445042395944,
+     "e_d_rms": 0.018563211598102296,
+     "e_d_mean": 0.0001464335424572023,
+     "angle_rms": 0.027116822183212194,
+     "px_median": 6.922804302526568,
+     "px_mean": 7.646535634215308
+    },
+    "depth_shares": {
+     "offset": 6.222643308599199e-05,
+     "jitter": 0.03977431470154391,
+     "residual": 0.96016345886537
+    },
+    "depth_ms_total": 0.00034459282483591963,
+    "camera_nonrigid_share": 0.07894159002129036,
+    "camera_n_pairs": 416,
+    "camera_tot2": 20.8326575633857,
+    "camera_nr2": 1.6445631124227276
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq138_0",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq138_0__c0.npz",
+    "scale": 1.2446530889424496,
+    "n_groups": 1,
+    "self": {
+     "n": 9888,
+     "sq_mean": 0.6898303600825075,
+     "radial_share": 0.9183181027925399,
+     "perp_share": 0.08168189720746019,
+     "e_d_rms": 0.15228813557473184,
+     "e_d_mean": 0.1026481609662914,
+     "angle_rms": 0.039861890870088464,
+     "px_median": 12.083452558493295,
+     "px_mean": 13.265654777710752
+    },
+    "depth_shares": {
+     "offset": 0.45432873597250756,
+     "jitter": 0.00021481299299059604,
+     "residual": 0.5454564510345017
+    },
+    "depth_ms_total": 0.02319167623682791,
+    "camera_nonrigid_share": 0.04803855914266902,
+    "camera_n_pairs": 416,
+    "camera_tot2": 46.83636969674053,
+    "camera_nr2": 2.249951715704781
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq139_0",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq139_0__c0.npz",
+    "scale": 0.8818896019713963,
+    "n_groups": 1,
+    "self": {
+     "n": 7968,
+     "sq_mean": 0.39687063446023807,
+     "radial_share": 0.9725735014672947,
+     "perp_share": 0.027426498532705252,
+     "e_d_rms": 0.13871275120674356,
+     "e_d_mean": -0.05364042588389678,
+     "angle_rms": 0.026772327094105985,
+     "px_median": 8.173938117660164,
+     "px_mean": 10.787344254313608
+    },
+    "depth_shares": {
+     "offset": 0.14953803294689552,
+     "jitter": 0.0013906033773604218,
+     "residual": 0.8490713636757439
+    },
+    "depth_ms_total": 0.019241227347343938,
+    "camera_nonrigid_share": 0.10740940130190146,
+    "camera_n_pairs": 416,
+    "camera_tot2": 51.376472839616824,
+    "camera_nr2": 5.5183161887066445
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq139_8",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq139_8__c0.npz",
+    "scale": 0.8872546176974352,
+    "n_groups": 1,
+    "self": {
+     "n": 0,
+     "sq_mean": 0.0,
+     "radial_share": null,
+     "perp_share": null,
+     "e_d_rms": null,
+     "e_d_mean": null,
+     "angle_rms": null,
+     "px_median": null,
+     "px_mean": null
+    },
+    "depth_shares": {
+     "offset": null,
+     "jitter": null,
+     "residual": null
+    },
+    "depth_ms_total": 0.0,
+    "camera_nonrigid_share": 0.0006928391556175948,
+    "camera_n_pairs": 376,
+    "camera_tot2": 1.4268416900139734e+24,
+    "camera_nr2": 9.885717917092632e+20
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_decoration_skeleton_seq140_7",
+    "file": "adt_mini/Apartment_release_decoration_skeleton_seq140_7__c0.npz",
+    "scale": 0.43587345286745355,
+    "n_groups": 1,
+    "self": {
+     "n": 22272,
+     "sq_mean": 0.07694940923873517,
+     "radial_share": 0.13262904106330603,
+     "perp_share": 0.867370958936694,
+     "e_d_rms": 0.05557146906051773,
+     "e_d_mean": -0.019515018230817537,
+     "angle_rms": 0.14762909240197133,
+     "px_median": 49.6417211711751,
+     "px_mean": 53.500900586664365
+    },
+    "depth_shares": {
+     "offset": 0.12332018489407151,
+     "jitter": 0.005189310675819355,
+     "residual": 0.8714905044301091
+    },
+    "depth_ms_total": 0.0030881881735440797,
+    "camera_nonrigid_share": 0.00589040031170273,
+    "camera_n_pairs": 416,
+    "camera_tot2": 166.31924260974924,
+    "camera_nr2": 0.979686918510629
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_golden_skeleton_seq100_4",
+    "file": "adt_mini/Apartment_release_golden_skeleton_seq100_4__c0.npz",
+    "scale": 0.7908585405390689,
+    "n_groups": 1,
+    "self": {
+     "n": 4128,
+     "sq_mean": 0.04221195260274118,
+     "radial_share": 0.8890727019996888,
+     "perp_share": 0.11092729800031126,
+     "e_d_rms": 0.1015451412269635,
+     "e_d_mean": -0.05074600497732902,
+     "angle_rms": 0.035049761369071175,
+     "px_median": 11.612844244509445,
+     "px_mean": 205.19705696317686
+    },
+    "depth_shares": {
+     "offset": 0.2497384543870044,
+     "jitter": 0.010821338984185544,
+     "residual": 0.7394402066288102
+    },
+    "depth_ms_total": 0.01031141570680396,
+    "camera_nonrigid_share": 0.20615497663859295,
+    "camera_n_pairs": 416,
+    "camera_tot2": 135.0600506425478,
+    "camera_nr2": 27.84330158502162
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq131_3",
+    "file": "adt_mini/Apartment_release_meal_seq131_3__c0.npz",
+    "scale": 1.0140467143081255,
+    "n_groups": 1,
+    "self": {
+     "n": 13200,
+     "sq_mean": 0.29572691015510577,
+     "radial_share": 0.7487632706484925,
+     "perp_share": 0.25123672935150754,
+     "e_d_rms": 0.139116471153528,
+     "e_d_mean": -0.06008016437794004,
+     "angle_rms": 0.06562742720165261,
+     "px_median": 18.531307062495312,
+     "px_mean": 34.20418173334433
+    },
+    "depth_shares": {
+     "offset": 0.18651128700363703,
+     "jitter": 0.0030079822878229232,
+     "residual": 0.81048073070854
+    },
+    "depth_ms_total": 0.019353392546210383,
+    "camera_nonrigid_share": 0.09936776678173187,
+    "camera_n_pairs": 416,
+    "camera_tot2": 51.06780044795431,
+    "camera_nr2": 5.074493284968346
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq132_2",
+    "file": "adt_mini/Apartment_release_meal_seq132_2__c0.npz",
+    "scale": 0.9123988731048794,
+    "n_groups": 2,
+    "self": {
+     "n": 27936,
+     "sq_mean": 0.21670113853559508,
+     "radial_share": 0.7837668657484544,
+     "perp_share": 0.21623313425154553,
+     "e_d_rms": 0.2858416449120156,
+     "e_d_mean": 0.13766214980314245,
+     "angle_rms": 0.10123502787717809,
+     "px_median": 18.51096105992482,
+     "px_mean": 19.553589296042368
+    },
+    "depth_shares": {
+     "offset": 0.2917464767252697,
+     "jitter": 0.0074963845460925774,
+     "residual": 0.7007571387286377
+    },
+    "depth_ms_total": 0.08170544596600682,
+    "camera_nonrigid_share": 0.06139228609027097,
+    "camera_n_pairs": 416,
+    "camera_tot2": 62.47696264118894,
+    "camera_nr2": 3.835603564519043
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq133_1",
+    "file": "adt_mini/Apartment_release_meal_seq133_1__c0.npz",
+    "scale": 0.8656188543361818,
+    "n_groups": 2,
+    "self": {
+     "n": 22176,
+     "sq_mean": 0.10649504974072597,
+     "radial_share": 0.8340437470931248,
+     "perp_share": 0.16595625290687527,
+     "e_d_rms": 0.2365375653844323,
+     "e_d_mean": 0.024157700690430953,
+     "angle_rms": 0.1937770055948641,
+     "px_median": 22.205539868611215,
+     "px_mean": 26.45907740233261
+    },
+    "depth_shares": {
+     "offset": 0.021447584063032668,
+     "jitter": 0.01214791128660625,
+     "residual": 0.9664045046503611
+    },
+    "depth_ms_total": 0.05595001983799458,
+    "camera_nonrigid_share": 0.5956916923325781,
+    "camera_n_pairs": 416,
+    "camera_tot2": 237.22769331041133,
+    "camera_nr2": 141.31456609623274
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq136_0",
+    "file": "adt_mini/Apartment_release_meal_seq136_0__c0.npz",
+    "scale": 0.756734804214429,
+    "n_groups": 1,
+    "self": {
+     "n": 32448,
+     "sq_mean": 0.09078475235211231,
+     "radial_share": 0.9479306280674602,
+     "perp_share": 0.05206937193253974,
+     "e_d_rms": 0.0791538604316161,
+     "e_d_mean": 0.029730303826582358,
+     "angle_rms": 0.03358266718206891,
+     "px_median": 10.757958820953561,
+     "px_mean": 11.368589915465133
+    },
+    "depth_shares": {
+     "offset": 0.1410764404669786,
+     "jitter": 0.0018617366947515934,
+     "residual": 0.8570618228382698
+    },
+    "depth_ms_total": 0.006265333621227761,
+    "camera_nonrigid_share": 0.08416913069280683,
+    "camera_n_pairs": 416,
+    "camera_tot2": 45.25507483094645,
+    "camera_nr2": 3.809080307958685
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq138_0",
+    "file": "adt_mini/Apartment_release_meal_seq138_0__c0.npz",
+    "scale": 0.9320310007603189,
+    "n_groups": 1,
+    "self": {
+     "n": 20832,
+     "sq_mean": 0.1524182521817015,
+     "radial_share": 0.9138535092098201,
+     "perp_share": 0.08614649079018005,
+     "e_d_rms": 0.1049788420619793,
+     "e_d_mean": -0.01710180092655369,
+     "angle_rms": 0.024341749977849266,
+     "px_median": 7.2892617628943785,
+     "px_mean": 8.93034889086463
+    },
+    "depth_shares": {
+     "offset": 0.026538730073510913,
+     "jitter": 0.0006699831888862683,
+     "residual": 0.9727912867376027
+    },
+    "depth_ms_total": 0.011020557280673993,
+    "camera_nonrigid_share": 0.5648082709705612,
+    "camera_n_pairs": 416,
+    "camera_tot2": 42.33648471783133,
+    "camera_nr2": 23.911996732449904
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq139_0",
+    "file": "adt_mini/Apartment_release_meal_seq139_0__c0.npz",
+    "scale": 0.8789340439275386,
+    "n_groups": 1,
+    "self": {
+     "n": 11328,
+     "sq_mean": 0.022182352415399547,
+     "radial_share": 0.5274422651207594,
+     "perp_share": 0.47255773487924047,
+     "e_d_rms": 0.05903150623927667,
+     "e_d_mean": -0.02806374660629547,
+     "angle_rms": 0.046497811488459974,
+     "px_median": 12.337344980053961,
+     "px_mean": 14.697061273941168
+    },
+    "depth_shares": {
+     "offset": 0.2260078746257939,
+     "jitter": 0.010188262726065298,
+     "residual": 0.7638038626481412
+    },
+    "depth_ms_total": 0.00348471872887776,
+    "camera_nonrigid_share": 0.2634376198645044,
+    "camera_n_pairs": 416,
+    "camera_tot2": 39.37539275894376,
+    "camera_nr2": 10.372959749646187
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq139_8",
+    "file": "adt_mini/Apartment_release_meal_seq139_8__c0.npz",
+    "scale": 0.5176025380814163,
+    "n_groups": 3,
+    "self": {
+     "n": 24528,
+     "sq_mean": 0.23621977247621323,
+     "radial_share": 0.8542038184783471,
+     "perp_share": 0.145796181521653,
+     "e_d_rms": 0.14872867013878083,
+     "e_d_mean": -0.1215046797731781,
+     "angle_rms": 0.13041593928599737,
+     "px_median": 37.35661550642173,
+     "px_mean": 41.908933511447934
+    },
+    "depth_shares": {
+     "offset": 0.6802195559150153,
+     "jitter": 0.10411774089688035,
+     "residual": 0.21566270318810413
+    },
+    "depth_ms_total": 0.022120217321250274,
+    "camera_nonrigid_share": 0.09649823656074519,
+    "camera_n_pairs": 416,
+    "camera_tot2": 46.23580800684491,
+    "camera_nr2": 4.461673938621717
+   },
+   {
+    "subset": "adt_mini",
+    "sequence": "Apartment_release_meal_seq140_8",
+    "file": "adt_mini/Apartment_release_meal_seq140_8__c0.npz",
+    "scale": 0.47615693703814305,
+    "n_groups": 2,
+    "self": {
+     "n": 19056,
+     "sq_mean": 0.6590496848445155,
+     "radial_share": 0.9821682921876094,
+     "perp_share": 0.017831707812390452,
+     "e_d_rms": 0.243566199852304,
+     "e_d_mean": -0.1436806057289921,
+     "angle_rms": 0.1371832082393321,
+     "px_median": 46.74101313874924,
+     "px_mean": 52.60056611164566
+    },
+    "depth_shares": {
+     "offset": 0.6870916078261762,
+     "jitter": 0.07019914007628807,
+     "residual": 0.24270925209753588
+    },
+    "depth_ms_total": 0.059324493710492504,
+    "camera_nonrigid_share": 0.028199278169357595,
+    "camera_n_pairs": 416,
+    "camera_tot2": 1000.3610673442571,
+    "camera_nr2": 28.20946000783617
+   }
+  ],
+  "po_mini": [
+   {
+    "subset": "po_mini",
+    "sequence": "cab_e_3rd_1",
+    "file": "po_mini/cab_e_3rd_1__c0.npz",
+    "scale": 1.4478617096228366,
+    "n_groups": 2,
+    "self": {
+     "n": 84720,
+     "sq_mean": 0.07132630058803012,
+     "radial_share": 0.9606408419842606,
+     "perp_share": 0.03935915801573965,
+     "e_d_rms": 0.037026923199537924,
+     "e_d_mean": -0.0009476660758892078,
+     "angle_rms": 0.007952314649995802,
+     "px_median": 4.4519707177294245,
+     "px_mean": 5.3812783007019895
+    },
+    "depth_shares": {
+     "offset": 0.0006870977036296577,
+     "jitter": 0.042459126070532364,
+     "residual": 0.9568537762258377
+    },
+    "depth_ms_total": 0.0013709930416244802,
+    "camera_nonrigid_share": 0.571278622337384,
+    "camera_n_pairs": 416,
+    "camera_tot2": 15.844177995397672,
+    "camera_nr2": 9.051440177279076
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "cab_e_3rd_12",
+    "file": "po_mini/cab_e_3rd_12__c0.npz",
+    "scale": 0.7848110512882256,
+    "n_groups": 3,
+    "self": {
+     "n": 31584,
+     "sq_mean": 0.0662534117076766,
+     "radial_share": 0.9461064981283291,
+     "perp_share": 0.05389350187167109,
+     "e_d_rms": 0.07657058512837782,
+     "e_d_mean": 0.0033013498996710368,
+     "angle_rms": 0.03011709780975695,
+     "px_median": 17.299602047666305,
+     "px_mean": 19.539723704011013
+    },
+    "depth_shares": {
+     "offset": 0.3279852986437782,
+     "jitter": 0.027143313365874173,
+     "residual": 0.6448713879903475
+    },
+    "depth_ms_total": 0.005863054506902158,
+    "camera_nonrigid_share": 0.3077844208895195,
+    "camera_n_pairs": 416,
+    "camera_tot2": 131.1542891942592,
+    "camera_nr2": 40.367246946831635
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "cab_e_3rd_13",
+    "file": "po_mini/cab_e_3rd_13__c0.npz",
+    "scale": 0.8084864963923604,
+    "n_groups": 2,
+    "self": {
+     "n": 26256,
+     "sq_mean": 0.10876354567476727,
+     "radial_share": 0.9546064023757004,
+     "perp_share": 0.045393597624299536,
+     "e_d_rms": 0.10370455593100687,
+     "e_d_mean": 0.02197651381228948,
+     "angle_rms": 0.025736032160115274,
+     "px_median": 9.08778755131981,
+     "px_mean": 12.384500529092083
+    },
+    "depth_shares": {
+     "offset": 0.06438922562409036,
+     "jitter": 0.016307575903355125,
+     "residual": 0.9193031984725546
+    },
+    "depth_ms_total": 0.010754634920847331,
+    "camera_nonrigid_share": 0.28775786833468386,
+    "camera_n_pairs": 416,
+    "camera_tot2": 68.1195546090166,
+    "camera_nr2": 19.601937826198707
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "cab_e_3rd_16",
+    "file": "po_mini/cab_e_3rd_16__c0.npz",
+    "scale": 0.9703690952980196,
+    "n_groups": 4,
+    "self": {
+     "n": 37296,
+     "sq_mean": 0.24170309133259466,
+     "radial_share": 0.873242484385596,
+     "perp_share": 0.12675751561440413,
+     "e_d_rms": 0.1177265119974374,
+     "e_d_mean": 0.004695584370667524,
+     "angle_rms": 0.07743433783956445,
+     "px_median": 19.819109445135012,
+     "px_mean": 21.5682422770798
+    },
+    "depth_shares": {
+     "offset": 0.002692551761325884,
+     "jitter": 0.00848124809600036,
+     "residual": 0.9888262001426739
+    },
+    "depth_ms_total": 0.013859531627082776,
+    "camera_nonrigid_share": 0.5046039555090355,
+    "camera_n_pairs": 416,
+    "camera_tot2": 47.07333089960509,
+    "camera_nr2": 23.75338897092643
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "cab_e_3rd_6",
+    "file": "po_mini/cab_e_3rd_6__c0.npz",
+    "scale": 1.4035967620036425,
+    "n_groups": 2,
+    "self": {
+     "n": 57984,
+     "sq_mean": 0.8198371688443925,
+     "radial_share": 0.9644769457686881,
+     "perp_share": 0.03552305423131202,
+     "e_d_rms": 0.12533661622727985,
+     "e_d_mean": -0.023014332349938993,
+     "angle_rms": 0.03095452302371169,
+     "px_median": 22.19572071871892,
+     "px_mean": 24.697538031437983
+    },
+    "depth_shares": {
+     "offset": 0.03677452007175848,
+     "jitter": 0.004928986074652128,
+     "residual": 0.9582964938535893
+    },
+    "depth_ms_total": 0.01570926736730443,
+    "camera_nonrigid_share": 0.9195943234623543,
+    "camera_n_pairs": 416,
+    "camera_tot2": 29.271281948348758,
+    "camera_nr2": 26.9177047201676
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd1_0",
+    "file": "po_mini/dancingroom1_3rd1_0__c0.npz",
+    "scale": 1.4796002280107174,
+    "n_groups": 1,
+    "self": {
+     "n": 27936,
+     "sq_mean": 0.37005053532851023,
+     "radial_share": 0.9892457699169016,
+     "perp_share": 0.010754230083098228,
+     "e_d_rms": 0.07969258935754468,
+     "e_d_mean": 0.020860190137458875,
+     "angle_rms": 0.010623633855530846,
+     "px_median": 5.271037572069328,
+     "px_mean": 6.33679465168828
+    },
+    "depth_shares": {
+     "offset": 0.06851736442397205,
+     "jitter": 0.001344982622187035,
+     "residual": 0.9301376529538409
+    },
+    "depth_ms_total": 0.006350908798510243,
+    "camera_nonrigid_share": 0.8304462918280149,
+    "camera_n_pairs": 416,
+    "camera_tot2": 22.889152325017648,
+    "camera_nr2": 19.00821167139749
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd1_14",
+    "file": "po_mini/dancingroom1_3rd1_14__c0.npz",
+    "scale": 0.917910672472503,
+    "n_groups": 10,
+    "self": {
+     "n": 37920,
+     "sq_mean": 0.1965399994447558,
+     "radial_share": 0.6106913785714339,
+     "perp_share": 0.3893086214285661,
+     "e_d_rms": 0.08267426219309268,
+     "e_d_mean": -0.0010508367904964958,
+     "angle_rms": 0.07450193870963412,
+     "px_median": 44.517705354943274,
+     "px_mean": 52.21540412129506
+    },
+    "depth_shares": {
+     "offset": 0.1869300335633501,
+     "jitter": 0.06792095643445484,
+     "residual": 0.7451490100021951
+    },
+    "depth_ms_total": 0.006835033629172234,
+    "camera_nonrigid_share": 0.02382459025526045,
+    "camera_n_pairs": 416,
+    "camera_tot2": 493.6331426282935,
+    "camera_nr2": 11.760607359535634
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd1_18",
+    "file": "po_mini/dancingroom1_3rd1_18__c0.npz",
+    "scale": 1.1677018614350099,
+    "n_groups": 3,
+    "self": {
+     "n": 23664,
+     "sq_mean": 0.11303806014380256,
+     "radial_share": 0.6131768368801617,
+     "perp_share": 0.3868231631198383,
+     "e_d_rms": 0.04642006165896204,
+     "e_d_mean": 0.005793605007015515,
+     "angle_rms": 0.042630646648462035,
+     "px_median": 28.06047590497036,
+     "px_mean": 29.291525546860086
+    },
+    "depth_shares": {
+     "offset": 0.11047925699079648,
+     "jitter": 0.03218083992406402,
+     "residual": 0.8573399030851396
+    },
+    "depth_ms_total": 0.002154822124421838,
+    "camera_nonrigid_share": 0.05465193655739752,
+    "camera_n_pairs": 416,
+    "camera_tot2": 172.35205008450964,
+    "camera_nr2": 9.419373306756022
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd1_22",
+    "file": "po_mini/dancingroom1_3rd1_22__c0.npz",
+    "scale": 1.2689514567785596,
+    "n_groups": 4,
+    "self": {
+     "n": 24480,
+     "sq_mean": 0.7960349196843738,
+     "radial_share": 0.9796639258995192,
+     "perp_share": 0.02033607410048075,
+     "e_d_rms": 0.13601193085938196,
+     "e_d_mean": -0.022827004938636004,
+     "angle_rms": 0.025279516715457948,
+     "px_median": 7.823764047453684,
+     "px_mean": 12.269015184030753
+    },
+    "depth_shares": {
+     "offset": 0.03183739226097536,
+     "jitter": 0.007432570245607442,
+     "residual": 0.9607300374934173
+    },
+    "depth_ms_total": 0.018499245336097297,
+    "camera_nonrigid_share": 0.5659833121540007,
+    "camera_n_pairs": 416,
+    "camera_tot2": 64.43736165828508,
+    "camera_nr2": 36.4704713778214
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd1_23",
+    "file": "po_mini/dancingroom1_3rd1_23__c0.npz",
+    "scale": 0.970745309692429,
+    "n_groups": 5,
+    "self": {
+     "n": 44304,
+     "sq_mean": 0.2072871555379965,
+     "radial_share": 0.9330176086620702,
+     "perp_share": 0.06698239133792991,
+     "e_d_rms": 0.10804091648570499,
+     "e_d_mean": 0.010916417265741753,
+     "angle_rms": 0.03730994850824209,
+     "px_median": 13.45828930908965,
+     "px_mean": 22.36532344641293
+    },
+    "depth_shares": {
+     "offset": 0.07035519275527602,
+     "jitter": 0.03133246504426429,
+     "residual": 0.8983123422004597
+    },
+    "depth_ms_total": 0.011672839635071085,
+    "camera_nonrigid_share": 0.24360871781636181,
+    "camera_n_pairs": 416,
+    "camera_tot2": 473.60602599395014,
+    "camera_nr2": 115.37455674248872
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd1_3",
+    "file": "po_mini/dancingroom1_3rd1_3__c0.npz",
+    "scale": 1.3391345895007662,
+    "n_groups": 3,
+    "self": {
+     "n": 43200,
+     "sq_mean": 0.20842558431619704,
+     "radial_share": 0.9142066561213894,
+     "perp_share": 0.08579334387861084,
+     "e_d_rms": 0.06345204473566866,
+     "e_d_mean": 0.00838597987411116,
+     "angle_rms": 0.023344586649701637,
+     "px_median": 12.768092726825945,
+     "px_mean": 15.387899556089447
+    },
+    "depth_shares": {
+     "offset": 0.024962159282266128,
+     "jitter": 0.017217168358968846,
+     "residual": 0.9578206723587649
+    },
+    "depth_ms_total": 0.004026161981137297,
+    "camera_nonrigid_share": 0.40416756436421775,
+    "camera_n_pairs": 416,
+    "camera_tot2": 41.44495033976773,
+    "camera_nr2": 16.750704634019883
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_11",
+    "file": "po_mini/dancingroom1_3rd2_11__c0.npz",
+    "scale": 1.2204351566058045,
+    "n_groups": 5,
+    "self": {
+     "n": 85344,
+     "sq_mean": 0.4671758375302998,
+     "radial_share": 0.7887706028355328,
+     "perp_share": 0.211229397164467,
+     "e_d_rms": 0.1070853776805589,
+     "e_d_mean": -0.01815502568067173,
+     "angle_rms": 0.05768238372965557,
+     "px_median": 36.43583456234051,
+     "px_mean": 39.179848496648795
+    },
+    "depth_shares": {
+     "offset": 0.10070287243884674,
+     "jitter": 0.02325224996600611,
+     "residual": 0.876044877595147
+    },
+    "depth_ms_total": 0.011467278112987941,
+    "camera_nonrigid_share": 0.3366361168925882,
+    "camera_n_pairs": 416,
+    "camera_tot2": 67.17466337173866,
+    "camera_nr2": 22.61341783102888
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_16",
+    "file": "po_mini/dancingroom1_3rd2_16__c0.npz",
+    "scale": 1.3046112538951251,
+    "n_groups": 5,
+    "self": {
+     "n": 85968,
+     "sq_mean": 0.19880299587512745,
+     "radial_share": 0.872059010376546,
+     "perp_share": 0.12794098962345402,
+     "e_d_rms": 0.06104479797776078,
+     "e_d_mean": -0.018422360244867975,
+     "angle_rms": 0.030454393345356046,
+     "px_median": 13.35239335728932,
+     "px_mean": 18.01588025140553
+    },
+    "depth_shares": {
+     "offset": 0.14110459206860165,
+     "jitter": 0.046444321064374704,
+     "residual": 0.8124510868670236
+    },
+    "depth_ms_total": 0.0037264673601456275,
+    "camera_nonrigid_share": 0.7095395719837865,
+    "camera_n_pairs": 416,
+    "camera_tot2": 40.79046706001241,
+    "camera_nr2": 28.942450538779948
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_17",
+    "file": "po_mini/dancingroom1_3rd2_17__c0.npz",
+    "scale": 1.1664808867538043,
+    "n_groups": 14,
+    "self": {
+     "n": 69792,
+     "sq_mean": 0.39893528580426574,
+     "radial_share": 0.7983950722933243,
+     "perp_share": 0.20160492770667582,
+     "e_d_rms": 0.1473689583071675,
+     "e_d_mean": -0.016947575741412597,
+     "angle_rms": 0.09405083764918945,
+     "px_median": 18.907190242268495,
+     "px_mean": 52.76038709786157
+    },
+    "depth_shares": {
+     "offset": 0.12202853439342162,
+     "jitter": 0.18711410618297208,
+     "residual": 0.6908573594236063
+    },
+    "depth_ms_total": 0.02171760987253967,
+    "camera_nonrigid_share": 0.19326441811479275,
+    "camera_n_pairs": 416,
+    "camera_tot2": 405.4950539422822,
+    "camera_nr2": 78.36776564858167
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_20",
+    "file": "po_mini/dancingroom1_3rd2_20__c0.npz",
+    "scale": 1.236241970741167,
+    "n_groups": 12,
+    "self": {
+     "n": 58224,
+     "sq_mean": 0.39251347533486497,
+     "radial_share": 0.9100240033434372,
+     "perp_share": 0.08997599665656286,
+     "e_d_rms": 0.09950057938184842,
+     "e_d_mean": -0.024715813912597067,
+     "angle_rms": 0.04990960483422915,
+     "px_median": 11.479343262538572,
+     "px_mean": 25.14477690357572
+    },
+    "depth_shares": {
+     "offset": 0.1648039557208075,
+     "jitter": 0.09792890698031374,
+     "residual": 0.7372671372988792
+    },
+    "depth_ms_total": 0.00990036529732352,
+    "camera_nonrigid_share": 0.10192471283368512,
+    "camera_n_pairs": 416,
+    "camera_tot2": 154.75839615866215,
+    "camera_nr2": 15.773705087073319
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_24",
+    "file": "po_mini/dancingroom1_3rd2_24__c0.npz",
+    "scale": 1.2289409252031493,
+    "n_groups": 4,
+    "self": {
+     "n": 91584,
+     "sq_mean": 0.3735310172351359,
+     "radial_share": 0.9562290145994771,
+     "perp_share": 0.043770985400522905,
+     "e_d_rms": 0.09092330808916695,
+     "e_d_mean": 0.012808227284368819,
+     "angle_rms": 0.02542733146872732,
+     "px_median": 14.595442364733998,
+     "px_mean": 17.605488050961075
+    },
+    "depth_shares": {
+     "offset": 0.10683358915919508,
+     "jitter": 0.017193088060305787,
+     "residual": 0.8759733227804989
+    },
+    "depth_ms_total": 0.008267047953877572,
+    "camera_nonrigid_share": 0.5003197319231397,
+    "camera_n_pairs": 416,
+    "camera_tot2": 45.85871485375998,
+    "camera_nr2": 22.944019921972895
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_4",
+    "file": "po_mini/dancingroom1_3rd2_4__c0.npz",
+    "scale": 1.1408021370233603,
+    "n_groups": 10,
+    "self": {
+     "n": 70848,
+     "sq_mean": 0.2904183838427066,
+     "radial_share": 0.6854105792301817,
+     "perp_share": 0.3145894207698183,
+     "e_d_rms": 0.0783141688372504,
+     "e_d_mean": -0.01132529633979582,
+     "angle_rms": 0.062123908374457956,
+     "px_median": 38.82855661255185,
+     "px_mean": 42.71398033215284
+    },
+    "depth_shares": {
+     "offset": 0.296679350997267,
+     "jitter": 0.11768418544821248,
+     "residual": 0.5856364635545201
+    },
+    "depth_ms_total": 0.006133109040669361,
+    "camera_nonrigid_share": 0.14526087303572385,
+    "camera_n_pairs": 416,
+    "camera_tot2": 103.92694159038447,
+    "camera_nr2": 15.096518267351927
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd2_5",
+    "file": "po_mini/dancingroom1_3rd2_5__c0.npz",
+    "scale": 1.1275006733352004,
+    "n_groups": 9,
+    "self": {
+     "n": 56640,
+     "sq_mean": 0.23085361304835042,
+     "radial_share": 0.743088619082195,
+     "perp_share": 0.25691138091780474,
+     "e_d_rms": 0.07113566677079902,
+     "e_d_mean": -0.010897282160348918,
+     "angle_rms": 0.04713856844759178,
+     "px_median": 32.93183299377658,
+     "px_mean": 34.80454029513974
+    },
+    "depth_shares": {
+     "offset": 0.22994792155142094,
+     "jitter": 0.02559180918412998,
+     "residual": 0.7444602692644491
+    },
+    "depth_ms_total": 0.00506028308692616,
+    "camera_nonrigid_share": 0.20315272555052383,
+    "camera_n_pairs": 416,
+    "camera_tot2": 25.14967382434646,
+    "camera_nr2": 5.10922478412265
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_0",
+    "file": "po_mini/dancingroom1_3rd_0__c0.npz",
+    "scale": 1.5377756048679447,
+    "n_groups": 1,
+    "self": {
+     "n": 91584,
+     "sq_mean": 1.4593765700518235,
+     "radial_share": 0.9925076846567094,
+     "perp_share": 0.007492315343290538,
+     "e_d_rms": 0.16758169638526016,
+     "e_d_mean": 0.06266603620409084,
+     "angle_rms": 0.015971552250754074,
+     "px_median": 10.177049578776394,
+     "px_mean": 10.453017455305332
+    },
+    "depth_shares": {
+     "offset": 0.13983351859511414,
+     "jitter": 0.0001694408789958245,
+     "residual": 0.8599970405258903
+    },
+    "depth_ms_total": 0.02808362496336151,
+    "camera_nonrigid_share": 0.9005956649035741,
+    "camera_n_pairs": 416,
+    "camera_tot2": 48.74649411540024,
+    "camera_nr2": 43.90088127957704
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_1",
+    "file": "po_mini/dancingroom1_3rd_1__c0.npz",
+    "scale": 1.541021116943998,
+    "n_groups": 2,
+    "self": {
+     "n": 71088,
+     "sq_mean": 1.0018279659662133,
+     "radial_share": 0.9866287009967173,
+     "perp_share": 0.013371299003282794,
+     "e_d_rms": 0.13152833527019336,
+     "e_d_mean": 0.0487159655936297,
+     "angle_rms": 0.01886603048748948,
+     "px_median": 11.050568770556628,
+     "px_mean": 11.453080110530669
+    },
+    "depth_shares": {
+     "offset": 0.15028123747073702,
+     "jitter": 0.0004992079288664299,
+     "residual": 0.8492195546003964
+    },
+    "depth_ms_total": 0.017299702978948395,
+    "camera_nonrigid_share": 0.9122254315186121,
+    "camera_n_pairs": 416,
+    "camera_tot2": 36.615433680570064,
+    "camera_nr2": 33.40152978949915
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_10",
+    "file": "po_mini/dancingroom1_3rd_10__c0.npz",
+    "scale": 1.4347499635568741,
+    "n_groups": 3,
+    "self": {
+     "n": 63888,
+     "sq_mean": 0.43049687014664567,
+     "radial_share": 0.9721682029102353,
+     "perp_share": 0.027831797089764767,
+     "e_d_rms": 0.09319421535715716,
+     "e_d_mean": -0.026173288800709765,
+     "angle_rms": 0.020785027453837705,
+     "px_median": 7.724557685972076,
+     "px_mean": 10.434233486855792
+    },
+    "depth_shares": {
+     "offset": 0.10644425818823879,
+     "jitter": 0.007123933045188729,
+     "residual": 0.8864318087665725
+    },
+    "depth_ms_total": 0.008685161776036189,
+    "camera_nonrigid_share": 0.745684113250115,
+    "camera_n_pairs": 416,
+    "camera_tot2": 24.236015468157365,
+    "camera_nr2": 18.072411703088996
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_16",
+    "file": "po_mini/dancingroom1_3rd_16__c0.npz",
+    "scale": 1.3905368147406665,
+    "n_groups": 2,
+    "self": {
+     "n": 70608,
+     "sq_mean": 0.24373157015865118,
+     "radial_share": 0.9784266686555149,
+     "perp_share": 0.021573331344485348,
+     "e_d_rms": 0.07255414584077485,
+     "e_d_mean": -0.001466785879770591,
+     "angle_rms": 0.013228086063148755,
+     "px_median": 6.149479812860744,
+     "px_mean": 7.4208292670431115
+    },
+    "depth_shares": {
+     "offset": 0.06637641368808064,
+     "jitter": 0.005816306354541892,
+     "residual": 0.9278072799573774
+    },
+    "depth_ms_total": 0.005264104078684428,
+    "camera_nonrigid_share": 0.9177726665367825,
+    "camera_n_pairs": 416,
+    "camera_tot2": 26.34245631027729,
+    "camera_nr2": 24.17638637101188
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_2",
+    "file": "po_mini/dancingroom1_3rd_2__c0.npz",
+    "scale": 1.4646916839986523,
+    "n_groups": 2,
+    "self": {
+     "n": 69936,
+     "sq_mean": 0.5328487170936167,
+     "radial_share": 0.987841419251533,
+     "perp_share": 0.012158580748467093,
+     "e_d_rms": 0.1033796705271206,
+     "e_d_mean": 0.005282511601350699,
+     "angle_rms": 0.014301827769080167,
+     "px_median": 6.119221500028088,
+     "px_mean": 7.245512554161094
+    },
+    "depth_shares": {
+     "offset": 0.017175504325997907,
+     "jitter": 0.0013998271351134985,
+     "residual": 0.9814246685388885
+    },
+    "depth_ms_total": 0.010687356278296006,
+    "camera_nonrigid_share": 0.8773783503800886,
+    "camera_n_pairs": 416,
+    "camera_tot2": 33.03027623926234,
+    "camera_nr2": 28.980049279402632
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_22",
+    "file": "po_mini/dancingroom1_3rd_22__c0.npz",
+    "scale": 1.4115648458093986,
+    "n_groups": 4,
+    "self": {
+     "n": 101760,
+     "sq_mean": 0.7320788352347386,
+     "radial_share": 0.9609629804177054,
+     "perp_share": 0.039037019582294434,
+     "e_d_rms": 0.12183017097747545,
+     "e_d_mean": -0.0023456448495456196,
+     "angle_rms": 0.033608536593851907,
+     "px_median": 8.604903145951832,
+     "px_mean": 12.717322348087803
+    },
+    "depth_shares": {
+     "offset": 0.11085488710932773,
+     "jitter": 0.007165049160136369,
+     "residual": 0.8819800637305357
+    },
+    "depth_ms_total": 0.014842590560400907,
+    "camera_nonrigid_share": 0.8989786293887734,
+    "camera_n_pairs": 416,
+    "camera_tot2": 105.5378875156471,
+    "camera_nr2": 94.87630546740297
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_26",
+    "file": "po_mini/dancingroom1_3rd_26__c0.npz",
+    "scale": 1.4260585751582378,
+    "n_groups": 2,
+    "self": {
+     "n": 79872,
+     "sq_mean": 0.4211440348208619,
+     "radial_share": 0.989452362657717,
+     "perp_share": 0.010547637342283114,
+     "e_d_rms": 0.08936784900768543,
+     "e_d_mean": -3.842185649527074e-05,
+     "angle_rms": 0.010839724756497767,
+     "px_median": 4.97240530998923,
+     "px_mean": 6.09430292272383
+    },
+    "depth_shares": {
+     "offset": 0.05376301214434094,
+     "jitter": 0.0018021396363334867,
+     "residual": 0.9444348482193256
+    },
+    "depth_ms_total": 0.00798661243626046,
+    "camera_nonrigid_share": 0.43690459987694796,
+    "camera_n_pairs": 416,
+    "camera_tot2": 22.249113086085792,
+    "camera_nr2": 9.72073985049328
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_30",
+    "file": "po_mini/dancingroom1_3rd_30__c0.npz",
+    "scale": 1.382543731199829,
+    "n_groups": 3,
+    "self": {
+     "n": 57216,
+     "sq_mean": 0.6534087731481492,
+     "radial_share": 0.9871299079899871,
+     "perp_share": 0.012870092010012664,
+     "e_d_rms": 0.11467584461588153,
+     "e_d_mean": -0.024061955418277856,
+     "angle_rms": 0.017185066954806958,
+     "px_median": 5.173663323284623,
+     "px_mean": 7.083312266914133
+    },
+    "depth_shares": {
+     "offset": 0.14995847428032535,
+     "jitter": 0.0010739164686905734,
+     "residual": 0.848967609250984
+    },
+    "depth_ms_total": 0.013150549338365805,
+    "camera_nonrigid_share": 0.914673221709426,
+    "camera_n_pairs": 416,
+    "camera_tot2": 37.17917034841993,
+    "camera_nr2": 34.00679152307282
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_31",
+    "file": "po_mini/dancingroom1_3rd_31__c0.npz",
+    "scale": 1.434661342092988,
+    "n_groups": 4,
+    "self": {
+     "n": 47664,
+     "sq_mean": 0.5508878997031113,
+     "radial_share": 0.960652413056584,
+     "perp_share": 0.03934758694341602,
+     "e_d_rms": 0.10857821494841156,
+     "e_d_mean": -0.02723255262330732,
+     "angle_rms": 0.028725954333125216,
+     "px_median": 11.418966138683661,
+     "px_mean": 13.970782406615825
+    },
+    "depth_shares": {
+     "offset": 0.15534937929742812,
+     "jitter": 0.005532475033517419,
+     "residual": 0.8391181456690544
+    },
+    "depth_ms_total": 0.011789228761383469,
+    "camera_nonrigid_share": 0.9594876501644712,
+    "camera_n_pairs": 416,
+    "camera_tot2": 60.75463081057042,
+    "camera_nr2": 58.293317953044195
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_32",
+    "file": "po_mini/dancingroom1_3rd_32__c0.npz",
+    "scale": 1.451665428985962,
+    "n_groups": 3,
+    "self": {
+     "n": 71520,
+     "sq_mean": 0.5901777152976101,
+     "radial_share": 0.9712805149964089,
+     "perp_share": 0.028719485003591016,
+     "e_d_rms": 0.11353869405898304,
+     "e_d_mean": -0.006034958556114784,
+     "angle_rms": 0.027665143120860228,
+     "px_median": 7.642558383630776,
+     "px_mean": 11.648910855377641
+    },
+    "depth_shares": {
+     "offset": 0.02104488780362148,
+     "jitter": 0.007869634686062202,
+     "residual": 0.9710854775103167
+    },
+    "depth_ms_total": 0.012891035048619348,
+    "camera_nonrigid_share": 0.9523435171470319,
+    "camera_n_pairs": 416,
+    "camera_tot2": 57.542277322638895,
+    "camera_nr2": 54.80001477009182
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_5",
+    "file": "po_mini/dancingroom1_3rd_5__c0.npz",
+    "scale": 1.4591077076722485,
+    "n_groups": 3,
+    "self": {
+     "n": 50592,
+     "sq_mean": 0.5095993328689719,
+     "radial_share": 0.9812987698460048,
+     "perp_share": 0.01870123015399543,
+     "e_d_rms": 0.09960058205885787,
+     "e_d_mean": 0.00010292610529506452,
+     "angle_rms": 0.018414955217849284,
+     "px_median": 5.643425728979331,
+     "px_mean": 7.823650850814986
+    },
+    "depth_shares": {
+     "offset": 0.05490831456451837,
+     "jitter": 0.014103244784710834,
+     "residual": 0.9309884406507709
+    },
+    "depth_ms_total": 0.00992027594646328,
+    "camera_nonrigid_share": 0.922369193834779,
+    "camera_n_pairs": 416,
+    "camera_tot2": 62.893680452315714,
+    "camera_nr2": 58.01119333610465
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_7",
+    "file": "po_mini/dancingroom1_3rd_7__c0.npz",
+    "scale": 1.432433951452395,
+    "n_groups": 4,
+    "self": {
+     "n": 61536,
+     "sq_mean": 0.5538742095353713,
+     "radial_share": 0.9688880415127691,
+     "perp_share": 0.031111958487231074,
+     "e_d_rms": 0.10802922476340328,
+     "e_d_mean": -0.0011542181251280074,
+     "angle_rms": 0.026979928746436888,
+     "px_median": 5.978122959670904,
+     "px_mean": 10.432872672946482
+    },
+    "depth_shares": {
+     "offset": 0.03403237522004244,
+     "jitter": 0.01092697434812812,
+     "residual": 0.9550406504318293
+    },
+    "depth_ms_total": 0.011670313402981903,
+    "camera_nonrigid_share": 0.95613714689956,
+    "camera_n_pairs": 416,
+    "camera_tot2": 61.368402135256574,
+    "camera_nr2": 58.67660892738908
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_8",
+    "file": "po_mini/dancingroom1_3rd_8__c0.npz",
+    "scale": 1.424738411623343,
+    "n_groups": 4,
+    "self": {
+     "n": 80832,
+     "sq_mean": 0.6301051367215956,
+     "radial_share": 0.9534865474357459,
+     "perp_share": 0.04651345256425401,
+     "e_d_rms": 0.12020241457253156,
+     "e_d_mean": -0.008232829179172632,
+     "angle_rms": 0.03734734755793592,
+     "px_median": 7.704930438393459,
+     "px_mean": 13.333692736470287
+    },
+    "depth_shares": {
+     "offset": 0.04064897263387736,
+     "jitter": 0.008550698015354146,
+     "residual": 0.9508003293507683
+    },
+    "depth_ms_total": 0.014448620469066748,
+    "camera_nonrigid_share": 0.8257361941036265,
+    "camera_n_pairs": 416,
+    "camera_tot2": 73.40674603674711,
+    "camera_nr2": 60.614607093915026
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "dancingroom1_3rd_9",
+    "file": "po_mini/dancingroom1_3rd_9__c0.npz",
+    "scale": 1.4524022278029254,
+    "n_groups": 2,
+    "self": {
+     "n": 84288,
+     "sq_mean": 0.5198441449333864,
+     "radial_share": 0.979362088876295,
+     "perp_share": 0.020637911123705055,
+     "e_d_rms": 0.10039173495226707,
+     "e_d_mean": -0.0009012621383062627,
+     "angle_rms": 0.01816513127134341,
+     "px_median": 7.796713614187068,
+     "px_mean": 9.547126445539938
+    },
+    "depth_shares": {
+     "offset": 0.04376862819016725,
+     "jitter": 0.0025388473579594723,
+     "residual": 0.9536925244518735
+    },
+    "depth_ms_total": 0.01007850044672624,
+    "camera_nonrigid_share": 0.8506883274999791,
+    "camera_n_pairs": 416,
+    "camera_tot2": 35.94717546365284,
+    "camera_nr2": 30.57984257352312
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "egobody_egocentric_1",
+    "file": "po_mini/egobody_egocentric_1__c0.npz",
+    "scale": 0.5903244110150974,
+    "n_groups": 5,
+    "self": {
+     "n": 22752,
+     "sq_mean": 0.10095582781280624,
+     "radial_share": 0.6687368394508817,
+     "perp_share": 0.3312631605491184,
+     "e_d_rms": 0.10882836106576733,
+     "e_d_mean": 0.0405121043826944,
+     "angle_rms": 0.08193494202685968,
+     "px_median": 60.64290346017022,
+     "px_mean": 59.24184198185511
+    },
+    "depth_shares": {
+     "offset": 0.403395732433265,
+     "jitter": 0.039217817771535934,
+     "residual": 0.5573864497951994
+    },
+    "depth_ms_total": 0.01184361217226102,
+    "camera_nonrigid_share": 0.678354324976136,
+    "camera_n_pairs": 416,
+    "camera_tot2": 13.671935521144574,
+    "camera_nr2": 9.274416591563284
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "egobody_egocentric_4",
+    "file": "po_mini/egobody_egocentric_4__c0.npz",
+    "scale": 0.6218862187192493,
+    "n_groups": 4,
+    "self": {
+     "n": 29760,
+     "sq_mean": 0.060345037380702855,
+     "radial_share": 0.5866073797081657,
+     "perp_share": 0.4133926202918343,
+     "e_d_rms": 0.05462439882972753,
+     "e_d_mean": -0.015363362003381748,
+     "angle_rms": 0.045838174308408454,
+     "px_median": 23.993985337165245,
+     "px_mean": 31.232785963125178
+    },
+    "depth_shares": {
+     "offset": 0.4318363222400035,
+     "jitter": 0.021164944217588896,
+     "residual": 0.5469987335424071
+    },
+    "depth_ms_total": 0.0029838249475091397,
+    "camera_nonrigid_share": 0.08955602731542588,
+    "camera_n_pairs": 416,
+    "camera_tot2": 16.486774300140056,
+    "camera_nr2": 1.476490009566604
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "egobody_egocentric_7",
+    "file": "po_mini/egobody_egocentric_7__c0.npz",
+    "scale": 0.6759174658371923,
+    "n_groups": 6,
+    "self": {
+     "n": 27168,
+     "sq_mean": 0.0494233293441586,
+     "radial_share": 0.525842817761294,
+     "perp_share": 0.47415718223870595,
+     "e_d_rms": 0.05695931227510876,
+     "e_d_mean": 0.016255833591070776,
+     "angle_rms": 0.05009548960014206,
+     "px_median": 30.928534046928007,
+     "px_mean": 34.21961123016118
+    },
+    "depth_shares": {
+     "offset": 0.2674143941005478,
+     "jitter": 0.05642083049746523,
+     "residual": 0.6761647754019869
+    },
+    "depth_ms_total": 0.0032443632548533542,
+    "camera_nonrigid_share": 0.5106174005181207,
+    "camera_n_pairs": 416,
+    "camera_tot2": 16.508338272380563,
+    "camera_nr2": 8.429444775516766
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_3rd_1",
+    "file": "po_mini/seminar_g110_0315_3rd_1__c0.npz",
+    "scale": 1.084039771340553,
+    "n_groups": 2,
+    "self": {
+     "n": 130176,
+     "sq_mean": 0.0726338014913272,
+     "radial_share": 0.6349723303403552,
+     "perp_share": 0.3650276696596454,
+     "e_d_rms": 0.044208469226256555,
+     "e_d_mean": 0.014130513503461383,
+     "angle_rms": 0.02815161105087614,
+     "px_median": 18.712526772662635,
+     "px_mean": 20.372736580605974
+    },
+    "depth_shares": {
+     "offset": 0.16752199361799716,
+     "jitter": 0.010863723261414389,
+     "residual": 0.8216142831205883
+    },
+    "depth_ms_total": 0.001954388751328873,
+    "camera_nonrigid_share": 0.25623860402180426,
+    "camera_n_pairs": 416,
+    "camera_tot2": 59.542742246931624,
+    "camera_nr2": 15.257149152983867
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_3rd_12",
+    "file": "po_mini/seminar_g110_0315_3rd_12__c0.npz",
+    "scale": 1.1303115227348872,
+    "n_groups": 9,
+    "self": {
+     "n": 46416,
+     "sq_mean": 0.08217444874629204,
+     "radial_share": 0.9547989186976372,
+     "perp_share": 0.04520108130236304,
+     "e_d_rms": 0.057209986844323595,
+     "e_d_mean": -0.016001362334039617,
+     "angle_rms": 0.011745814580715495,
+     "px_median": 6.778316758640813,
+     "px_mean": 8.284091739789519
+    },
+    "depth_shares": {
+     "offset": 0.2788613586694399,
+     "jitter": 0.009920321516634977,
+     "residual": 0.711218319813925
+    },
+    "depth_ms_total": 0.0032729825947276792,
+    "camera_nonrigid_share": 0.31989481493545013,
+    "camera_n_pairs": 416,
+    "camera_tot2": 14.01304993357003,
+    "camera_nr2": 4.482702015180607
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_3rd_4",
+    "file": "po_mini/seminar_g110_0315_3rd_4__c0.npz",
+    "scale": 0.8919927842772104,
+    "n_groups": 6,
+    "self": {
+     "n": 31344,
+     "sq_mean": 0.09160213108388249,
+     "radial_share": 0.7563343071656173,
+     "perp_share": 0.24366569283438264,
+     "e_d_rms": 0.07458082275316208,
+     "e_d_mean": 0.000366949778262626,
+     "angle_rms": 0.03425008158938969,
+     "px_median": 24.160194041181423,
+     "px_mean": 24.31846041164917
+    },
+    "depth_shares": {
+     "offset": 0.004071926428233272,
+     "jitter": 0.001981992680484074,
+     "residual": 0.9939460808912826
+    },
+    "depth_ms_total": 0.00556229912253858,
+    "camera_nonrigid_share": 0.8226571799055278,
+    "camera_n_pairs": 416,
+    "camera_tot2": 18.526881622519525,
+    "camera_nr2": 15.241272188025462
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_3rd_8",
+    "file": "po_mini/seminar_g110_0315_3rd_8__c0.npz",
+    "scale": 1.0788680719390036,
+    "n_groups": 6,
+    "self": {
+     "n": 50112,
+     "sq_mean": 0.08018745636021324,
+     "radial_share": 0.8647237122265601,
+     "perp_share": 0.13527628777344022,
+     "e_d_rms": 0.052598143364880466,
+     "e_d_mean": 0.009078151198161808,
+     "angle_rms": 0.019389749172972197,
+     "px_median": 13.51094806970718,
+     "px_mean": 14.0480209778105
+    },
+    "depth_shares": {
+     "offset": 0.1380764984144444,
+     "jitter": 0.007172578426359298,
+     "residual": 0.8547509231591968
+    },
+    "depth_ms_total": 0.002766564685432519,
+    "camera_nonrigid_share": 0.5252197368597933,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.819437753728263,
+    "camera_nr2": 3.0564835656851046
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_0",
+    "file": "po_mini/seminar_g110_0315_ego1_0__c0.npz",
+    "scale": 0.8167283788090196,
+    "n_groups": 10,
+    "self": {
+     "n": 16848,
+     "sq_mean": 0.07506573496462214,
+     "radial_share": 0.508993553583949,
+     "perp_share": 0.49100644641605096,
+     "e_d_rms": 0.055039367140666554,
+     "e_d_mean": 0.01065084338061365,
+     "angle_rms": 0.056445351477690815,
+     "px_median": 37.36050152209237,
+     "px_mean": 63.588914706033314
+    },
+    "depth_shares": {
+     "offset": 0.037491288767825974,
+     "jitter": 0.01243635861219361,
+     "residual": 0.9500723526199807
+    },
+    "depth_ms_total": 0.003029331935245085,
+    "camera_nonrigid_share": 0.02430016208759242,
+    "camera_n_pairs": 416,
+    "camera_tot2": 311.94703122110036,
+    "camera_nr2": 7.580363421415992
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_12",
+    "file": "po_mini/seminar_g110_0315_ego1_12__c0.npz",
+    "scale": 0.7110247606389127,
+    "n_groups": 339,
+    "self": {
+     "n": 9936,
+     "sq_mean": 0.24558200183784903,
+     "radial_share": 0.9592063645177207,
+     "perp_share": 0.040793635482279586,
+     "e_d_rms": 0.13899779247038652,
+     "e_d_mean": 0.01263496417802649,
+     "angle_rms": 0.04771129338709184,
+     "px_median": 15.720494761238824,
+     "px_mean": 24.197649769812344
+    },
+    "depth_shares": {
+     "offset": 0.17813561469963626,
+     "jitter": 0.049234245393949626,
+     "residual": 0.7726301399064138
+    },
+    "depth_ms_total": 0.019320386311640646,
+    "camera_nonrigid_share": 0.3468254334639709,
+    "camera_n_pairs": 416,
+    "camera_tot2": 58.12887955879141,
+    "camera_nr2": 20.160573849752787
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_14",
+    "file": "po_mini/seminar_g110_0315_ego1_14__c0.npz",
+    "scale": 0.6076659955451748,
+    "n_groups": 4,
+    "self": {
+     "n": 15120,
+     "sq_mean": 0.0800369834148768,
+     "radial_share": 0.32634498431565834,
+     "perp_share": 0.6736550156843417,
+     "e_d_rms": 0.061433644387763164,
+     "e_d_mean": -0.0030400205046997157,
+     "angle_rms": 0.06388669916560084,
+     "px_median": 47.775506128758465,
+     "px_mean": 49.23315158460618
+    },
+    "depth_shares": {
+     "offset": 0.0044652199750452514,
+     "jitter": 0.0144423469230863,
+     "residual": 0.981092433101868
+    },
+    "depth_ms_total": 0.0037740926627621452,
+    "camera_nonrigid_share": 0.1021432208415642,
+    "camera_n_pairs": 416,
+    "camera_tot2": 29.423743711698457,
+    "camera_nr2": 3.0054359519296012
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_15",
+    "file": "po_mini/seminar_g110_0315_ego1_15__c0.npz",
+    "scale": 0.6268324045350853,
+    "n_groups": 5,
+    "self": {
+     "n": 12144,
+     "sq_mean": 0.10228655062613336,
+     "radial_share": 0.6026369003074099,
+     "perp_share": 0.3973630996925902,
+     "e_d_rms": 0.1196597989088498,
+     "e_d_mean": 0.035916405737001444,
+     "angle_rms": 0.06034435352352064,
+     "px_median": 43.331528617851745,
+     "px_mean": 44.77680090540287
+    },
+    "depth_shares": {
+     "offset": 0.1407505645713176,
+     "jitter": 0.0024897832936577116,
+     "residual": 0.8567596521350253
+    },
+    "depth_ms_total": 0.014318467474906367,
+    "camera_nonrigid_share": 0.11407080572181993,
+    "camera_n_pairs": 416,
+    "camera_tot2": 36.03726566854256,
+    "camera_nr2": 4.11079993082193
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_18",
+    "file": "po_mini/seminar_g110_0315_ego1_18__c0.npz",
+    "scale": 0.8562013342422589,
+    "n_groups": 339,
+    "self": {
+     "n": 8304,
+     "sq_mean": 0.04620293766620605,
+     "radial_share": 0.9425839552566487,
+     "perp_share": 0.05741604474335166,
+     "e_d_rms": 0.07115524073838574,
+     "e_d_mean": 0.016683597308951588,
+     "angle_rms": 0.021672408642412832,
+     "px_median": 9.186697084962377,
+     "px_mean": 10.88030142538544
+    },
+    "depth_shares": {
+     "offset": 0.054975047446486375,
+     "jitter": 0.0048858611347842255,
+     "residual": 0.9401390914187293
+    },
+    "depth_ms_total": 0.005063068284537629,
+    "camera_nonrigid_share": 0.10720966789322568,
+    "camera_n_pairs": 416,
+    "camera_tot2": 11.325439519367286,
+    "camera_nr2": 1.2141966096161803
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_2",
+    "file": "po_mini/seminar_g110_0315_ego1_2__c0.npz",
+    "scale": 0.8084244588419262,
+    "n_groups": 339,
+    "self": {
+     "n": 17808,
+     "sq_mean": 0.059035271535108215,
+     "radial_share": 0.5459496718559237,
+     "perp_share": 0.4540503281440762,
+     "e_d_rms": 0.05321905194824363,
+     "e_d_mean": -0.012180111703516945,
+     "angle_rms": 0.04602835283412289,
+     "px_median": 32.23107915693569,
+     "px_mean": 37.29118728036603
+    },
+    "depth_shares": {
+     "offset": 0.16661503063740998,
+     "jitter": 0.02301370823216379,
+     "residual": 0.8103712611304262
+    },
+    "depth_ms_total": 0.002832267490269854,
+    "camera_nonrigid_share": 0.033094616908355474,
+    "camera_n_pairs": 416,
+    "camera_tot2": 59.23086032011746,
+    "camera_nr2": 1.9602226314466007
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego1_9",
+    "file": "po_mini/seminar_g110_0315_ego1_9__c0.npz",
+    "scale": 0.8104919775157194,
+    "n_groups": 5,
+    "self": {
+     "n": 92160,
+     "sq_mean": 0.10159496477681043,
+     "radial_share": 0.1985093957395869,
+     "perp_share": 0.801490604260413,
+     "e_d_rms": 0.03894181877657926,
+     "e_d_mean": -0.007210607655283308,
+     "angle_rms": 0.07552230226640937,
+     "px_median": 82.22004390261131,
+     "px_mean": 401.8609074503522
+    },
+    "depth_shares": {
+     "offset": 0.034285561618498384,
+     "jitter": 0.24775054063137117,
+     "residual": 0.7179638977501305
+    },
+    "depth_ms_total": 0.0015164652496279414,
+    "camera_nonrigid_share": 0.012975826247635611,
+    "camera_n_pairs": 416,
+    "camera_tot2": 739.836384409987,
+    "camera_nr2": 9.599988375782939
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego2_10",
+    "file": "po_mini/seminar_g110_0315_ego2_10__c0.npz",
+    "scale": 0.7771676149003515,
+    "n_groups": 7,
+    "self": {
+     "n": 26496,
+     "sq_mean": 0.15611824884636005,
+     "radial_share": 0.8167372165172871,
+     "perp_share": 0.1832627834827128,
+     "e_d_rms": 0.105666497788959,
+     "e_d_mean": -0.006366890280564448,
+     "angle_rms": 0.04299842963741021,
+     "px_median": 27.85287953779911,
+     "px_mean": 31.030372994421093
+    },
+    "depth_shares": {
+     "offset": 0.07047320983558146,
+     "jitter": 0.010713016780634906,
+     "residual": 0.9188137733837834
+    },
+    "depth_ms_total": 0.011165408754984077,
+    "camera_nonrigid_share": 0.13026749023870318,
+    "camera_n_pairs": 416,
+    "camera_tot2": 31.636810347746774,
+    "camera_nr2": 4.121247883158807
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego2_17",
+    "file": "po_mini/seminar_g110_0315_ego2_17__c0.npz",
+    "scale": 0.6453591787619251,
+    "n_groups": 4,
+    "self": {
+     "n": 22032,
+     "sq_mean": 0.14993229727350108,
+     "radial_share": 0.804899991505238,
+     "perp_share": 0.19510000849476183,
+     "e_d_rms": 0.11403068945659775,
+     "e_d_mean": 0.019083665826607706,
+     "angle_rms": 0.05016811876428334,
+     "px_median": 36.31765972343635,
+     "px_mean": 37.92914546770056
+    },
+    "depth_shares": {
+     "offset": 0.03613157770156815,
+     "jitter": 0.0023395215536721266,
+     "residual": 0.9615289007447597
+    },
+    "depth_ms_total": 0.013002998137947034,
+    "camera_nonrigid_share": 0.25209536750598927,
+    "camera_n_pairs": 416,
+    "camera_tot2": 27.86070805759163,
+    "camera_nr2": 7.023555436755639
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego2_2",
+    "file": "po_mini/seminar_g110_0315_ego2_2__c0.npz",
+    "scale": 0.741443199040684,
+    "n_groups": 4,
+    "self": {
+     "n": 24864,
+     "sq_mean": 0.12567146224552778,
+     "radial_share": 0.648544783476208,
+     "perp_share": 0.35145521652379175,
+     "e_d_rms": 0.0762759548447325,
+     "e_d_mean": 0.004959945945229325,
+     "angle_rms": 0.04855582878451709,
+     "px_median": 35.879265134043244,
+     "px_mean": 36.31741432999618
+    },
+    "depth_shares": {
+     "offset": 0.007625069625541356,
+     "jitter": 0.003673801152060481,
+     "residual": 0.9887011292223983
+    },
+    "depth_ms_total": 0.00581802128747567,
+    "camera_nonrigid_share": 0.15618852095493743,
+    "camera_n_pairs": 416,
+    "camera_tot2": 15.73125449771457,
+    "camera_nr2": 2.457041372763746
+   },
+   {
+    "subset": "po_mini",
+    "sequence": "seminar_g110_0315_ego2_3",
+    "file": "po_mini/seminar_g110_0315_ego2_3__c0.npz",
+    "scale": 0.7517893842275685,
+    "n_groups": 6,
+    "self": {
+     "n": 22896,
+     "sq_mean": 0.13271516773543424,
+     "radial_share": 0.8265505112005377,
+     "perp_share": 0.17344948879946256,
+     "e_d_rms": 0.08773200515097863,
+     "e_d_mean": 0.02529689641820076,
+     "angle_rms": 0.03683367294320225,
+     "px_median": 25.584347062527726,
+     "px_mean": 27.111869096090807
+    },
+    "depth_shares": {
+     "offset": 0.09379366734667131,
+     "jitter": 0.03636856298751412,
+     "residual": 0.8698377696658146
+    },
+    "depth_ms_total": 0.007696904727811344,
+    "camera_nonrigid_share": 0.1762289459203735,
+    "camera_n_pairs": 416,
+    "camera_tot2": 22.296281263472466,
+    "camera_nr2": 3.929250145005926
+   }
+  ],
+  "pstudio_mini": [
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_13",
+    "file": "pstudio_mini/basketball_13__c0.npz",
+    "scale": 1.095240911951859,
+    "n_groups": 5,
+    "self": {
+     "n": 4800,
+     "sq_mean": 0.22671098855093552,
+     "radial_share": 0.1192436364970329,
+     "perp_share": 0.8807563635029669,
+     "e_d_rms": 0.050440588629614064,
+     "e_d_mean": -0.02868320405843233,
+     "angle_rms": 0.13202480751019918,
+     "px_median": 90.67632794852037,
+     "px_mean": 94.22010172606096
+    },
+    "depth_shares": {
+     "offset": 0.5795055372630988,
+     "jitter": 0.3061984661184024,
+     "residual": 0.1142959966184987
+    },
+    "depth_ms_total": 0.0025442529813019523,
+    "camera_nonrigid_share": 0.25757305155712873,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.602059178848126,
+    "camera_nr2": 1.4429394776995346
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_14",
+    "file": "pstudio_mini/basketball_14__c0.npz",
+    "scale": 0.9787837340364941,
+    "n_groups": 4,
+    "self": {
+     "n": 2400,
+     "sq_mean": 0.02657291109022287,
+     "radial_share": 0.7235652185199837,
+     "perp_share": 0.2764347814800167,
+     "e_d_rms": 0.06754203418737484,
+     "e_d_mean": 0.014516071292942453,
+     "angle_rms": 0.030546217635827152,
+     "px_median": 15.485210521669106,
+     "px_mean": 18.081761611210034
+    },
+    "depth_shares": {
+     "offset": 0.8345035465087685,
+     "jitter": 0.15249654089106185,
+     "residual": 0.012999912600169663
+    },
+    "depth_ms_total": 0.004561926382168512,
+    "camera_nonrigid_share": 0.23040264912843328,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.28574853832593,
+    "camera_nr2": 0.9874478167286052
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_20",
+    "file": "pstudio_mini/basketball_20__c0.npz",
+    "scale": 0.9542514583365639,
+    "n_groups": 4,
+    "self": {
+     "n": 7152,
+     "sq_mean": 0.028117118907306476,
+     "radial_share": 0.22666448414335763,
+     "perp_share": 0.7733355158566424,
+     "e_d_rms": 0.02677067524396587,
+     "e_d_mean": -0.007804267245219092,
+     "angle_rms": 0.041275166142393196,
+     "px_median": 22.25046204263169,
+     "px_mean": 22.230209343443146
+    },
+    "depth_shares": {
+     "offset": 0.6255624736975265,
+     "jitter": 0.14176970396259408,
+     "residual": 0.23266782233987948
+    },
+    "depth_ms_total": 0.000716669053017887,
+    "camera_nonrigid_share": 0.13885835218284803,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.398655083611032,
+    "camera_nr2": 0.47193164454808756
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_24",
+    "file": "pstudio_mini/basketball_24__c0.npz",
+    "scale": 1.016375078722526,
+    "n_groups": 4,
+    "self": {
+     "n": 5424,
+     "sq_mean": 0.040302482108982275,
+     "radial_share": 0.47535690682609516,
+     "perp_share": 0.5246430931739051,
+     "e_d_rms": 0.04187224112004566,
+     "e_d_mean": 0.003198396447858562,
+     "angle_rms": 0.043888138410431085,
+     "px_median": 21.627050581927307,
+     "px_mean": 23.227338262223245
+    },
+    "depth_shares": {
+     "offset": 0.8194204283555893,
+     "jitter": 0.09120233420449339,
+     "residual": 0.08937723743991688
+    },
+    "depth_ms_total": 0.0017532845764152427,
+    "camera_nonrigid_share": 0.09371876861170145,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.670705177412438,
+    "camera_nr2": 0.5314515063870937
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_29",
+    "file": "pstudio_mini/basketball_29__c0.npz",
+    "scale": 0.9854751459438941,
+    "n_groups": 5,
+    "self": {
+     "n": 10368,
+     "sq_mean": 0.01900593595034849,
+     "radial_share": 0.3451732821342467,
+     "perp_share": 0.6548267178657533,
+     "e_d_rms": 0.03816938718571189,
+     "e_d_mean": 0.015276373129670864,
+     "angle_rms": 0.048401436279982855,
+     "px_median": 29.38961833709596,
+     "px_mean": 27.97551411626926
+    },
+    "depth_shares": {
+     "offset": 0.43651515989428374,
+     "jitter": 0.36041754348510235,
+     "residual": 0.20306729662061387
+    },
+    "depth_ms_total": 0.0014569021181327871,
+    "camera_nonrigid_share": 0.108441065584663,
+    "camera_n_pairs": 416,
+    "camera_tot2": 22.584840161600056,
+    "camera_nr2": 2.4491241331832025
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_3",
+    "file": "pstudio_mini/basketball_3__c0.npz",
+    "scale": 0.9499425816550691,
+    "n_groups": 8,
+    "self": {
+     "n": 12048,
+     "sq_mean": 0.0071048807032081255,
+     "radial_share": 0.29502006235470923,
+     "perp_share": 0.7049799376452907,
+     "e_d_rms": 0.025143475747783077,
+     "e_d_mean": -0.0076712474108841,
+     "angle_rms": 0.04072957943894959,
+     "px_median": 16.674660399651852,
+     "px_mean": 18.00246615937864
+    },
+    "depth_shares": {
+     "offset": 0.10543714240289132,
+     "jitter": 0.43464090840068503,
+     "residual": 0.4599219491964238
+    },
+    "depth_ms_total": 0.0006321943726793558,
+    "camera_nonrigid_share": 0.11322603594930902,
+    "camera_n_pairs": 416,
+    "camera_tot2": 211.000303549146,
+    "camera_nr2": 23.89072795497072
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_4",
+    "file": "pstudio_mini/basketball_4__c0.npz",
+    "scale": 1.0760156970777481,
+    "n_groups": 3,
+    "self": {
+     "n": 5088,
+     "sq_mean": 0.13768345828906534,
+     "radial_share": 0.5542942093781631,
+     "perp_share": 0.44570579062183696,
+     "e_d_rms": 0.13088259907079358,
+     "e_d_mean": -0.05477600175681373,
+     "angle_rms": 0.07253446855481312,
+     "px_median": 46.44927728025412,
+     "px_mean": 47.60014502627731
+    },
+    "depth_shares": {
+     "offset": 0.8061383063670392,
+     "jitter": 0.18280169918445505,
+     "residual": 0.011059994448505738
+    },
+    "depth_ms_total": 0.017130254739526094,
+    "camera_nonrigid_share": 0.33817602456853463,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.4427409491536967,
+    "camera_nr2": 1.1642524478041008
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_5",
+    "file": "pstudio_mini/basketball_5__c0.npz",
+    "scale": 0.9528639684820069,
+    "n_groups": 4,
+    "self": {
+     "n": 3888,
+     "sq_mean": 0.022010179352631703,
+     "radial_share": 0.22284275882879342,
+     "perp_share": 0.7771572411712067,
+     "e_d_rms": 0.02138354416752854,
+     "e_d_mean": -0.005343942697795661,
+     "angle_rms": 0.038154040899018235,
+     "px_median": 15.244416527062786,
+     "px_mean": 18.446961764028377
+    },
+    "depth_shares": {
+     "offset": 0.15395529122524235,
+     "jitter": 0.31663933589809584,
+     "residual": 0.5294053728766618
+    },
+    "depth_ms_total": 0.00045725596116464375,
+    "camera_nonrigid_share": 0.10476837869356813,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.7115305085534893,
+    "camera_nr2": 0.38885103385286346
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_6",
+    "file": "pstudio_mini/basketball_6__c0.npz",
+    "scale": 1.1274707137301683,
+    "n_groups": 4,
+    "self": {
+     "n": 1776,
+     "sq_mean": 0.16931569286848777,
+     "radial_share": 0.6857854304124446,
+     "perp_share": 0.3142145695875554,
+     "e_d_rms": 0.16418654568869906,
+     "e_d_mean": -0.07505481708776907,
+     "angle_rms": 0.07205431364912684,
+     "px_median": 27.549768365290404,
+     "px_mean": 41.60115362167705
+    },
+    "depth_shares": {
+     "offset": 0.9266982973434383,
+     "jitter": 0.06905863578841005,
+     "residual": 0.004243066868151212
+    },
+    "depth_ms_total": 0.026957221785187262,
+    "camera_nonrigid_share": 0.4362087390411227,
+    "camera_n_pairs": 410,
+    "camera_tot2": 1.1261592783391825,
+    "camera_nr2": 0.4912405187637955
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "basketball_9",
+    "file": "pstudio_mini/basketball_9__c0.npz",
+    "scale": 0.9136869487942134,
+    "n_groups": 6,
+    "self": {
+     "n": 6096,
+     "sq_mean": 0.03177569910000042,
+     "radial_share": 0.4149122293209196,
+     "perp_share": 0.5850877706790804,
+     "e_d_rms": 0.05600034113505406,
+     "e_d_mean": 0.021706709006353096,
+     "angle_rms": 0.0679598659377828,
+     "px_median": 38.27533496404003,
+     "px_mean": 40.58870229595336
+    },
+    "depth_shares": {
+     "offset": 0.5423005601049938,
+     "jitter": 0.34867635514889983,
+     "residual": 0.10902308474610645
+    },
+    "depth_ms_total": 0.003136038207242427,
+    "camera_nonrigid_share": 0.043387576384909636,
+    "camera_n_pairs": 416,
+    "camera_tot2": 29.813811755924547,
+    "camera_nr2": 1.2935490348854932
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_11",
+    "file": "pstudio_mini/boxes_11__c0.npz",
+    "scale": 0.9693859197005942,
+    "n_groups": 5,
+    "self": {
+     "n": 11760,
+     "sq_mean": 0.1719353406578894,
+     "radial_share": 0.9053328465362152,
+     "perp_share": 0.09466715346378506,
+     "e_d_rms": 0.09881926017425961,
+     "e_d_mean": 0.04423612082399835,
+     "angle_rms": 0.03797598484898261,
+     "px_median": 12.175847374797131,
+     "px_mean": 15.998243733494167
+    },
+    "depth_shares": {
+     "offset": 0.6456285466078326,
+     "jitter": 0.01383056774139506,
+     "residual": 0.3405408856507723
+    },
+    "depth_ms_total": 0.009765246181388014,
+    "camera_nonrigid_share": 0.13074723004515934,
+    "camera_n_pairs": 416,
+    "camera_tot2": 8.225841457773312,
+    "camera_nr2": 1.075505985394496
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_12",
+    "file": "pstudio_mini/boxes_12__c0.npz",
+    "scale": 0.8671723738872131,
+    "n_groups": 6,
+    "self": {
+     "n": 11136,
+     "sq_mean": 0.08119913577562286,
+     "radial_share": 0.9237055019640754,
+     "perp_share": 0.07629449803592463,
+     "e_d_rms": 0.10236427270333877,
+     "e_d_mean": 0.0164566441780947,
+     "angle_rms": 0.03497825633530614,
+     "px_median": 15.538936706858387,
+     "px_mean": 16.989283181721145
+    },
+    "depth_shares": {
+     "offset": 0.9497805453328546,
+     "jitter": 0.02294916435569773,
+     "residual": 0.027270290311446944
+    },
+    "depth_ms_total": 0.010478444326083506,
+    "camera_nonrigid_share": 0.20662715164679835,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.740068297733948,
+    "camera_nr2": 0.9794268109720538
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_17",
+    "file": "pstudio_mini/boxes_17__c0.npz",
+    "scale": 1.021577233521742,
+    "n_groups": 6,
+    "self": {
+     "n": 8688,
+     "sq_mean": 0.08025101680398129,
+     "radial_share": 0.6355307922623132,
+     "perp_share": 0.3644692077376869,
+     "e_d_rms": 0.05966549979947316,
+     "e_d_mean": 0.026782227663890653,
+     "angle_rms": 0.05570928449593585,
+     "px_median": 25.794134603962085,
+     "px_mean": 27.197907068011183
+    },
+    "depth_shares": {
+     "offset": 0.7452756630463154,
+     "jitter": 0.03095139103186018,
+     "residual": 0.22377294592182498
+    },
+    "depth_ms_total": 0.0035599718663209315,
+    "camera_nonrigid_share": 0.197574590954035,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.65095034375822,
+    "camera_nr2": 1.1164842026695938
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_19",
+    "file": "pstudio_mini/boxes_19__c0.npz",
+    "scale": 1.0209001492401972,
+    "n_groups": 5,
+    "self": {
+     "n": 8880,
+     "sq_mean": 0.0993383010402026,
+     "radial_share": 0.8478948548365297,
+     "perp_share": 0.15210514516347035,
+     "e_d_rms": 0.07100003331572613,
+     "e_d_mean": 0.016963354480465907,
+     "angle_rms": 0.03302589398221772,
+     "px_median": 10.272189491981722,
+     "px_mean": 12.737565380409768
+    },
+    "depth_shares": {
+     "offset": 0.5289683343107902,
+     "jitter": 0.0458622204530427,
+     "residual": 0.42516944523616695
+    },
+    "depth_ms_total": 0.005041004730834222,
+    "camera_nonrigid_share": 0.540281949841587,
+    "camera_n_pairs": 416,
+    "camera_tot2": 2.4040746466163085,
+    "camera_nr2": 1.2988781376385832
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_22",
+    "file": "pstudio_mini/boxes_22__c0.npz",
+    "scale": 0.9523973349013412,
+    "n_groups": 8,
+    "self": {
+     "n": 5760,
+     "sq_mean": 0.012680723350816771,
+     "radial_share": 0.5659527358692971,
+     "perp_share": 0.4340472641307029,
+     "e_d_rms": 0.03262826895211774,
+     "e_d_mean": 0.0075304994201068395,
+     "angle_rms": 0.02806805841343876,
+     "px_median": 11.219972323394208,
+     "px_mean": 13.746176722802279
+    },
+    "depth_shares": {
+     "offset": 0.3936171189401612,
+     "jitter": 0.15171437936890045,
+     "residual": 0.45466850169093825
+    },
+    "depth_ms_total": 0.0010646039348117305,
+    "camera_nonrigid_share": 0.2260263760628162,
+    "camera_n_pairs": 416,
+    "camera_tot2": 11.293489415818197,
+    "camera_nr2": 2.552626485761158
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_27",
+    "file": "pstudio_mini/boxes_27__c0.npz",
+    "scale": 0.9949825439220565,
+    "n_groups": 2,
+    "self": {
+     "n": 5760,
+     "sq_mean": 0.2004276621285633,
+     "radial_share": 0.831528904464731,
+     "perp_share": 0.16847109553526884,
+     "e_d_rms": 0.11238177336307846,
+     "e_d_mean": -0.03021873039730635,
+     "angle_rms": 0.04935613319533639,
+     "px_median": 30.71389813607071,
+     "px_mean": 31.77010975903419
+    },
+    "depth_shares": {
+     "offset": 0.7365771135416956,
+     "jitter": 0.010289028076214745,
+     "residual": 0.25313385838209
+    },
+    "depth_ms_total": 0.01262966298423033,
+    "camera_nonrigid_share": 0.41659701961077344,
+    "camera_n_pairs": 416,
+    "camera_tot2": 1.0874381896522978,
+    "camera_nr2": 0.45302350882008224
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_28",
+    "file": "pstudio_mini/boxes_28__c0.npz",
+    "scale": 0.99663860597667,
+    "n_groups": 5,
+    "self": {
+     "n": 12432,
+     "sq_mean": 0.04299679153125943,
+     "radial_share": 0.9535358190662218,
+     "perp_share": 0.046464180933778215,
+     "e_d_rms": 0.06420257615784139,
+     "e_d_mean": 0.013926181733483686,
+     "angle_rms": 0.02246870415636132,
+     "px_median": 6.210484624117755,
+     "px_mean": 8.663850234464993
+    },
+    "depth_shares": {
+     "offset": 0.9105625525973349,
+     "jitter": 0.06663079002904136,
+     "residual": 0.022806657373624042
+    },
+    "depth_ms_total": 0.004121970785303423,
+    "camera_nonrigid_share": 0.09359724079914516,
+    "camera_n_pairs": 416,
+    "camera_tot2": 8.1949865185811,
+    "camera_nr2": 0.7670281265253835
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_29",
+    "file": "pstudio_mini/boxes_29__c0.npz",
+    "scale": 0.9200383218666206,
+    "n_groups": 6,
+    "self": {
+     "n": 17040,
+     "sq_mean": 0.11051030402689763,
+     "radial_share": 0.9509942911455193,
+     "perp_share": 0.04900570885448072,
+     "e_d_rms": 0.08937139945642081,
+     "e_d_mean": 0.03415425161657922,
+     "angle_rms": 0.025951600594992793,
+     "px_median": 12.21236835197761,
+     "px_mean": 12.509474246685407
+    },
+    "depth_shares": {
+     "offset": 0.8871537485575347,
+     "jitter": 0.03928284645901597,
+     "residual": 0.07356340498344938
+    },
+    "depth_ms_total": 0.007987247040799136,
+    "camera_nonrigid_share": 0.1619176496386918,
+    "camera_n_pairs": 416,
+    "camera_tot2": 13.779830719176793,
+    "camera_nr2": 2.2311978024681505
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_5",
+    "file": "pstudio_mini/boxes_5__c0.npz",
+    "scale": 0.806113414068286,
+    "n_groups": 6,
+    "self": {
+     "n": 12720,
+     "sq_mean": 0.03992913188658064,
+     "radial_share": 0.8506005756556164,
+     "perp_share": 0.14939942434438366,
+     "e_d_rms": 0.07004347734175129,
+     "e_d_mean": 0.007006267325485392,
+     "angle_rms": 0.04175963369103043,
+     "px_median": 17.616840027757824,
+     "px_mean": 19.330638914727277
+    },
+    "depth_shares": {
+     "offset": 0.8772125256407511,
+     "jitter": 0.07383221543569764,
+     "residual": 0.04895525892355184
+    },
+    "depth_ms_total": 0.0049060887181244265,
+    "camera_nonrigid_share": 0.0458390528614806,
+    "camera_n_pairs": 416,
+    "camera_tot2": 23.799134369626024,
+    "camera_nr2": 1.090929778426767
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_6",
+    "file": "pstudio_mini/boxes_6__c0.npz",
+    "scale": 1.025571238061171,
+    "n_groups": 6,
+    "self": {
+     "n": 10656,
+     "sq_mean": 0.1798819898063865,
+     "radial_share": 0.7080162443443426,
+     "perp_share": 0.29198375565565743,
+     "e_d_rms": 0.08573347663226291,
+     "e_d_mean": 0.023440294523431715,
+     "angle_rms": 0.06467341472641915,
+     "px_median": 28.064511659458223,
+     "px_mean": 29.77730805558921
+    },
+    "depth_shares": {
+     "offset": 0.3455315550991439,
+     "jitter": 0.018760425587277602,
+     "residual": 0.6357080193135786
+    },
+    "depth_ms_total": 0.007350229015454768,
+    "camera_nonrigid_share": 0.3590853014901893,
+    "camera_n_pairs": 416,
+    "camera_tot2": 2.287045209529089,
+    "camera_nr2": 0.8212443185854461
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "boxes_7",
+    "file": "pstudio_mini/boxes_7__c0.npz",
+    "scale": 0.9703608401038736,
+    "n_groups": 5,
+    "self": {
+     "n": 8304,
+     "sq_mean": 0.016996774559777477,
+     "radial_share": 0.5727352067969689,
+     "perp_share": 0.42726479320303096,
+     "e_d_rms": 0.03323814409172306,
+     "e_d_mean": 0.0028230263156382124,
+     "angle_rms": 0.03164645806523088,
+     "px_median": 12.170687676312355,
+     "px_mean": 14.490253122389193
+    },
+    "depth_shares": {
+     "offset": 0.5214806051628601,
+     "jitter": 0.08735485036031723,
+     "residual": 0.3911645444768223
+    },
+    "depth_ms_total": 0.0011047742226621446,
+    "camera_nonrigid_share": 0.11236015046540697,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.29524219685765,
+    "camera_nr2": 0.48261405952429076
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_1",
+    "file": "pstudio_mini/football_1__c0.npz",
+    "scale": 1.1450204744576993,
+    "n_groups": 3,
+    "self": {
+     "n": 7488,
+     "sq_mean": 0.07133072537134709,
+     "radial_share": 0.7633989240712196,
+     "perp_share": 0.23660107592878027,
+     "e_d_rms": 0.06962375577499862,
+     "e_d_mean": -0.006554757597240291,
+     "angle_rms": 0.0410895037196228,
+     "px_median": 20.715732261803367,
+     "px_mean": 25.736579934960318
+    },
+    "depth_shares": {
+     "offset": 0.7597166297810061,
+     "jitter": 0.04664514138171011,
+     "residual": 0.19363822883728377
+    },
+    "depth_ms_total": 0.004847467368216653,
+    "camera_nonrigid_share": 0.36106530008037185,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.962300225520295,
+    "camera_nr2": 2.152779720096754
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_16",
+    "file": "pstudio_mini/football_16__c0.npz",
+    "scale": 1.012513592740923,
+    "n_groups": 1,
+    "self": {
+     "n": 5760,
+     "sq_mean": 0.0104487570501172,
+     "radial_share": 0.701447495692164,
+     "perp_share": 0.2985525043078363,
+     "e_d_rms": 0.033289586167264164,
+     "e_d_mean": 0.011517985827688914,
+     "angle_rms": 0.018376462214626403,
+     "px_median": 6.016374977308036,
+     "px_mean": 7.537950996415362
+    },
+    "depth_shares": {
+     "offset": 0.11971161421095104,
+     "jitter": 0.07564206078294368,
+     "residual": 0.8046463250061053
+    },
+    "depth_ms_total": 0.0011081965471877056,
+    "camera_nonrigid_share": 0.19470454864787157,
+    "camera_n_pairs": 416,
+    "camera_tot2": 0.7628088344998645,
+    "camera_nr2": 0.14852234982590506
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_19",
+    "file": "pstudio_mini/football_19__c0.npz",
+    "scale": 1.096408478773161,
+    "n_groups": 2,
+    "self": {
+     "n": 6336,
+     "sq_mean": 0.08763854503822119,
+     "radial_share": 0.37832074110303815,
+     "perp_share": 0.6216792588969619,
+     "e_d_rms": 0.05425624492184788,
+     "e_d_mean": -0.010972621240783945,
+     "angle_rms": 0.058103386931476826,
+     "px_median": 30.314122852152515,
+     "px_mean": 29.89957721677771
+    },
+    "depth_shares": {
+     "offset": 0.6407099363445663,
+     "jitter": 0.09173982660697265,
+     "residual": 0.267550237048461
+    },
+    "depth_ms_total": 0.0029437401130195436,
+    "camera_nonrigid_share": 0.1621642396953221,
+    "camera_n_pairs": 416,
+    "camera_tot2": 2.2149429581370144,
+    "camera_nr2": 0.35918454077479656
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_21",
+    "file": "pstudio_mini/football_21__c0.npz",
+    "scale": 0.9695597126906212,
+    "n_groups": 4,
+    "self": {
+     "n": 7728,
+     "sq_mean": 0.008604814738940075,
+     "radial_share": 0.3173627337541262,
+     "perp_share": 0.6826372662458738,
+     "e_d_rms": 0.02596185322085795,
+     "e_d_mean": 0.006878834540041713,
+     "angle_rms": 0.02804060024539629,
+     "px_median": 15.520690429840029,
+     "px_mean": 14.891247996546472
+    },
+    "depth_shares": {
+     "offset": 0.11434225012215032,
+     "jitter": 0.4220472615733744,
+     "residual": 0.4636104883044755
+    },
+    "depth_ms_total": 0.0006740178226613721,
+    "camera_nonrigid_share": 0.10113546025709311,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.088487373911543,
+    "camera_nr2": 0.6157619728300441
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_22",
+    "file": "pstudio_mini/football_22__c0.npz",
+    "scale": 1.0338294471197622,
+    "n_groups": 3,
+    "self": {
+     "n": 7344,
+     "sq_mean": 0.009907584261129197,
+     "radial_share": 0.7027427234031098,
+     "perp_share": 0.2972572765968911,
+     "e_d_rms": 0.021661830019226183,
+     "e_d_mean": 0.00797651693202137,
+     "angle_rms": 0.017256460621982845,
+     "px_median": 9.926256075745844,
+     "px_mean": 10.26969077179716
+    },
+    "depth_shares": {
+     "offset": 0.562711177232103,
+     "jitter": 0.045813369738779204,
+     "residual": 0.39147545302911835
+    },
+    "depth_ms_total": 0.0004692348797818486,
+    "camera_nonrigid_share": 0.019133884488646342,
+    "camera_n_pairs": 416,
+    "camera_tot2": 11.887767688318231,
+    "camera_nr2": 0.2274591737761434
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_29",
+    "file": "pstudio_mini/football_29__c0.npz",
+    "scale": 0.9130269814410671,
+    "n_groups": 4,
+    "self": {
+     "n": 7488,
+     "sq_mean": 0.02166843257872205,
+     "radial_share": 0.3055901298582998,
+     "perp_share": 0.6944098701417001,
+     "e_d_rms": 0.02937784601527809,
+     "e_d_mean": -0.0010263692098832604,
+     "angle_rms": 0.04498444758892993,
+     "px_median": 29.433733419456587,
+     "px_mean": 29.54636335839295
+    },
+    "depth_shares": {
+     "offset": 0.4916170660798185,
+     "jitter": 0.251119746097155,
+     "residual": 0.2572631878230265
+    },
+    "depth_ms_total": 0.0008630578364973908,
+    "camera_nonrigid_share": 0.04747806642883527,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.553052020945603,
+    "camera_nr2": 0.26364817273323327
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_3",
+    "file": "pstudio_mini/football_3__c0.npz",
+    "scale": 0.9650312840131517,
+    "n_groups": 2,
+    "self": {
+     "n": 5232,
+     "sq_mean": 0.024178716482164526,
+     "radial_share": 0.1340375370514235,
+     "perp_share": 0.8659624629485766,
+     "e_d_rms": 0.017107139702207244,
+     "e_d_mean": -0.0006456505141815298,
+     "angle_rms": 0.042119982646579075,
+     "px_median": 23.48572911410647,
+     "px_mean": 23.412041304655887
+    },
+    "depth_shares": {
+     "offset": 0.014761903970670337,
+     "jitter": 0.4238171414792254,
+     "residual": 0.5614209545501042
+    },
+    "depth_ms_total": 0.00029265422879083534,
+    "camera_nonrigid_share": 0.1572666399608465,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.3181407486495256,
+    "camera_nr2": 0.5218328464572786
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "football_7",
+    "file": "pstudio_mini/football_7__c0.npz",
+    "scale": 1.0951733224868665,
+    "n_groups": 4,
+    "self": {
+     "n": 5040,
+     "sq_mean": 0.07094994507979267,
+     "radial_share": 0.9414402859281655,
+     "perp_share": 0.05855971407183444,
+     "e_d_rms": 0.0617286876580715,
+     "e_d_mean": 0.028667573934021483,
+     "angle_rms": 0.020654902303835543,
+     "px_median": 9.75373394056813,
+     "px_mean": 10.632001947701115
+    },
+    "depth_shares": {
+     "offset": 0.8996662293617148,
+     "jitter": 0.05431941770203142,
+     "residual": 0.046014352936253694
+    },
+    "depth_ms_total": 0.003810430879987748,
+    "camera_nonrigid_share": 0.04515997968985288,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.561912712471644,
+    "camera_nr2": 0.2060158854421011
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "juggle_22",
+    "file": "pstudio_mini/juggle_22__c0.npz",
+    "scale": 1.0081683441674916,
+    "n_groups": 1,
+    "self": {
+     "n": 11760,
+     "sq_mean": 0.004982716103006226,
+     "radial_share": 0.49827769896581725,
+     "perp_share": 0.5017223010341825,
+     "e_d_rms": 0.017998704747332284,
+     "e_d_mean": -0.006020378213369936,
+     "angle_rms": 0.01808075116693366,
+     "px_median": 7.9871027937556764,
+     "px_mean": 9.02213211217278
+    },
+    "depth_shares": {
+     "offset": 0.11188324277403558,
+     "jitter": 0.11343159338398853,
+     "residual": 0.774685163841976
+    },
+    "depth_ms_total": 0.0003239533725816416,
+    "camera_nonrigid_share": 0.07961002373795853,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.274212582428385,
+    "camera_nr2": 0.4198801888861633
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "juggle_4",
+    "file": "pstudio_mini/juggle_4__c0.npz",
+    "scale": 1.1709074207925283,
+    "n_groups": 1,
+    "self": {
+     "n": 8832,
+     "sq_mean": 0.0164449348902954,
+     "radial_share": 0.34021283601787716,
+     "perp_share": 0.659787163982123,
+     "e_d_rms": 0.02613466544340317,
+     "e_d_mean": -0.007389373964420206,
+     "angle_rms": 0.03439301290530809,
+     "px_median": 19.47786654103671,
+     "px_mean": 18.628068144354028
+    },
+    "depth_shares": {
+     "offset": 0.0799431767750412,
+     "jitter": 0.5597572176086301,
+     "residual": 0.3602996056163287
+    },
+    "depth_ms_total": 0.0006830207378386117,
+    "camera_nonrigid_share": 0.02953131542566502,
+    "camera_n_pairs": 416,
+    "camera_tot2": 11.496797876330081,
+    "camera_nr2": 0.3395155644710194
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "juggle_5",
+    "file": "pstudio_mini/juggle_5__c0.npz",
+    "scale": 0.8597972556509867,
+    "n_groups": 1,
+    "self": {
+     "n": 15840,
+     "sq_mean": 0.003162383090233809,
+     "radial_share": 0.3895951447884492,
+     "perp_share": 0.6104048552115509,
+     "e_d_rms": 0.015705397948099185,
+     "e_d_mean": 0.0019242312098605584,
+     "angle_rms": 0.01956327954000212,
+     "px_median": 8.164327551880614,
+     "px_mean": 8.541049035315044
+    },
+    "depth_shares": {
+     "offset": 0.015011241724325658,
+     "jitter": 0.39569882460345096,
+     "residual": 0.5892899336722234
+    },
+    "depth_ms_total": 0.00024665952470815815,
+    "camera_nonrigid_share": 0.013486684977971253,
+    "camera_n_pairs": 416,
+    "camera_tot2": 31.02391863813865,
+    "camera_nr2": 0.4184098174547869
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "juggle_7",
+    "file": "pstudio_mini/juggle_7__c0.npz",
+    "scale": 0.9608835039404098,
+    "n_groups": 2,
+    "self": {
+     "n": 10608,
+     "sq_mean": 0.00453153945574757,
+     "radial_share": 0.5059471176452602,
+     "perp_share": 0.4940528823547405,
+     "e_d_rms": 0.015708312702448556,
+     "e_d_mean": 0.006112509034155341,
+     "angle_rms": 0.01728600401912735,
+     "px_median": 6.986317129487379,
+     "px_mean": 7.7028619751729215
+    },
+    "depth_shares": {
+     "offset": 0.16556392582052548,
+     "jitter": 0.03534997747374822,
+     "residual": 0.7990860967057264
+    },
+    "depth_ms_total": 0.0002467510879579067,
+    "camera_nonrigid_share": 0.05150088171915202,
+    "camera_n_pairs": 416,
+    "camera_tot2": 10.580948017891565,
+    "camera_nr2": 0.5449281523459295
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "juggle_8",
+    "file": "pstudio_mini/juggle_8__c0.npz",
+    "scale": 0.8937848633039827,
+    "n_groups": 1,
+    "self": {
+     "n": 9312,
+     "sq_mean": 0.013523790983363876,
+     "radial_share": 0.22308038260927446,
+     "perp_share": 0.7769196173907257,
+     "e_d_rms": 0.018270775567139238,
+     "e_d_mean": 0.005398939731833088,
+     "angle_rms": 0.03453601103618532,
+     "px_median": 19.697291933456842,
+     "px_mean": 19.755101186508455
+    },
+    "depth_shares": {
+     "offset": 0.08731784185831448,
+     "jitter": 0.29244931583923495,
+     "residual": 0.6202328423024505
+    },
+    "depth_ms_total": 0.00033382123982477217,
+    "camera_nonrigid_share": 0.12429655461092762,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.302999817042062,
+    "camera_nr2": 0.5348480517497802
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "juggle_9",
+    "file": "pstudio_mini/juggle_9__c0.npz",
+    "scale": 0.8689904152741803,
+    "n_groups": 1,
+    "self": {
+     "n": 18384,
+     "sq_mean": 0.009756973476915703,
+     "radial_share": 0.2630206301532247,
+     "perp_share": 0.7369793698467751,
+     "e_d_rms": 0.016322182330943274,
+     "e_d_mean": -0.002492725185094679,
+     "angle_rms": 0.027533466430412788,
+     "px_median": 13.397788295327949,
+     "px_mean": 13.398871796597081
+    },
+    "depth_shares": {
+     "offset": 0.023323426460671398,
+     "jitter": 0.3287706204164228,
+     "residual": 0.647905953122906
+    },
+    "depth_ms_total": 0.00026641363604455677,
+    "camera_nonrigid_share": 0.04057824866691934,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.9298830580507955,
+    "camera_nr2": 0.20004602062841795
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_14",
+    "file": "pstudio_mini/softball_14__c0.npz",
+    "scale": 0.9310823028809582,
+    "n_groups": 1,
+    "self": {
+     "n": 12912,
+     "sq_mean": 0.01096807346522999,
+     "radial_share": 0.33228740793536726,
+     "perp_share": 0.6677125920646324,
+     "e_d_rms": 0.018571464795288997,
+     "e_d_mean": -0.006665141974357774,
+     "angle_rms": 0.02660101052160284,
+     "px_median": 14.952355145386623,
+     "px_mean": 14.868899031210203
+    },
+    "depth_shares": {
+     "offset": 0.1288031519355267,
+     "jitter": 0.49861615910948115,
+     "residual": 0.37258068895499236
+    },
+    "depth_ms_total": 0.0003448993046426586,
+    "camera_nonrigid_share": 0.05662290416862537,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.828188517759779,
+    "camera_nr2": 0.3300089599177947
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_19",
+    "file": "pstudio_mini/softball_19__c0.npz",
+    "scale": 1.084912207820549,
+    "n_groups": 3,
+    "self": {
+     "n": 7680,
+     "sq_mean": 0.017951032519239758,
+     "radial_share": 0.6857587403900406,
+     "perp_share": 0.3142412596099597,
+     "e_d_rms": 0.03187568476830974,
+     "e_d_mean": 0.008806927993049603,
+     "angle_rms": 0.024041101214217334,
+     "px_median": 7.964462081498152,
+     "px_mean": 9.02403858899263
+    },
+    "depth_shares": {
+     "offset": 0.33045642073592146,
+     "jitter": 0.12133513601395395,
+     "residual": 0.5482084432501247
+    },
+    "depth_ms_total": 0.0010160592794486534,
+    "camera_nonrigid_share": 0.34928756932547567,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.594594152572006,
+    "camera_nr2": 1.60483462358892
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_2",
+    "file": "pstudio_mini/softball_2__c0.npz",
+    "scale": 0.9012019520549632,
+    "n_groups": 3,
+    "self": {
+     "n": 14400,
+     "sq_mean": 0.013725463268874066,
+     "radial_share": 0.49783643688227774,
+     "perp_share": 0.5021635631177223,
+     "e_d_rms": 0.03384264885456066,
+     "e_d_mean": 0.001046120774526933,
+     "angle_rms": 0.035890136332198064,
+     "px_median": 12.726114121360121,
+     "px_mean": 15.755338177551614
+    },
+    "depth_shares": {
+     "offset": 0.29298571527425954,
+     "jitter": 0.3656104594811215,
+     "residual": 0.3414038252446189
+    },
+    "depth_ms_total": 0.0011453248814930963,
+    "camera_nonrigid_share": 0.33101199699501854,
+    "camera_n_pairs": 416,
+    "camera_tot2": 12.348528790716394,
+    "camera_nr2": 4.087511174965515
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_21",
+    "file": "pstudio_mini/softball_21__c0.npz",
+    "scale": 0.9708665813416624,
+    "n_groups": 3,
+    "self": {
+     "n": 9312,
+     "sq_mean": 0.01363784635143126,
+     "radial_share": 0.35296698840177876,
+     "perp_share": 0.6470330115982212,
+     "e_d_rms": 0.02679179689786352,
+     "e_d_mean": -0.0014070681163585314,
+     "angle_rms": 0.03503195863195654,
+     "px_median": 12.422697304186489,
+     "px_mean": 15.495528665556899
+    },
+    "depth_shares": {
+     "offset": 0.11229571696483,
+     "jitter": 0.08770234867584698,
+     "residual": 0.8000019343593231
+    },
+    "depth_ms_total": 0.0007178003810163693,
+    "camera_nonrigid_share": 0.11656174786937065,
+    "camera_n_pairs": 416,
+    "camera_tot2": 9.324441156877574,
+    "camera_nr2": 1.0868731591507466
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_23",
+    "file": "pstudio_mini/softball_23__c0.npz",
+    "scale": 0.9179220897671647,
+    "n_groups": 2,
+    "self": {
+     "n": 10752,
+     "sq_mean": 0.0057368385763535415,
+     "radial_share": 0.4696686334055757,
+     "perp_share": 0.5303313665944241,
+     "e_d_rms": 0.017322005199955214,
+     "e_d_mean": -0.0046068267945665025,
+     "angle_rms": 0.018551934326251678,
+     "px_median": 9.66114765306265,
+     "px_mean": 9.635623309397058
+    },
+    "depth_shares": {
+     "offset": 0.07114400594692687,
+     "jitter": 0.2607571098527314,
+     "residual": 0.6680988842003416
+    },
+    "depth_ms_total": 0.00030005186414727556,
+    "camera_nonrigid_share": 0.5804784668463538,
+    "camera_n_pairs": 416,
+    "camera_tot2": 9.84178125351652,
+    "camera_nr2": 5.712942093078457
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_25",
+    "file": "pstudio_mini/softball_25__c0.npz",
+    "scale": 0.9039193997019281,
+    "n_groups": 3,
+    "self": {
+     "n": 12864,
+     "sq_mean": 0.009500070449005539,
+     "radial_share": 0.5601929262174374,
+     "perp_share": 0.4398070737825624,
+     "e_d_rms": 0.022437060163352743,
+     "e_d_mean": -0.006186727050897406,
+     "angle_rms": 0.019418974917323587,
+     "px_median": 6.2542421515429805,
+     "px_mean": 7.285848068838083
+    },
+    "depth_shares": {
+     "offset": 0.20953071122975467,
+     "jitter": 0.2933370849642643,
+     "residual": 0.49713220380598083
+    },
+    "depth_ms_total": 0.0005034216687739107,
+    "camera_nonrigid_share": 0.07178176704430939,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.7729266798480574,
+    "camera_nr2": 0.2708273440081129
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "softball_9",
+    "file": "pstudio_mini/softball_9__c0.npz",
+    "scale": 0.8481225524733608,
+    "n_groups": 3,
+    "self": {
+     "n": 10704,
+     "sq_mean": 0.02438966200075653,
+     "radial_share": 0.22439055519779802,
+     "perp_share": 0.7756094448022018,
+     "e_d_rms": 0.03051630712653563,
+     "e_d_mean": -0.011242492253315342,
+     "angle_rms": 0.05553255949010105,
+     "px_median": 22.648567825176762,
+     "px_mean": 26.10845370369555
+    },
+    "depth_shares": {
+     "offset": 0.17137032161543872,
+     "jitter": 0.18352483121971652,
+     "residual": 0.6451048471648447
+    },
+    "depth_ms_total": 0.0009312450006410491,
+    "camera_nonrigid_share": 0.09268640036042455,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.589795880522663,
+    "camera_nr2": 0.6107844592756
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_17",
+    "file": "pstudio_mini/tennis_17__c0.npz",
+    "scale": 1.0850168485533058,
+    "n_groups": 3,
+    "self": {
+     "n": 2208,
+     "sq_mean": 0.04533832244753494,
+     "radial_share": 0.20984305854224874,
+     "perp_share": 0.7901569414577513,
+     "e_d_rms": 0.03165893857277417,
+     "e_d_mean": -0.010710362959693244,
+     "angle_rms": 0.059592019025208,
+     "px_median": 25.274226829936474,
+     "px_mean": 25.497588827613704
+    },
+    "depth_shares": {
+     "offset": 0.4087079472212861,
+     "jitter": 0.30271077474486263,
+     "residual": 0.28858127803385103
+    },
+    "depth_ms_total": 0.0010022883915546885,
+    "camera_nonrigid_share": 0.41623593249527224,
+    "camera_n_pairs": 416,
+    "camera_tot2": 2.1952335998467847,
+    "camera_nr2": 0.9137351044771798
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_2",
+    "file": "pstudio_mini/tennis_2__c0.npz",
+    "scale": 1.029697893134882,
+    "n_groups": 3,
+    "self": {
+     "n": 7632,
+     "sq_mean": 0.061022589703213594,
+     "radial_share": 0.3656435636353197,
+     "perp_share": 0.6343564363646804,
+     "e_d_rms": 0.05378923845944885,
+     "e_d_mean": 0.0016112328869367606,
+     "angle_rms": 0.07051678145076816,
+     "px_median": 25.372313484968828,
+     "px_mean": 31.04183768442013
+    },
+    "depth_shares": {
+     "offset": 0.09359957358672108,
+     "jitter": 0.6203593611226031,
+     "residual": 0.28604106529067574
+    },
+    "depth_ms_total": 0.0028932821740474514,
+    "camera_nonrigid_share": 0.0981238263019506,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.82345829096643,
+    "camera_nr2": 0.6695438361213947
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_22",
+    "file": "pstudio_mini/tennis_22__c0.npz",
+    "scale": 1.0330806593827777,
+    "n_groups": 3,
+    "self": {
+     "n": 3984,
+     "sq_mean": 0.02513620124097132,
+     "radial_share": 0.6502791500017413,
+     "perp_share": 0.34972084999825886,
+     "e_d_rms": 0.05212364159132637,
+     "e_d_mean": 0.0117693680373832,
+     "angle_rms": 0.03629041333460562,
+     "px_median": 10.24424190980395,
+     "px_mean": 14.631148861016422
+    },
+    "depth_shares": {
+     "offset": 0.21328080489868873,
+     "jitter": 0.5444830913035175,
+     "residual": 0.24223610379779395
+    },
+    "depth_ms_total": 0.002716874012741048,
+    "camera_nonrigid_share": 0.12087067454861389,
+    "camera_n_pairs": 416,
+    "camera_tot2": 10.083098259660241,
+    "camera_nr2": 1.2187508881850881
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_23",
+    "file": "pstudio_mini/tennis_23__c0.npz",
+    "scale": 0.9428221041627985,
+    "n_groups": 3,
+    "self": {
+     "n": 4992,
+     "sq_mean": 0.05901928667172287,
+     "radial_share": 0.8752509077241205,
+     "perp_share": 0.12474909227587942,
+     "e_d_rms": 0.060562951524794864,
+     "e_d_mean": 0.010135736018498225,
+     "angle_rms": 0.03141926831423086,
+     "px_median": 8.438677417692135,
+     "px_mean": 11.161615894453465
+    },
+    "depth_shares": {
+     "offset": 0.0353457117886026,
+     "jitter": 0.012384917921657591,
+     "residual": 0.9522693702897398
+    },
+    "depth_ms_total": 0.0036678710973946527,
+    "camera_nonrigid_share": 0.22999272130577747,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.542562010770241,
+    "camera_nr2": 0.8147634772515147
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_26",
+    "file": "pstudio_mini/tennis_26__c0.npz",
+    "scale": 0.8171465720371439,
+    "n_groups": 3,
+    "self": {
+     "n": 4704,
+     "sq_mean": 0.019448379505093753,
+     "radial_share": 0.5833107473667415,
+     "perp_share": 0.4166892526332586,
+     "e_d_rms": 0.040986020999139304,
+     "e_d_mean": 0.004481252312556194,
+     "angle_rms": 0.03252791159892011,
+     "px_median": 9.52047441241077,
+     "px_mean": 13.011144359655077
+    },
+    "depth_shares": {
+     "offset": 0.17634052293726254,
+     "jitter": 0.5002141840046366,
+     "residual": 0.32344529305810094
+    },
+    "depth_ms_total": 0.001679853917341888,
+    "camera_nonrigid_share": 0.03612480045318893,
+    "camera_n_pairs": 416,
+    "camera_tot2": 9.67458364095329,
+    "camera_nr2": 0.3494924034971236
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_28",
+    "file": "pstudio_mini/tennis_28__c0.npz",
+    "scale": 1.0881429391999151,
+    "n_groups": 2,
+    "self": {
+     "n": 5760,
+     "sq_mean": 0.04842690578583236,
+     "radial_share": 0.3461845638589061,
+     "perp_share": 0.6538154361410939,
+     "e_d_rms": 0.04497455666669507,
+     "e_d_mean": -0.007629291533590715,
+     "angle_rms": 0.05846187336548504,
+     "px_median": 15.593809204717413,
+     "px_mean": 22.310698908055013
+    },
+    "depth_shares": {
+     "offset": 0.24516540270459503,
+     "jitter": 0.28146136757657064,
+     "residual": 0.4733732297188343
+    },
+    "depth_ms_total": 0.002022710747365766,
+    "camera_nonrigid_share": 0.29713200132525447,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.207361916916721,
+    "camera_nr2": 1.8444058693236332
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_4",
+    "file": "pstudio_mini/tennis_4__c0.npz",
+    "scale": 1.2459495874580153,
+    "n_groups": 3,
+    "self": {
+     "n": 6240,
+     "sq_mean": 0.07067636193954445,
+     "radial_share": 0.3735505393328263,
+     "perp_share": 0.626449460667174,
+     "e_d_rms": 0.052445607735369645,
+     "e_d_mean": 0.009259546750598304,
+     "angle_rms": 0.07778920876564462,
+     "px_median": 27.60402058988269,
+     "px_mean": 34.46657037288792
+    },
+    "depth_shares": {
+     "offset": 0.06670550795988836,
+     "jitter": 0.1760337355718615,
+     "residual": 0.7572607564682502
+    },
+    "depth_ms_total": 0.002750541770732264,
+    "camera_nonrigid_share": 0.19195740792795837,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.140886986850135,
+    "camera_nr2": 0.7948739325183658
+   },
+   {
+    "subset": "pstudio_mini",
+    "sequence": "tennis_5",
+    "file": "pstudio_mini/tennis_5__c0.npz",
+    "scale": 0.9074658919239935,
+    "n_groups": 3,
+    "self": {
+     "n": 5088,
+     "sq_mean": 0.01923181517238737,
+     "radial_share": 0.6415552174763235,
+     "perp_share": 0.3584447825236764,
+     "e_d_rms": 0.04414204482805908,
+     "e_d_mean": 0.009615990110702013,
+     "angle_rms": 0.030793288199032872,
+     "px_median": 8.329799301744112,
+     "px_mean": 11.692928374823913
+    },
+    "depth_shares": {
+     "offset": 0.42670521089189895,
+     "jitter": 0.3140157727527529,
+     "residual": 0.25927901635534806
+    },
+    "depth_ms_total": 0.001948520121602377,
+    "camera_nonrigid_share": 0.07529274959571915,
+    "camera_n_pairs": 416,
+    "camera_tot2": 15.306969719719243,
+    "camera_nr2": 1.1525038381760762
+   }
+  ],
+  "ds_mini": [
+   {
+    "subset": "ds_mini",
+    "sequence": "01f258-3_obj_source_left_6",
+    "file": "ds_mini/01f258-3_obj_source_left_6__c0.npz",
+    "scale": 0.7121760533230581,
+    "n_groups": 3,
+    "self": {
+     "n": 30096,
+     "sq_mean": 0.031623092434087674,
+     "radial_share": 0.8437855074262016,
+     "perp_share": 0.1562144925737982,
+     "e_d_rms": 0.0651471436405059,
+     "e_d_mean": -0.005976249704212159,
+     "angle_rms": 0.028368396434938197,
+     "px_median": 4.460386363885172,
+     "px_mean": 13.48645200737469
+    },
+    "depth_shares": {
+     "offset": 0.011752738527006883,
+     "jitter": 0.0020073060784981463,
+     "residual": 0.986239955394495
+    },
+    "depth_ms_total": 0.004244150324516708,
+    "camera_nonrigid_share": 0.30881670888459267,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.3223352215366875,
+    "camera_nr2": 1.3348093378109165
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "029beb-3_obj_source_left_1",
+    "file": "ds_mini/029beb-3_obj_source_left_1__c0.npz",
+    "scale": 0.7711673084964398,
+    "n_groups": 3,
+    "self": {
+     "n": 44352,
+     "sq_mean": 0.11749629056122338,
+     "radial_share": 0.9431984066642186,
+     "perp_share": 0.05680159333578129,
+     "e_d_rms": 0.08834272197989386,
+     "e_d_mean": -0.012814124027570603,
+     "angle_rms": 0.024086945792724232,
+     "px_median": 3.9001174644278547,
+     "px_mean": 13.875602086601146
+    },
+    "depth_shares": {
+     "offset": 0.05374555966207072,
+     "jitter": 0.003495010268069167,
+     "residual": 0.94275943006986
+    },
+    "depth_ms_total": 0.007804436526816823,
+    "camera_nonrigid_share": 0.18983446014387,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.447056479135494,
+    "camera_nr2": 0.8442045659459858
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "029beb-3_obj_source_left_6",
+    "file": "ds_mini/029beb-3_obj_source_left_6__c0.npz",
+    "scale": 0.741294270254405,
+    "n_groups": 5,
+    "self": {
+     "n": 43920,
+     "sq_mean": 0.10053188362034096,
+     "radial_share": 0.892668405882454,
+     "perp_share": 0.10733159411754621,
+     "e_d_rms": 0.09114066375669144,
+     "e_d_mean": -0.03508887882909771,
+     "angle_rms": 0.03837678302150393,
+     "px_median": 9.08541658318266,
+     "px_mean": 24.12725180272717
+    },
+    "depth_shares": {
+     "offset": 0.4339877167422484,
+     "jitter": 0.010788628471788818,
+     "residual": 0.5552236547859628
+    },
+    "depth_ms_total": 0.008306620590010291,
+    "camera_nonrigid_share": 0.43563440950079674,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.799529361535273,
+    "camera_nr2": 2.5264745487949516
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "26b966-3_obj_source_left_3",
+    "file": "ds_mini/26b966-3_obj_source_left_3__c0.npz",
+    "scale": 0.8512208215856025,
+    "n_groups": 7,
+    "self": {
+     "n": 46464,
+     "sq_mean": 0.500229515256236,
+     "radial_share": 0.6906112991581602,
+     "perp_share": 0.30938870084183995,
+     "e_d_rms": 0.24784806167538398,
+     "e_d_mean": 0.0053656688295084295,
+     "angle_rms": 0.38597968258526144,
+     "px_median": 5.678603344715519,
+     "px_mean": 45.049953827425284
+    },
+    "depth_shares": {
+     "offset": 0.7191956900081055,
+     "jitter": 0.01401420536506883,
+     "residual": 0.26679010462682606
+    },
+    "depth_ms_total": 0.061428661676244924,
+    "camera_nonrigid_share": 0.6831543368715404,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.138217561766504,
+    "camera_nr2": 3.5101956111102988
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "3592f1-3_obj_source_left_2",
+    "file": "ds_mini/3592f1-3_obj_source_left_2__c0.npz",
+    "scale": 0.7023491098073443,
+    "n_groups": 4,
+    "self": {
+     "n": 23664,
+     "sq_mean": 0.014067986969691323,
+     "radial_share": 0.9065084256942231,
+     "perp_share": 0.09349157430577693,
+     "e_d_rms": 0.044726988908138976,
+     "e_d_mean": 0.005431267989303211,
+     "angle_rms": 0.014527170084849828,
+     "px_median": 4.724570609193572,
+     "px_mean": 7.78097144559461
+    },
+    "depth_shares": {
+     "offset": 0.04560860655312986,
+     "jitter": 0.04481145317775922,
+     "residual": 0.9095799402691108
+    },
+    "depth_ms_total": 0.0020005035367887873,
+    "camera_nonrigid_share": 0.7399893761815224,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.1939765156291147,
+    "camera_nr2": 2.363508689338821
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "3592f1-3_obj_source_left_3",
+    "file": "ds_mini/3592f1-3_obj_source_left_3__c0.npz",
+    "scale": 0.676953188774383,
+    "n_groups": 4,
+    "self": {
+     "n": 24000,
+     "sq_mean": 0.030405270790439573,
+     "radial_share": 0.797762543747486,
+     "perp_share": 0.20223745625251388,
+     "e_d_rms": 0.0690980313920316,
+     "e_d_mean": -0.018361415609248696,
+     "angle_rms": 0.03411034519920289,
+     "px_median": 8.966200895227548,
+     "px_mean": 21.842172145566167
+    },
+    "depth_shares": {
+     "offset": 0.1636489006482127,
+     "jitter": 0.0038072044022099917,
+     "residual": 0.8325438949495775
+    },
+    "depth_ms_total": 0.004774537942254185,
+    "camera_nonrigid_share": 0.30989231905990416,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.884748445109219,
+    "camera_nr2": 1.823638342739061
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "3c8664-3_obj_source_left_0",
+    "file": "ds_mini/3c8664-3_obj_source_left_0__c0.npz",
+    "scale": 0.8539223543513026,
+    "n_groups": 4,
+    "self": {
+     "n": 62400,
+     "sq_mean": 0.6045369917031462,
+     "radial_share": 0.9657282456671954,
+     "perp_share": 0.03427175433280445,
+     "e_d_rms": 0.21002309764636387,
+     "e_d_mean": -0.018386780121478655,
+     "angle_rms": 0.03806003962637134,
+     "px_median": 6.408397081278756,
+     "px_mean": 18.627879808320998
+    },
+    "depth_shares": {
+     "offset": 0.016603344408270392,
+     "jitter": 0.0035038464743914863,
+     "residual": 0.9798928091173379
+    },
+    "depth_ms_total": 0.044109701544974095,
+    "camera_nonrigid_share": 0.7817659574070124,
+    "camera_n_pairs": 416,
+    "camera_tot2": 21.427864187030746,
+    "camera_nr2": 16.751574761361525
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "3c8664-3_obj_source_left_3",
+    "file": "ds_mini/3c8664-3_obj_source_left_3__c0.npz",
+    "scale": 0.8300010226424158,
+    "n_groups": 2,
+    "self": {
+     "n": 53616,
+     "sq_mean": 0.5526337863070048,
+     "radial_share": 0.9918933980598813,
+     "perp_share": 0.008106601940118812,
+     "e_d_rms": 0.20764055647546864,
+     "e_d_mean": -0.03874442200799211,
+     "angle_rms": 0.030599609314876763,
+     "px_median": 5.167604785662221,
+     "px_mean": 11.933859727201922
+    },
+    "depth_shares": {
+     "offset": 0.03517873828294268,
+     "jitter": 0.00022663251351903943,
+     "residual": 0.9645946292035384
+    },
+    "depth_ms_total": 0.04311460069344228,
+    "camera_nonrigid_share": 0.7482238522723609,
+    "camera_n_pairs": 416,
+    "camera_tot2": 26.25399778605586,
+    "camera_nr2": 19.643867361032747
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "3c8664-3_obj_source_left_6",
+    "file": "ds_mini/3c8664-3_obj_source_left_6__c0.npz",
+    "scale": 0.8519966588574396,
+    "n_groups": 3,
+    "self": {
+     "n": 50064,
+     "sq_mean": 0.4687134351618913,
+     "radial_share": 0.9956743993457308,
+     "perp_share": 0.004325600654269198,
+     "e_d_rms": 0.18476093254192189,
+     "e_d_mean": -0.026720507439254967,
+     "angle_rms": 0.01569439082914366,
+     "px_median": 4.731088649330738,
+     "px_mean": 7.901329592813772
+    },
+    "depth_shares": {
+     "offset": 0.02423844836035668,
+     "jitter": 0.0001416044411034837,
+     "residual": 0.9756199471985397
+    },
+    "depth_ms_total": 0.034136602193760614,
+    "camera_nonrigid_share": 0.9199609118802589,
+    "camera_n_pairs": 416,
+    "camera_tot2": 21.144173959013262,
+    "camera_nr2": 19.451813556288663
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "423875-3_obj_source_left_0",
+    "file": "ds_mini/423875-3_obj_source_left_0__c0.npz",
+    "scale": 1.0271291759589363,
+    "n_groups": 3,
+    "self": {
+     "n": 72528,
+     "sq_mean": 0.29190351161395506,
+     "radial_share": 0.978295121168262,
+     "perp_share": 0.021704878831737887,
+     "e_d_rms": 0.11817621487500837,
+     "e_d_mean": -0.03275746769158115,
+     "angle_rms": 0.021441449059322326,
+     "px_median": 2.6273863912891726,
+     "px_mean": 7.355874588593282
+    },
+    "depth_shares": {
+     "offset": 0.08333048108740841,
+     "jitter": 0.00011398907883789155,
+     "residual": 0.9165555298337537
+    },
+    "depth_ms_total": 0.01396561776218415,
+    "camera_nonrigid_share": 0.6795782298423299,
+    "camera_n_pairs": 416,
+    "camera_tot2": 7.025960926061822,
+    "camera_nr2": 4.77469008907447
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "423875-3_obj_source_left_5",
+    "file": "ds_mini/423875-3_obj_source_left_5__c0.npz",
+    "scale": 1.0319315127473008,
+    "n_groups": 2,
+    "self": {
+     "n": 68736,
+     "sq_mean": 0.26792547084892576,
+     "radial_share": 0.9883823103754946,
+     "perp_share": 0.011617689624505344,
+     "e_d_rms": 0.11022629939851196,
+     "e_d_mean": -0.011017126782594526,
+     "angle_rms": 0.014889251713376128,
+     "px_median": 2.975749740596239,
+     "px_mean": 6.017580437880597
+    },
+    "depth_shares": {
+     "offset": 0.1614576755893206,
+     "jitter": 0.0002920133740031166,
+     "residual": 0.8382503110366765
+    },
+    "depth_ms_total": 0.012149837079090396,
+    "camera_nonrigid_share": 0.839833843626491,
+    "camera_n_pairs": 416,
+    "camera_tot2": 16.891838855420296,
+    "camera_nr2": 14.186337951866935
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5894d0-3_obj_source_left_0",
+    "file": "ds_mini/5894d0-3_obj_source_left_0__c0.npz",
+    "scale": 1.1163497313394786,
+    "n_groups": 2,
+    "self": {
+     "n": 49248,
+     "sq_mean": 1.6944266142224012,
+     "radial_share": 0.9958990522513358,
+     "perp_share": 0.004100947748664379,
+     "e_d_rms": 0.2447511005684211,
+     "e_d_mean": 0.036014105788047555,
+     "angle_rms": 0.017923147647456374,
+     "px_median": 3.634650544547614,
+     "px_mean": 7.134715035313034
+    },
+    "depth_shares": {
+     "offset": 0.08431602246227056,
+     "jitter": 5.4746727479141394e-05,
+     "residual": 0.9156292308102504
+    },
+    "depth_ms_total": 0.05990310122945339,
+    "camera_nonrigid_share": 0.9036552176976352,
+    "camera_n_pairs": 416,
+    "camera_tot2": 11.427797217606393,
+    "camera_nr2": 10.326788582480535
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5894d0-3_obj_source_left_1",
+    "file": "ds_mini/5894d0-3_obj_source_left_1__c0.npz",
+    "scale": 1.094106077810421,
+    "n_groups": 2,
+    "self": {
+     "n": 59856,
+     "sq_mean": 0.7901342100204588,
+     "radial_share": 0.9909636625616158,
+     "perp_share": 0.009036337438384402,
+     "e_d_rms": 0.1772361861050008,
+     "e_d_mean": 0.02940076156744572,
+     "angle_rms": 0.02257624736119767,
+     "px_median": 3.47496467826341,
+     "px_mean": 8.317219624801048
+    },
+    "depth_shares": {
+     "offset": 0.09899247532358889,
+     "jitter": 0.00017247679028721582,
+     "residual": 0.9008350478861238
+    },
+    "depth_ms_total": 0.03141266566504648,
+    "camera_nonrigid_share": 0.7334239331649103,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.509497209081099,
+    "camera_nr2": 4.040797112845356
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5894d0-3_obj_source_left_3",
+    "file": "ds_mini/5894d0-3_obj_source_left_3__c0.npz",
+    "scale": 1.0466465379661114,
+    "n_groups": 1,
+    "self": {
+     "n": 60048,
+     "sq_mean": 0.8580159650269017,
+     "radial_share": 0.9781194756827861,
+     "perp_share": 0.02188052431721408,
+     "e_d_rms": 0.18707291950763638,
+     "e_d_mean": 0.0033832173738381735,
+     "angle_rms": 0.03879192944807288,
+     "px_median": 3.3068288062935296,
+     "px_mean": 12.791321712876183
+    },
+    "depth_shares": {
+     "offset": 0.0003270679257950446,
+     "jitter": 3.0182884225283017e-05,
+     "residual": 0.9996427491899798
+    },
+    "depth_ms_total": 0.0349962772131106,
+    "camera_nonrigid_share": 0.8328211713159233,
+    "camera_n_pairs": 416,
+    "camera_tot2": 7.001976028391676,
+    "camera_nr2": 5.8313938774911716
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5894d0-3_obj_source_left_6",
+    "file": "ds_mini/5894d0-3_obj_source_left_6__c0.npz",
+    "scale": 1.0704747865604047,
+    "n_groups": 1,
+    "self": {
+     "n": 60192,
+     "sq_mean": 0.9187943146146276,
+     "radial_share": 0.9898478753314278,
+     "perp_share": 0.010152124668572224,
+     "e_d_rms": 0.19428823066529413,
+     "e_d_mean": 0.015054083525212097,
+     "angle_rms": 0.030149781650448952,
+     "px_median": 4.1298396442824234,
+     "px_mean": 10.314302734218154
+    },
+    "depth_shares": {
+     "offset": 0.006003654011830954,
+     "jitter": 1.1707509965073936e-05,
+     "residual": 0.9939846384782038
+    },
+    "depth_ms_total": 0.03774791657505054,
+    "camera_nonrigid_share": 0.6463381809240594,
+    "camera_n_pairs": 416,
+    "camera_tot2": 7.878758273730733,
+    "camera_nr2": 5.092342290583504
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5a0677-3_obj_source_left_0",
+    "file": "ds_mini/5a0677-3_obj_source_left_0__c0.npz",
+    "scale": 1.1737582765876464,
+    "n_groups": 2,
+    "self": {
+     "n": 90144,
+     "sq_mean": 0.9546447121169925,
+     "radial_share": 0.9873406553282734,
+     "perp_share": 0.012659344671726679,
+     "e_d_rms": 0.17276739600373117,
+     "e_d_mean": -0.03884483838985695,
+     "angle_rms": 0.03535099021811484,
+     "px_median": 3.9171220329852243,
+     "px_mean": 11.098657088071347
+    },
+    "depth_shares": {
+     "offset": 0.10244220549336636,
+     "jitter": 0.0002755127538142972,
+     "residual": 0.8972822817528193
+    },
+    "depth_ms_total": 0.02984857312191007,
+    "camera_nonrigid_share": 0.8455269362514799,
+    "camera_n_pairs": 416,
+    "camera_tot2": 21.879786290946598,
+    "camera_nr2": 18.499948668421208
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5a0677-3_obj_source_left_1",
+    "file": "ds_mini/5a0677-3_obj_source_left_1__c0.npz",
+    "scale": 1.2272008980217983,
+    "n_groups": 2,
+    "self": {
+     "n": 94272,
+     "sq_mean": 0.8437842597830711,
+     "radial_share": 0.9837448183586207,
+     "perp_share": 0.0162551816413794,
+     "e_d_rms": 0.16622883595741048,
+     "e_d_mean": -0.03139154106066717,
+     "angle_rms": 0.02931452626775828,
+     "px_median": 4.842658463434115,
+     "px_mean": 14.325824321778091
+    },
+    "depth_shares": {
+     "offset": 0.04347007525001765,
+     "jitter": 0.00012515752121213848,
+     "residual": 0.9564047672287703
+    },
+    "depth_ms_total": 0.027632025903755682,
+    "camera_nonrigid_share": 0.5915358229295204,
+    "camera_n_pairs": 416,
+    "camera_tot2": 12.341608161554177,
+    "camera_nr2": 7.300503340118635
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "5a0677-3_obj_source_left_4",
+    "file": "ds_mini/5a0677-3_obj_source_left_4__c0.npz",
+    "scale": 1.2157052011058214,
+    "n_groups": 2,
+    "self": {
+     "n": 90192,
+     "sq_mean": 1.0060613421320632,
+     "radial_share": 0.9661069912971004,
+     "perp_share": 0.033893008702899366,
+     "e_d_rms": 0.19016512554566442,
+     "e_d_mean": 0.005116009652493134,
+     "angle_rms": 0.1470583670326117,
+     "px_median": 12.152249946456056,
+     "px_mean": 25.05857950550447
+    },
+    "depth_shares": {
+     "offset": 0.03426893023265846,
+     "jitter": 0.00028221547663633565,
+     "residual": 0.9654488542907049
+    },
+    "depth_ms_total": 0.036162774973798315,
+    "camera_nonrigid_share": 0.8515868123739506,
+    "camera_n_pairs": 416,
+    "camera_tot2": 42.562934788100904,
+    "camera_nr2": 36.24603396147918
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "6fae75-3_obj_source_left_0",
+    "file": "ds_mini/6fae75-3_obj_source_left_0__c0.npz",
+    "scale": 0.8198501400751816,
+    "n_groups": 6,
+    "self": {
+     "n": 50208,
+     "sq_mean": 0.08880221786796985,
+     "radial_share": 0.8267769993758703,
+     "perp_share": 0.17322300062412987,
+     "e_d_rms": 0.07675094388086627,
+     "e_d_mean": -0.0013088218548607928,
+     "angle_rms": 0.053907565989626115,
+     "px_median": 4.992220703949094,
+     "px_mean": 30.45184638490437
+    },
+    "depth_shares": {
+     "offset": 0.06252671497794922,
+     "jitter": 0.03436630461779594,
+     "residual": 0.9031069804042545
+    },
+    "depth_ms_total": 0.0058907073866038846,
+    "camera_nonrigid_share": 0.37453879422537373,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.89553992493607,
+    "camera_nr2": 1.8335696205677323
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "6fae75-3_obj_source_left_1",
+    "file": "ds_mini/6fae75-3_obj_source_left_1__c0.npz",
+    "scale": 0.9155894884033017,
+    "n_groups": 4,
+    "self": {
+     "n": 50544,
+     "sq_mean": 0.08630296108519446,
+     "radial_share": 0.97313430564281,
+     "perp_share": 0.026865694357189884,
+     "e_d_rms": 0.07378905706333509,
+     "e_d_mean": -0.00022350641211012863,
+     "angle_rms": 0.01449020331122864,
+     "px_median": 4.005724462505592,
+     "px_mean": 6.974941638875246
+    },
+    "depth_shares": {
+     "offset": 0.006030330038541737,
+     "jitter": 0.006921114688500239,
+     "residual": 0.987048555272958
+    },
+    "depth_ms_total": 0.005444824942296124,
+    "camera_nonrigid_share": 0.4263174272081751,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.8409902309355175,
+    "camera_nr2": 2.0637985003923394
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "87f245-3_obj_source_left_2",
+    "file": "ds_mini/87f245-3_obj_source_left_2__c0.npz",
+    "scale": 0.9335683115964238,
+    "n_groups": 4,
+    "self": {
+     "n": 48000,
+     "sq_mean": 0.2652860701873622,
+     "radial_share": 0.7336382564304966,
+     "perp_share": 0.26636174356950326,
+     "e_d_rms": 0.11435364863793125,
+     "e_d_mean": 0.06104558304205894,
+     "angle_rms": 0.058302224372602476,
+     "px_median": 3.084336067748067,
+     "px_mean": 24.254944599884567
+    },
+    "depth_shares": {
+     "offset": 0.35509118832425596,
+     "jitter": 0.0015743880564720407,
+     "residual": 0.6433344236192722
+    },
+    "depth_ms_total": 0.013076756956807434,
+    "camera_nonrigid_share": 0.3190646869394599,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.7744615666931134,
+    "camera_nr2": 1.2042973981419616
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "90ac3c-3_obj_source_left_0",
+    "file": "ds_mini/90ac3c-3_obj_source_left_0__c0.npz",
+    "scale": 0.834384928118163,
+    "n_groups": 4,
+    "self": {
+     "n": 54816,
+     "sq_mean": 0.060671367239055356,
+     "radial_share": 0.9020268426650254,
+     "perp_share": 0.09797315733497476,
+     "e_d_rms": 0.07237895563275268,
+     "e_d_mean": -0.014243680230348409,
+     "angle_rms": 0.0230669780809568,
+     "px_median": 6.070471386608063,
+     "px_mean": 12.653334318156599
+    },
+    "depth_shares": {
+     "offset": 0.05305150514035617,
+     "jitter": 0.009977716870542141,
+     "residual": 0.9369707779891014
+    },
+    "depth_ms_total": 0.005238713218487981,
+    "camera_nonrigid_share": 0.3328544442410215,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.0447936445074735,
+    "camera_nr2": 2.012036429094194
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "90ac3c-3_obj_source_left_2",
+    "file": "ds_mini/90ac3c-3_obj_source_left_2__c0.npz",
+    "scale": 0.8234913413376519,
+    "n_groups": 7,
+    "self": {
+     "n": 58224,
+     "sq_mean": 0.10331483051456437,
+     "radial_share": 0.9075319083236238,
+     "perp_share": 0.09246809167637615,
+     "e_d_rms": 0.09868726814355623,
+     "e_d_mean": -0.025871467586264685,
+     "angle_rms": 0.03253381043070903,
+     "px_median": 7.005396904238088,
+     "px_mean": 18.403716934960162
+    },
+    "depth_shares": {
+     "offset": 0.16435537260721156,
+     "jitter": 0.028737445369636905,
+     "residual": 0.8069071820231514
+    },
+    "depth_ms_total": 0.00973917689363817,
+    "camera_nonrigid_share": 0.40189734474465166,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.590432862124242,
+    "camera_nr2": 1.8448827785163247
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "90ac3c-3_obj_source_left_4",
+    "file": "ds_mini/90ac3c-3_obj_source_left_4__c0.npz",
+    "scale": 0.79996185652245,
+    "n_groups": 5,
+    "self": {
+     "n": 57120,
+     "sq_mean": 0.08725437030130007,
+     "radial_share": 0.9197782119449945,
+     "perp_share": 0.08022178805500556,
+     "e_d_rms": 0.08532135708577154,
+     "e_d_mean": -0.02462645825668459,
+     "angle_rms": 0.02495474756258107,
+     "px_median": 6.660469643206278,
+     "px_mean": 14.531327294348165
+    },
+    "depth_shares": {
+     "offset": 0.11304630209036283,
+     "jitter": 0.002603458965093938,
+     "residual": 0.8843502389445432
+    },
+    "depth_ms_total": 0.007279733974957737,
+    "camera_nonrigid_share": 0.21697801631624303,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.9156458679291966,
+    "camera_nr2": 1.5005431219688998
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "9c43b3-3_obj_source_left_1",
+    "file": "ds_mini/9c43b3-3_obj_source_left_1__c0.npz",
+    "scale": 0.8035363488962746,
+    "n_groups": 3,
+    "self": {
+     "n": 41616,
+     "sq_mean": 0.2693930389545865,
+     "radial_share": 0.6736501624064761,
+     "perp_share": 0.3263498375935239,
+     "e_d_rms": 0.133810103186274,
+     "e_d_mean": 0.028978165471613693,
+     "angle_rms": 0.08059860327568698,
+     "px_median": 7.006519929592564,
+     "px_mean": 52.126778673310554
+    },
+    "depth_shares": {
+     "offset": 0.13830531236210347,
+     "jitter": 0.002696583034877305,
+     "residual": 0.8589981046030193
+    },
+    "depth_ms_total": 0.017905143714721294,
+    "camera_nonrigid_share": 0.47048787740038833,
+    "camera_n_pairs": 416,
+    "camera_tot2": 11.510586435273709,
+    "camera_nr2": 5.41559137956563
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "9c43b3-3_obj_source_left_3",
+    "file": "ds_mini/9c43b3-3_obj_source_left_3__c0.npz",
+    "scale": 0.8664564088942898,
+    "n_groups": 4,
+    "self": {
+     "n": 35136,
+     "sq_mean": 0.1449853489042691,
+     "radial_share": 0.5702982214576512,
+     "perp_share": 0.4297017785423489,
+     "e_d_rms": 0.08572340125814981,
+     "e_d_mean": 0.025627350201555675,
+     "angle_rms": 0.0528431424818382,
+     "px_median": 4.77952085195739,
+     "px_mean": 30.125648568147767
+    },
+    "depth_shares": {
+     "offset": 0.14843603385419327,
+     "jitter": 0.003930246200621142,
+     "residual": 0.8476337199451855
+    },
+    "depth_ms_total": 0.00734850152326576,
+    "camera_nonrigid_share": 0.40128355799504084,
+    "camera_n_pairs": 416,
+    "camera_tot2": 9.63833214168778,
+    "camera_nr2": 3.8677042149544345
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "9c43b3-3_obj_source_left_6",
+    "file": "ds_mini/9c43b3-3_obj_source_left_6__c0.npz",
+    "scale": 0.8292332807908614,
+    "n_groups": 3,
+    "self": {
+     "n": 38208,
+     "sq_mean": 0.1784355163703704,
+     "radial_share": 0.8031787007628058,
+     "perp_share": 0.19682129923719444,
+     "e_d_rms": 0.10973358505052212,
+     "e_d_mean": 0.004017028269667789,
+     "angle_rms": 0.04627268554262275,
+     "px_median": 5.938227821138784,
+     "px_mean": 24.650985831679858
+    },
+    "depth_shares": {
+     "offset": 0.04700790067897312,
+     "jitter": 0.001239725842282836,
+     "residual": 0.9517523734787441
+    },
+    "depth_ms_total": 0.01204145968804017,
+    "camera_nonrigid_share": 0.4308446461443583,
+    "camera_n_pairs": 416,
+    "camera_tot2": 8.586362361846614,
+    "camera_nr2": 3.699388253457041
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "a16a72-3_obj_source_left_0",
+    "file": "ds_mini/a16a72-3_obj_source_left_0__c0.npz",
+    "scale": 0.8123407817965083,
+    "n_groups": 3,
+    "self": {
+     "n": 45312,
+     "sq_mean": 0.06395489555573936,
+     "radial_share": 0.6867640958444543,
+     "perp_share": 0.3132359041555459,
+     "e_d_rms": 0.07483180602239668,
+     "e_d_mean": 0.016792402214204097,
+     "angle_rms": 0.05749848650343869,
+     "px_median": 5.126184988448916,
+     "px_mean": 24.393918818373784
+    },
+    "depth_shares": {
+     "offset": 0.09712898049957853,
+     "jitter": 0.006953312462510175,
+     "residual": 0.8959177070379113
+    },
+    "depth_ms_total": 0.0055997991925736046,
+    "camera_nonrigid_share": 0.566949901872165,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.7840830937706946,
+    "camera_nr2": 2.1453855386894136
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "a16a72-3_obj_source_left_3",
+    "file": "ds_mini/a16a72-3_obj_source_left_3__c0.npz",
+    "scale": 0.82838685936613,
+    "n_groups": 2,
+    "self": {
+     "n": 36192,
+     "sq_mean": 0.09267127220668064,
+     "radial_share": 0.731016720176308,
+     "perp_share": 0.26898327982369213,
+     "e_d_rms": 0.08951322437886702,
+     "e_d_mean": 0.014045149129572193,
+     "angle_rms": 0.03578906482152286,
+     "px_median": 5.1540963828258075,
+     "px_mean": 19.40525349823379
+    },
+    "depth_shares": {
+     "offset": 0.06241470700605854,
+     "jitter": 0.002413683225042704,
+     "residual": 0.9351716097688988
+    },
+    "depth_ms_total": 0.008012617338701395,
+    "camera_nonrigid_share": 0.33050170787381006,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.989439225693885,
+    "camera_nr2": 1.3185164775505993
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "a16a72-3_obj_source_left_6",
+    "file": "ds_mini/a16a72-3_obj_source_left_6__c0.npz",
+    "scale": 0.8087501861772401,
+    "n_groups": 3,
+    "self": {
+     "n": 42624,
+     "sq_mean": 0.08507121646298943,
+     "radial_share": 0.8638014386245007,
+     "perp_share": 0.13619856137549957,
+     "e_d_rms": 0.09221961377616766,
+     "e_d_mean": -0.013242705117807434,
+     "angle_rms": 0.02656810295288344,
+     "px_median": 4.342670100695737,
+     "px_mean": 13.229355759077901
+    },
+    "depth_shares": {
+     "offset": 0.022166686159279515,
+     "jitter": 0.0003244841881519093,
+     "residual": 0.9775088296525687
+    },
+    "depth_ms_total": 0.008504457165025533,
+    "camera_nonrigid_share": 0.5297677581235436,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.4253540119823205,
+    "camera_nr2": 1.8146421157073596
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "b49cb2-3_obj_source_left_0",
+    "file": "ds_mini/b49cb2-3_obj_source_left_0__c0.npz",
+    "scale": 0.862845303446349,
+    "n_groups": 2,
+    "self": {
+     "n": 54048,
+     "sq_mean": 0.11994642812470108,
+     "radial_share": 0.95021615566514,
+     "perp_share": 0.04978384433486007,
+     "e_d_rms": 0.09449156494103877,
+     "e_d_mean": -0.015674142054941505,
+     "angle_rms": 0.04126736490270604,
+     "px_median": 2.9693102010144976,
+     "px_mean": 11.010500416279365
+    },
+    "depth_shares": {
+     "offset": 0.027517526044936937,
+     "jitter": 0.0005404682536881909,
+     "residual": 0.9719420057013749
+    },
+    "depth_ms_total": 0.00892865584500655,
+    "camera_nonrigid_share": 0.7426250769904926,
+    "camera_n_pairs": 416,
+    "camera_tot2": 2.3917802763895244,
+    "camera_nr2": 1.7761960118981124
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "b49cb2-3_obj_source_left_3",
+    "file": "ds_mini/b49cb2-3_obj_source_left_3__c0.npz",
+    "scale": 0.8625455893319302,
+    "n_groups": 4,
+    "self": {
+     "n": 52800,
+     "sq_mean": 0.11886079954135853,
+     "radial_share": 0.8259607023174341,
+     "perp_share": 0.1740392976825656,
+     "e_d_rms": 0.10388166849596449,
+     "e_d_mean": 0.0029353438412823766,
+     "angle_rms": 0.12320351277845468,
+     "px_median": 4.942705948093156,
+     "px_mean": 32.90049100519201
+    },
+    "depth_shares": {
+     "offset": 0.016649943789409222,
+     "jitter": 0.0016967889031259701,
+     "residual": 0.9816532673074649
+    },
+    "depth_ms_total": 0.010791401049505458,
+    "camera_nonrigid_share": 0.310543887285233,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.537035063381099,
+    "camera_nr2": 1.7194923926170032
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "b49cb2-3_obj_source_left_4",
+    "file": "ds_mini/b49cb2-3_obj_source_left_4__c0.npz",
+    "scale": 0.9118945864179723,
+    "n_groups": 3,
+    "self": {
+     "n": 54480,
+     "sq_mean": 0.17923944859228771,
+     "radial_share": 0.984532990659193,
+     "perp_share": 0.015467009340806971,
+     "e_d_rms": 0.09610607584565659,
+     "e_d_mean": -0.018024487725930176,
+     "angle_rms": 0.015833499307923483,
+     "px_median": 4.673284115910118,
+     "px_mean": 7.0802013911861765
+    },
+    "depth_shares": {
+     "offset": 0.07175059036559982,
+     "jitter": 0.002780082927751502,
+     "residual": 0.9254693267066486
+    },
+    "depth_ms_total": 0.009236377814451097,
+    "camera_nonrigid_share": 0.5560613994983654,
+    "camera_n_pairs": 416,
+    "camera_tot2": 7.662513905830741,
+    "camera_nr2": 4.260828206151928
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "ba3451-3_obj_source_left_0",
+    "file": "ds_mini/ba3451-3_obj_source_left_0__c0.npz",
+    "scale": 0.8377338069612646,
+    "n_groups": 5,
+    "self": {
+     "n": 52848,
+     "sq_mean": 0.5631278099634692,
+     "radial_share": 0.1124445844961076,
+     "perp_share": 0.8875554155038923,
+     "e_d_rms": 0.08598188686203558,
+     "e_d_mean": 0.012719264783958083,
+     "angle_rms": 0.3593488176766373,
+     "px_median": 5.3739219136432075,
+     "px_mean": 3772.304605705074
+    },
+    "depth_shares": {
+     "offset": 0.09595990768959393,
+     "jitter": 0.22106438450439556,
+     "residual": 0.6829757078060107
+    },
+    "depth_ms_total": 0.007392884868355886,
+    "camera_nonrigid_share": 0.7460195571843072,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.097001105787464,
+    "camera_nr2": 3.0564429507231807
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "ba3451-3_obj_source_left_1",
+    "file": "ds_mini/ba3451-3_obj_source_left_1__c0.npz",
+    "scale": 0.8328964435560207,
+    "n_groups": 5,
+    "self": {
+     "n": 52800,
+     "sq_mean": 0.48620288074598883,
+     "radial_share": 0.35511160788856555,
+     "perp_share": 0.6448883921114347,
+     "e_d_rms": 0.2016730415117329,
+     "e_d_mean": 0.06441326267404324,
+     "angle_rms": 0.36310267570958715,
+     "px_median": 5.994311215559801,
+     "px_mean": 607.8380917948517
+    },
+    "depth_shares": {
+     "offset": 0.6923821543934613,
+     "jitter": 0.11221346763063256,
+     "residual": 0.1954043779759062
+    },
+    "depth_ms_total": 0.04067201567259314,
+    "camera_nonrigid_share": 0.28240407392450295,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.422802917774554,
+    "camera_nr2": 1.5314216360692154
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "ba3451-3_obj_source_left_5",
+    "file": "ds_mini/ba3451-3_obj_source_left_5__c0.npz",
+    "scale": 0.8661986841515418,
+    "n_groups": 4,
+    "self": {
+     "n": 56544,
+     "sq_mean": 0.6708253433141249,
+     "radial_share": 0.12397153003452933,
+     "perp_share": 0.876028469965471,
+     "e_d_rms": 0.09180336240803016,
+     "e_d_mean": -0.03712004702335146,
+     "angle_rms": 0.3214262517321504,
+     "px_median": 5.81683204832318,
+     "px_mean": 1652.2432619364743
+    },
+    "depth_shares": {
+     "offset": 0.26193852248891775,
+     "jitter": 0.0011451993192069104,
+     "residual": 0.7369162781918752
+    },
+    "depth_ms_total": 0.008427857349420127,
+    "camera_nonrigid_share": 0.34562114526635895,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.187684248042293,
+    "camera_nr2": 2.1385945163549867
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "ba3451-3_obj_source_left_6",
+    "file": "ds_mini/ba3451-3_obj_source_left_6__c0.npz",
+    "scale": 0.8605678463507809,
+    "n_groups": 5,
+    "self": {
+     "n": 52896,
+     "sq_mean": 0.5846312936173753,
+     "radial_share": 0.15910252860047108,
+     "perp_share": 0.840897471399529,
+     "e_d_rms": 0.11407742751448649,
+     "e_d_mean": 0.017927204907610676,
+     "angle_rms": 0.4347852064716306,
+     "px_median": 4.290041284637071,
+     "px_mean": 5195.075795112227
+    },
+    "depth_shares": {
+     "offset": 0.30762617804062514,
+     "jitter": 0.00950173505959558,
+     "residual": 0.6828720868997793
+    },
+    "depth_ms_total": 0.01301365946832292,
+    "camera_nonrigid_share": 0.9611141329044072,
+    "camera_n_pairs": 416,
+    "camera_tot2": 34.9720447591235,
+    "camera_nr2": 33.6121264745591
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "bd1989-3_obj_source_left_1",
+    "file": "ds_mini/bd1989-3_obj_source_left_1__c0.npz",
+    "scale": 0.8614766254908318,
+    "n_groups": 3,
+    "self": {
+     "n": 48768,
+     "sq_mean": 0.07438847860298513,
+     "radial_share": 0.7694981726579139,
+     "perp_share": 0.2305018273420862,
+     "e_d_rms": 0.08133422162183795,
+     "e_d_mean": 0.0003408076373482804,
+     "angle_rms": 0.03460446266801359,
+     "px_median": 4.191220947021639,
+     "px_mean": 17.995172847001147
+    },
+    "depth_shares": {
+     "offset": 0.02636710252099199,
+     "jitter": 0.004159513792169787,
+     "residual": 0.9694733836868383
+    },
+    "depth_ms_total": 0.006615255606830253,
+    "camera_nonrigid_share": 0.5155281255958337,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.650607347636811,
+    "camera_nr2": 2.913047014405251
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "bd1989-3_obj_source_left_2",
+    "file": "ds_mini/bd1989-3_obj_source_left_2__c0.npz",
+    "scale": 0.9095835355482974,
+    "n_groups": 7,
+    "self": {
+     "n": 47424,
+     "sq_mean": 0.17106563486314746,
+     "radial_share": 0.7070313668428433,
+     "perp_share": 0.29296863315715665,
+     "e_d_rms": 0.09810003661100868,
+     "e_d_mean": 0.011185003212672958,
+     "angle_rms": 0.04838584932499335,
+     "px_median": 7.028801516226489,
+     "px_mean": 30.20514145049034
+    },
+    "depth_shares": {
+     "offset": 0.09011650156196026,
+     "jitter": 0.01436578119563905,
+     "residual": 0.8955177172424005
+    },
+    "depth_ms_total": 0.009623617183081242,
+    "camera_nonrigid_share": 0.3467490047144846,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.059262842949746,
+    "camera_nr2": 1.4075453506673137
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "bd1989-3_obj_source_left_4",
+    "file": "ds_mini/bd1989-3_obj_source_left_4__c0.npz",
+    "scale": 0.8639224015043868,
+    "n_groups": 5,
+    "self": {
+     "n": 50160,
+     "sq_mean": 0.11324944563495756,
+     "radial_share": 0.6777381975773918,
+     "perp_share": 0.3222618024226082,
+     "e_d_rms": 0.08817601665125849,
+     "e_d_mean": -0.01580301528816712,
+     "angle_rms": 0.05002585546842585,
+     "px_median": 6.537002421282471,
+     "px_mean": 27.77716164909642
+    },
+    "depth_shares": {
+     "offset": 0.12414924077707205,
+     "jitter": 0.0035705325279153195,
+     "residual": 0.8722802266950126
+    },
+    "depth_ms_total": 0.007775009912483014,
+    "camera_nonrigid_share": 0.5064249880838319,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.4991077350437365,
+    "camera_nr2": 2.784885569191232
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "bd1989-3_obj_source_left_6",
+    "file": "ds_mini/bd1989-3_obj_source_left_6__c0.npz",
+    "scale": 0.8936297555805338,
+    "n_groups": 5,
+    "self": {
+     "n": 48912,
+     "sq_mean": 0.09025338695196536,
+     "radial_share": 0.7494615377764957,
+     "perp_share": 0.25053846222350445,
+     "e_d_rms": 0.08050416446648626,
+     "e_d_mean": 0.006722541429460938,
+     "angle_rms": 0.032054425070504836,
+     "px_median": 5.947688637702509,
+     "px_mean": 20.073975334874465
+    },
+    "depth_shares": {
+     "offset": 0.03811384639622449,
+     "jitter": 0.0031382324706604333,
+     "residual": 0.9587479211331152
+    },
+    "depth_ms_total": 0.006480920496447069,
+    "camera_nonrigid_share": 0.6675741678766458,
+    "camera_n_pairs": 416,
+    "camera_tot2": 3.0439255469131177,
+    "camera_nr2": 2.0320460640589886
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "cb2501-3_obj_source_left_4",
+    "file": "ds_mini/cb2501-3_obj_source_left_4__c0.npz",
+    "scale": 0.8661579878604772,
+    "n_groups": 2,
+    "self": {
+     "n": 43824,
+     "sq_mean": 0.18699728420716916,
+     "radial_share": 0.9510127137535601,
+     "perp_share": 0.04898728624643987,
+     "e_d_rms": 0.14234958352679944,
+     "e_d_mean": 0.04676128976724318,
+     "angle_rms": 0.028174803284606264,
+     "px_median": 4.808971754960409,
+     "px_mean": 12.196419054591258
+    },
+    "depth_shares": {
+     "offset": 0.2618053895761456,
+     "jitter": 0.00028177440063406015,
+     "residual": 0.7379128360232202
+    },
+    "depth_ms_total": 0.020263403930253252,
+    "camera_nonrigid_share": 0.9004380456126504,
+    "camera_n_pairs": 416,
+    "camera_tot2": 17.714710737292965,
+    "camera_nr2": 15.950999514881511
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "cc2896-3_obj_source_left_3",
+    "file": "ds_mini/cc2896-3_obj_source_left_3__c0.npz",
+    "scale": 0.9090166406053894,
+    "n_groups": 3,
+    "self": {
+     "n": 50016,
+     "sq_mean": 0.20131876830023138,
+     "radial_share": 0.9884051607649739,
+     "perp_share": 0.011594839235026076,
+     "e_d_rms": 0.10965984010355952,
+     "e_d_mean": 0.05058516946207742,
+     "angle_rms": 0.019696670220352635,
+     "px_median": 3.946252973621502,
+     "px_mean": 7.573505333919592
+    },
+    "depth_shares": {
+     "offset": 0.22059147725368175,
+     "jitter": 0.0013056231362967173,
+     "residual": 0.7781028996100214
+    },
+    "depth_ms_total": 0.012025280531538245,
+    "camera_nonrigid_share": 0.7139663065160283,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.676659960705604,
+    "camera_nr2": 3.338977638976374
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "e09bca-3_obj_source_left_2",
+    "file": "ds_mini/e09bca-3_obj_source_left_2__c0.npz",
+    "scale": 0.8572647364631658,
+    "n_groups": 5,
+    "self": {
+     "n": 37584,
+     "sq_mean": 0.09856699926887083,
+     "radial_share": 0.7580122651989336,
+     "perp_share": 0.24198773480106633,
+     "e_d_rms": 0.08527220377601817,
+     "e_d_mean": 0.016863418489493243,
+     "angle_rms": 0.05394848378229793,
+     "px_median": 4.482773096059375,
+     "px_mean": 27.620152322621404
+    },
+    "depth_shares": {
+     "offset": 0.0842643654925989,
+     "jitter": 0.00324356925801496,
+     "residual": 0.9124920652493862
+    },
+    "depth_ms_total": 0.007271348736818769,
+    "camera_nonrigid_share": 0.24934820103216948,
+    "camera_n_pairs": 416,
+    "camera_tot2": 7.207200876283059,
+    "camera_nr2": 1.7971025729786563
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "e09bca-3_obj_source_left_4",
+    "file": "ds_mini/e09bca-3_obj_source_left_4__c0.npz",
+    "scale": 0.8916084344045975,
+    "n_groups": 7,
+    "self": {
+     "n": 41232,
+     "sq_mean": 0.11467436748619811,
+     "radial_share": 0.7887613969749198,
+     "perp_share": 0.2112386030250803,
+     "e_d_rms": 0.08900547067071592,
+     "e_d_mean": 0.021612660277825144,
+     "angle_rms": 0.05507529057533899,
+     "px_median": 6.019738496468079,
+     "px_mean": 26.366657831815097
+    },
+    "depth_shares": {
+     "offset": 0.2171852495846154,
+     "jitter": 0.016522498333248568,
+     "residual": 0.7662922520821359
+    },
+    "depth_ms_total": 0.00792197380931567,
+    "camera_nonrigid_share": 0.6864504482923405,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.354316645804692,
+    "camera_nr2": 2.989022613519431
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "e09bca-3_obj_source_left_5",
+    "file": "ds_mini/e09bca-3_obj_source_left_5__c0.npz",
+    "scale": 0.9028529778238777,
+    "n_groups": 5,
+    "self": {
+     "n": 41616,
+     "sq_mean": 0.07122696236469316,
+     "radial_share": 0.8498326402597397,
+     "perp_share": 0.1501673597402603,
+     "e_d_rms": 0.07169203290941879,
+     "e_d_mean": 0.0281626829690778,
+     "angle_rms": 0.03283211664175892,
+     "px_median": 5.158493282586854,
+     "px_mean": 17.90024576027399
+    },
+    "depth_shares": {
+     "offset": 0.4677131473034072,
+     "jitter": 0.006099590969492022,
+     "residual": 0.5261872617271004
+    },
+    "depth_ms_total": 0.0051397475826851875,
+    "camera_nonrigid_share": 0.7345334273948143,
+    "camera_n_pairs": 416,
+    "camera_tot2": 5.668364615380777,
+    "camera_nr2": 4.1636032886591305
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "fec654-3_obj_source_left_1",
+    "file": "ds_mini/fec654-3_obj_source_left_1__c0.npz",
+    "scale": 0.7399589982147375,
+    "n_groups": 3,
+    "self": {
+     "n": 39312,
+     "sq_mean": 0.029873265342526788,
+     "radial_share": 0.9274061538095968,
+     "perp_share": 0.0725938461904035,
+     "e_d_rms": 0.06912427360256125,
+     "e_d_mean": 0.008781636627166802,
+     "angle_rms": 0.024376023744522645,
+     "px_median": 4.079531725177401,
+     "px_mean": 9.391750177129657
+    },
+    "depth_shares": {
+     "offset": 0.05652584973898669,
+     "jitter": 0.007709815135683077,
+     "residual": 0.9357643351253304
+    },
+    "depth_ms_total": 0.004778165201081745,
+    "camera_nonrigid_share": 0.5217724490778195,
+    "camera_n_pairs": 416,
+    "camera_tot2": 4.3639293368709335,
+    "camera_nr2": 2.276978097701692
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "fec654-3_obj_source_left_3",
+    "file": "ds_mini/fec654-3_obj_source_left_3__c0.npz",
+    "scale": 0.7128548222423621,
+    "n_groups": 4,
+    "self": {
+     "n": 36672,
+     "sq_mean": 0.15842775685321236,
+     "radial_share": 0.7300620609641705,
+     "perp_share": 0.2699379390358296,
+     "e_d_rms": 0.2286141995124546,
+     "e_d_mean": 0.061152703137620584,
+     "angle_rms": 0.18117074964237845,
+     "px_median": 5.354588777380603,
+     "px_mean": 70.37470723741815
+    },
+    "depth_shares": {
+     "offset": 0.3825741531174032,
+     "jitter": 0.0039541240808056224,
+     "residual": 0.6134717228017913
+    },
+    "depth_ms_total": 0.052264452218720385,
+    "camera_nonrigid_share": 0.6406564798628791,
+    "camera_n_pairs": 416,
+    "camera_tot2": 6.836801197409704,
+    "camera_nr2": 4.380040988654818
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "fec654-3_obj_source_left_4",
+    "file": "ds_mini/fec654-3_obj_source_left_4__c0.npz",
+    "scale": 0.7153561303928134,
+    "n_groups": 5,
+    "self": {
+     "n": 33168,
+     "sq_mean": 0.04560178367519144,
+     "radial_share": 0.8455209070223948,
+     "perp_share": 0.15447909297760534,
+     "e_d_rms": 0.08971009607722762,
+     "e_d_mean": 0.009885139931449467,
+     "angle_rms": 0.05045781169346499,
+     "px_median": 6.4148648557976635,
+     "px_mean": 16.523024799790676
+    },
+    "depth_shares": {
+     "offset": 0.07826524554001613,
+     "jitter": 0.012389429349084661,
+     "residual": 0.9093453251108993
+    },
+    "depth_ms_total": 0.008047901338185412,
+    "camera_nonrigid_share": 0.8086101362421193,
+    "camera_n_pairs": 416,
+    "camera_tot2": 22.982225558871924,
+    "camera_nr2": 18.583660540306543
+   },
+   {
+    "subset": "ds_mini",
+    "sequence": "fec654-3_obj_source_left_5",
+    "file": "ds_mini/fec654-3_obj_source_left_5__c0.npz",
+    "scale": 0.7904664197599222,
+    "n_groups": 4,
+    "self": {
+     "n": 41280,
+     "sq_mean": 0.14397886823332495,
+     "radial_share": 0.9677486641792955,
+     "perp_share": 0.03225133582070455,
+     "e_d_rms": 0.14236355232943568,
+     "e_d_mean": 0.04815965881744993,
+     "angle_rms": 0.02697455831644451,
+     "px_median": 6.660337179812911,
+     "px_mean": 12.812432346130906
+    },
+    "depth_shares": {
+     "offset": 0.365633142015875,
+     "jitter": 0.0064110816665670705,
+     "residual": 0.6279557763175576
+    },
+    "depth_ms_total": 0.020267381031855977,
+    "camera_nonrigid_share": 0.566420892623137,
+    "camera_n_pairs": 416,
+    "camera_tot2": 16.500987005756237,
+    "camera_nr2": 9.346503788963233
+   }
+  ]
+ },
+ "runtime_s": 483.3410789966583
+}

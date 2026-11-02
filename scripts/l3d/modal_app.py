@@ -65,7 +65,7 @@ def _build_image() -> modal.Image:
         .apt_install("libglib2.0-0", "git")
         # requirements.txt carries --extra-index-url for the torch 2.6.0+cu124 wheels.
         .pip_install_from_requirements(str(LOCAL_REPO / "requirements.txt"))
-        .pip_install("huggingface_hub==2.3.0", "gdown==6.4.2")
+        .pip_install("huggingface_hub==2.3.0", "gdown==6.4.2", "scipy==1.15.3")
         .env({"PYTHONPATH": REPO_REMOTE, "PYTHONUNBUFFERED": "1", "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"})
     )
     for sub in ("src", "l3d", "scripts"):

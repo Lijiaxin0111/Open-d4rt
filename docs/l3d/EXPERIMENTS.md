@@ -13,13 +13,13 @@ scipy, pytest, modal, huggingface_hub, gdown). Run tests with
 
 | ID | What | Needs | Owner file(s) |
 | --- | --- | --- | --- |
-| G0 | Reproduce README WorldTrack numbers for `OpenD4RT_48CLIP_9Mix_NoCropAUG` (Gate 0: within ±2 APD per subset) | GPU, 14 GB ckpt, WorldTrack data | upstream `eval_track3d_in_worldtrack.py` (unchanged) |
+| G0 | Reproduce README WorldTrack numbers for `OpenD4RT_48CLIP_9Mix_NoCropAUG` (Gate 0: within ±2 APD per subset) | GPU, 14 GB ckpt, WorldTrack data | upstream `eval_track3d_in_worldtrack.py` (unchanged); result `results/l3d/gate0/` |
 | Q | Decode arbitrary queries `(u, v, t_s, t_t, t_c)` against one cached encoder pass, not only whole tracks | GPU for real runs; CPU for tests | `l3d/engine.py`, `l3d/worldtrack_clip.py` |
 | DUMP | Write decoded-query tables (schema in section 3) for the query designs in section 4 (design 5 in a second decode pass) | GPU | `scripts/l3d/dump_queries.py` |
 | A2 | Sensitivity test of the five checks on a synthetic scene with injected errors (Table 1 of the proposal confirmed or corrected) | CPU only | `l3d/sensitivity.py`, `scripts/l3d/run_sensitivity_synthetic.py` |
-| A1 | GT error decomposition: image-plane, depth offset/jitter, camera-frame (Sim(3) gauge + non-rigid) | CPU, on dumped tables | `l3d/decompose.py` |
-| A3 | T/S/C split (two-way ANOVA over source x camera frames), S share vs `abs(t_s - t_t)`; Spearman, AUROC, risk-coverage per check vs native confidence | CPU, on dumped tables | `l3d/tsc.py`, `l3d/detection.py` |
-| A4 | Pose baselines: Umeyama, confidence-weighted Umeyama, ray center (po_mini, ds_mini have GT poses) | CPU, on dumped tables | `l3d/checks.py`, `l3d/geometry.py` |
+| A1 | GT error decomposition: image-plane, depth offset/jitter, camera-frame (Sim(3) gauge + non-rigid) | CPU, on dumped tables | `l3d/decompose.py`, `scripts/l3d/run_a1_decompose.py` |
+| A3 | T/S/C split (two-way ANOVA over source x camera frames), S share vs `abs(t_s - t_t)`; Spearman, AUROC, risk-coverage per check vs native confidence | CPU, on dumped tables | `l3d/tsc.py`, `l3d/detection.py`, `l3d/check_rows.py`, `scripts/l3d/run_a3_tsc.py`, `scripts/l3d/run_a3_detection.py` |
+| A4 | Pose baselines: Umeyama, confidence-weighted Umeyama, ray center (adt_mini, po_mini, ds_mini have GT poses; pstudio_mini is a fixed camera) | CPU, on dumped tables | `l3d/checks.py`, `l3d/geometry.py`, `l3d/check_rows.py`, `scripts/l3d/run_a4_pose.py` |
 
 ## 2. Conventions
 
@@ -95,6 +95,9 @@ Arrays not listed as optional are required. `M` queries, `N` tracks, `T` frames.
 
 ## 5. Results layout
 
-- Small, committable summaries: `results/l3d/<experiment>/` (`.json`, `.md`, `.png`).
+- Small, committable summaries: `results/l3d/<experiment>/` (`.json`, `.md`, `.png`). Gate 1 combines them:
+  `scripts/l3d/run_gate1.py` -> `results/l3d/gate1/`.
+- GT poses: `po_mini` extrinsics are off from orthonormal by up to ~1e-3, so every analysis projects rotations
+  to SO(3) (`l3d.geometry.rigidify`, used by `relative_pose`).
 - Large artifacts (decoded tables, cached memory, logs) stay off git:
   `output/l3d/...` locally, or the remote volume/bucket.
