@@ -96,7 +96,9 @@ Arrays not listed as optional are required. `M` queries, `N` tracks, `T` frames.
 ## 5. Results layout
 
 - Small, committable summaries: `results/l3d/<experiment>/` (`.json`, `.md`, `.png`). Gate 1 combines them:
-  `scripts/l3d/run_gate1.py` -> `results/l3d/gate1/`.
+  `scripts/l3d/run_gate1.py` -> `results/l3d/gate1/`. Gate 3's self-correspondence error (design 4):
+  `scripts/l3d/run_gate3_selfcorr.py` -> `results/l3d/gate3_selfcorr/`. Risk-coverage figure:
+  `results/l3d/a3_detection/risk_coverage.png` (`run_a3_detection.py --from-json` redraws it).
 - GT poses: `po_mini` extrinsics are off from orthonormal by up to ~1e-3, so every analysis projects rotations
   to SO(3) (`l3d.geometry.rigidify`, used by `relative_pose`).
 - Large artifacts (decoded tables, cached memory, logs) stay off git:

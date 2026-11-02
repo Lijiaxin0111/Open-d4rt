@@ -140,14 +140,77 @@ def write_md(per_subset: dict[str, dict[str, Any]], k_ratio: dict[str, list[floa
     path.write_text("\n".join(lines))
 
 
+PLOT_CHECKS = ("source_swap", "camera_swap_se3", "ray_center")
+PLOT_LABEL = {"source_swap": "source swap (model u2)", "camera_swap_se3": "camera swap (SE(3))",
+              "ray_center": "ray center (K fit)"}
+
+
+def write_png(per_subset: dict[str, dict[str, Any]], path: Path) -> None:
+    """Risk-coverage of each loss check vs the native confidence: rows = checks, columns = subsets."""
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    ink, muted, grid = "#1f1f1e", "#6b6a66", "#e4e3df"
+    color = {"residual": "#2a78d6", "confidence": "#eb6834"}  # categorical slots 1, 2
+    subsets = [s for s in per_subset if per_subset[s]]
+    fig, axes = plt.subplots(len(PLOT_CHECKS), len(subsets), figsize=(3.1 * len(subsets), 2.5 * len(PLOT_CHECKS)),
+                             squeeze=False, constrained_layout=True)
+    for i, name in enumerate(PLOT_CHECKS):
+        for j, s in enumerate(subsets):
+            ax = axes[i, j]
+            m = per_subset[s].get(name, {})
+            rc = m.get("risk_coverage")
+            if not rc:
+                ax.set_axis_off()
+                continue
+            cov = np.asarray(rc["coverage"], dtype=float) * 100
+            mean_err = float(np.asarray(rc["oracle"], dtype=float)[-1])
+            ax.axhline(mean_err, color=muted, lw=1, ls=":", zorder=1)
+            ax.plot(cov, np.asarray(rc["oracle"], dtype=float), color=muted, lw=1.2, ls="--", zorder=2)
+            for key in ("confidence", "residual"):
+                ax.plot(cov, np.asarray(rc[key], dtype=float), color=color[key], lw=2, zorder=3,
+                        solid_capstyle="round")
+            ve = m["vs_error"]
+            ax.text(0.97, 0.04, f"E-AURC\ncheck {ve['residual']['eaurc']:.3f}\nconf  {ve['confidence']['eaurc']:.3f}",
+                    transform=ax.transAxes, ha="right", va="bottom", fontsize=7, color=muted, family="monospace",
+                    multialignment="left", bbox=dict(boxstyle="round,pad=0.25", fc="white", ec="none", alpha=0.85))
+            ax.set_ylim(bottom=0)
+            ax.set_xlim(0, 100)
+            ax.grid(axis="y", color=grid, lw=0.8)
+            ax.set_axisbelow(True)
+            for sp in ("top", "right"):
+                ax.spines[sp].set_visible(False)
+            for sp in ("left", "bottom"):
+                ax.spines[sp].set_color(grid)
+            ax.tick_params(labelsize=7, colors=muted, length=0)
+            if i == 0:
+                ax.set_title(f"{s}", fontsize=9, color=ink, loc="left")
+            if j == 0:
+                ax.set_ylabel(f"{PLOT_LABEL[name]}\nrisk (mean rel. error)", fontsize=8, color=ink)
+            if i == len(PLOT_CHECKS) - 1:
+                ax.set_xlabel("coverage (% of queries kept)", fontsize=8, color=ink)
+    handles = [plt.Line2D([], [], color=color["residual"], lw=2), plt.Line2D([], [], color=color["confidence"], lw=2),
+               plt.Line2D([], [], color=muted, lw=1.2, ls="--"), plt.Line2D([], [], color=muted, lw=1, ls=":")]
+    fig.legend(handles, ["check residual", "native confidence", "oracle (sorted by true error)", "keep all (mean error)"],
+               loc="outside upper left", ncol=4, frameon=False, fontsize=8, labelcolor=ink)
+    fig.savefig(path, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/a3_detection")
+    ap.add_argument("--from-json", action="store_true", help="only redraw the figure from an existing a3_detection.json")
     args = ap.parse_args()
 
+    if args.from_json:
+        write_png(json.loads((args.out / "a3_detection.json").read_text())["per_subset"], args.out / "risk_coverage.png")
+        return
     subsets = args.subsets.split(",")
     start = time.time()
     pooled: dict[str, dict[str, dict[str, list[np.ndarray]]]] = {s: {} for s in subsets}
@@ -170,6 +233,7 @@ def main() -> None:
                "k_fit_ratio": k_ratio, "runtime_s": runtime}
     (args.out / "a3_detection.json").write_text(json.dumps(jsonable(payload), indent=1))
     write_md(per_subset, k_ratio, args.out / "a3_detection.md", sys.argv, runtime)
+    write_png(jsonable(per_subset), args.out / "risk_coverage.png")
     print((args.out / "a3_detection.md").read_text())
 
 
