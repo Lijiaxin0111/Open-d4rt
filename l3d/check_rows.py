@@ -302,6 +302,8 @@ def pose_baselines(d: dict[str, Any], err: dict[str, np.ndarray], min_points: in
         "pairs": {k: np.asarray(v) for k, v in pairs.items()},
         "methods": {m: {k: np.asarray(v) for k, v in vals.items()} for m, vals in per_method.items()},
         "trajectory": ate,
+        "poses_to_0": traj,  # per method, [T, 4, 4] T_{t->0} (identity where ``have_pose`` is False)
+        "have_pose": have,
         "K_fit": K_fit,
         "ref_depth": ref_depth,
     }

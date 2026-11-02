@@ -110,14 +110,59 @@ def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str],
     path.write_text("\n".join(lines))
 
 
+def write_png(per_subset: dict[str, dict[str, Any]], path: Path) -> None:
+    """Stacked T / S / C / SC shares per subset, one panel per component."""
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    ink, muted, grid = "#1f1f1e", "#6b6a66", "#e4e3df"
+    color = {"T": "#d6d5d0", "S": "#2a78d6", "C": "#eb6834", "SC": "#1baf7a"}  # T neutral; categorical slots 1-3
+    name = {"T": "T (shared by every query)", "S": "S (source frame)", "C": "C (camera frame)", "SC": "S x C"}
+    subsets = [s for s in per_subset if per_subset[s].get("n_clips")]
+    fig, axes = plt.subplots(1, len(COMPONENTS), figsize=(4.0 * len(COMPONENTS), 0.55 * len(subsets) + 1.6),
+                             sharey=True, constrained_layout=True)
+    for ax, comp in zip(axes, COMPONENTS):
+        for y, s in enumerate(subsets):
+            left = 0.0
+            for part in PARTS:
+                w = 100 * float(per_subset[s][comp]["shares"][part])
+                ax.barh(y, w, left=left, height=0.62, color=color[part], edgecolor="white", linewidth=2)
+                if w >= 7:
+                    ax.text(left + w / 2, y, f"{w:.0f}", ha="center", va="center", fontsize=7,
+                            color=ink if part in ("T", "SC") else "white")
+                left += w
+        ax.axvline(80, color=muted, lw=1, ls=":", zorder=0)  # behind the bars: shows between them only
+        ax.set_xlim(0, 100)
+        ax.set_title(LABEL[comp], fontsize=9, color=ink, loc="left")
+        ax.set_xlabel("share of mean squared error (%)", fontsize=8, color=ink)
+        ax.tick_params(labelsize=7, colors=muted, length=0)
+        for sp in ax.spines.values():
+            sp.set_visible(False)
+    axes[0].set_yticks(range(len(subsets)))
+    axes[0].set_yticklabels(subsets, fontsize=8, color=ink)
+    axes[0].invert_yaxis()
+    handles = [plt.Rectangle((0, 0), 1, 1, color=color[p]) for p in PARTS]
+    handles.append(plt.Line2D([], [], color=muted, lw=1, ls=":"))
+    fig.legend(handles, [name[p] for p in PARTS] + ["T = 80%: 20% disagreement (RQ1 bar)"], loc="outside upper left",
+               ncol=5, frameon=False, fontsize=8, labelcolor=ink)
+    fig.savefig(path, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/a3_tsc")
+    ap.add_argument("--from-json", action="store_true", help="only redraw the figure from an existing a3_tsc.json")
     args = ap.parse_args()
 
+    if args.from_json:
+        write_png(json.loads((args.out / "a3_tsc.json").read_text())["per_subset"], args.out / "a3_tsc.png")
+        return
     subsets = args.subsets.split(",")
     start = time.time()
     clips: dict[str, list[dict[str, Any]]] = {s: [] for s in subsets}
@@ -130,6 +175,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "per_subset": per_subset, "runtime_s": runtime}
     (args.out / "a3_tsc.json").write_text(json.dumps(jsonable(payload), indent=1))
     write_md(per_subset, args.out / "a3_tsc.md", sys.argv, runtime)
+    write_png(jsonable(per_subset), args.out / "a3_tsc.png")
     print((args.out / "a3_tsc.md").read_text())
 
 
