@@ -25,7 +25,7 @@ developed to reproduce the model architecture, training recipe, evaluation
 protocols, and implementation details described in the D4RT paper and
 appendix. The current public repo includes the released Hugging Face
 checkpoint, the model, WorldTrack evaluation, and Viser visualization
-tools, with complete training and evaluation code planned for release.
+tools.
 
 <p align="center">
   <img src="docs/image.png" width="950" alt="D4RT overview">
@@ -76,9 +76,6 @@ write MP4 assets for Viser. The conda environment includes `ffmpeg`; if you use
 | --- | --- | --- | ---: | --- | --- |
 | `32CLIP_9Dataset_NoAUG` | 9Mix |  color aug + No crop aug | 32 | Released | [HF](https://huggingface.co/Lijiaxin0111/OpenD4RT/tree/main/checkpoints/OpenD4RT_32CLIP_9Dataset_NoAUG) |
 | `48CLIP_9Mix_NoCropAUG` | 9Mix | color aug + No crop aug  | 48 | Released | [HF](https://huggingface.co/Lijiaxin0111/OpenD4RT/tree/main/checkpoints/OpenD4RT_48CLIP_9Mix_NoCropAUG) |
-| `48CLIP_9Mix_AUG` | 9Mix | color aug + crop aug | 48 | Coming | TBD |
-| `32CLIP_10Mix_SynthVerse_NoAUG` | 10Mix | color aug + No crop aug | 32 | Coming | TBD |
-| `48CLIP_10Mix_SynthVerse_AUG` | 10Mix |  color aug + crop aug | 48 | Coming | TBD |
 
 Released checkpoint local path:
 `checkpoints/OpenD4RT_32CLIP_9Dataset_NoAUG/opend4rt.ckpt`.
@@ -88,8 +85,7 @@ Additional released checkpoint local path:
 
 Tip: all rows are OpenD4RT variants. The 9Mix setting uses PointOdyssey,
 Dynamic Replica, Kubric Full,
-TartanAir, Virtual KITTI 2, ScanNet, BlendedMVS, CO3D, and MVS-Synth. The
-10Mix setting additionally includes SynthVerse.
+TartanAir, Virtual KITTI 2, ScanNet, BlendedMVS, CO3D, and MVS-Synth.
 
 ## ⬇️ Checkpoint Download
 
@@ -314,10 +310,6 @@ The generated demo package contains `assets/demo_data.json`,
 - [x] Release WorldTrack evaluation scripts and archived metrics.
 - [x] Release Viser-based qualitative visualization tools.
 - [x] Release complete training code.
-- [ ] Release additional checkpoints listed in the Checkpoint Zoo.
-- [ ] Release SynthVerse evaluation results.
-- [ ] Release full evaluation code for the benchmarks reported in the D4RT
-  paper and appendix.
 
 ## 📄 License
 
