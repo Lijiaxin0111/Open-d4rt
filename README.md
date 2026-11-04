@@ -2,7 +2,7 @@
   <h1>OpenD4RT</h1>
   <h3>An unofficial PyTorch/GPU implementation of D4RT for 4D reconstruction and tracking</h3>
   <p>
-    <strong>RHOS Team</strong> · <a href="https://mvig-rhos.com/" target="_blank">https://mvig-rhos.com/</a>
+    <a href="https://github.com/sii-research" target="_blank"><strong>SII</strong></a> · <strong>RHOS Team</strong> · <a href="https://mvig-rhos.com/" target="_blank">https://mvig-rhos.com/</a>
   </p>
   <p>
     <a href="https://d4rt-paper.github.io/" target="_blank">
