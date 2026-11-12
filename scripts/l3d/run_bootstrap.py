@@ -32,7 +32,7 @@ from l3d import check_rows as cr  # noqa: E402
 from l3d import detection as det  # noqa: E402
 from l3d import tsc  # noqa: E402
 from l3d.decompose import table_scale  # noqa: E402
-from l3d.report import SUBSETS, fmt, iter_clips, jsonable  # noqa: E402
+from l3d.report import SUBSETS, fmt, iter_clips, jsonable, model_label  # noqa: E402
 from l3d.table import select  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
@@ -158,9 +158,9 @@ def verdict(name: str, lo: float, hi: float) -> str:
     return "**uncertain**"
 
 
-def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float, b: int) -> None:
+def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float, b: int, label: str = "OpenD4RT 48CLIP") -> None:
     lines = [
-        "# Bootstrap 95% CIs of the gate numbers (OpenD4RT 48CLIP, clip [0, 48))",
+        f"# Bootstrap 95% CIs of the gate numbers ({label}, clip [0, 48))",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s, {b} resamples of each subset's clips, one per sequence). Point = full-data value of the",
         "gate tables (bootstrap row statistics use a per-clip row subsample). Verdict: the whole CI on one side of the",
@@ -181,6 +181,7 @@ def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str],
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--b", type=int, default=1000, help="bootstrap resamples")
@@ -221,7 +222,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "thresholds": THRESH, "per_subset": per_subset,
                "runtime_s": runtime}
     (args.out / "bootstrap.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, args.out / "bootstrap.md", sys.argv, runtime, args.b)
+    write_md(per_subset, args.out / "bootstrap.md", sys.argv, runtime, args.b, label=model_label(args.dump, args.model_label))
     print((args.out / "bootstrap.md").read_text())
 
 

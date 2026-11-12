@@ -28,7 +28,7 @@ if str(REPO) not in sys.path:
 
 from l3d import tsc  # noqa: E402
 from l3d.decompose import table_scale  # noqa: E402
-from l3d.report import SUBSETS, fmt, iter_clips, jsonable  # noqa: E402
+from l3d.report import SUBSETS, fmt, iter_clips, jsonable, model_label  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
 COMPONENTS = ("xyz", "log_depth", "image_plane")
@@ -76,9 +76,9 @@ def pool(clips: list[dict[str, dict[str, Any]]]) -> dict[str, Any]:
     return out
 
 
-def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float) -> None:
+def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float, label: str = "OpenD4RT 48CLIP") -> None:
     lines = [
-        "# A3: T/S/C split of the real error (OpenD4RT 48CLIP, design 1, clip [0, 48))",
+        f"# A3: T/S/C split of the real error ({label}, design 1, clip [0, 48))",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s). Per `(track, t_t)` cell, design 1 decodes 6 source frames x 6",
         "camera frames (`t_t` and 0 always among the cameras); the balanced two-way split gives the part shared by",
@@ -154,6 +154,7 @@ def write_png(per_subset: dict[str, dict[str, Any]], path: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/a3_tsc")
@@ -174,7 +175,7 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "per_subset": per_subset, "runtime_s": runtime}
     (args.out / "a3_tsc.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, args.out / "a3_tsc.md", sys.argv, runtime)
+    write_md(per_subset, args.out / "a3_tsc.md", sys.argv, runtime, label=model_label(args.dump, args.model_label))
     write_png(jsonable(per_subset), args.out / "a3_tsc.png")
     print((args.out / "a3_tsc.md").read_text())
 

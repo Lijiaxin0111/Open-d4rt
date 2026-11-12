@@ -27,7 +27,7 @@ REPO = Path(__file__).resolve().parents[2]
 if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
-from l3d.report import SUBSETS, fmt, iter_clips, jsonable  # noqa: E402
+from l3d.report import SUBSETS, fmt, iter_clips, jsonable, model_label  # noqa: E402
 from l3d.table import select  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
@@ -75,9 +75,9 @@ def summarize(rows: dict[str, np.ndarray]) -> dict[str, Any]:
     }
 
 
-def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float) -> None:
+def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float, label: str = "OpenD4RT 48CLIP") -> None:
     lines = [
-        "# Gate 3 input: self-correspondence 2D error (OpenD4RT 48CLIP, design 4, clip [0, 48))",
+        f"# Gate 3 input: self-correspondence 2D error ({label}, design 4, clip [0, 48))",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s). Error of the model's own `u2 = uv_hat(u1, t1, t2, t2)` against GT, in",
         "pixels of the 256x256 model input, rows with `t1 != t2`. Gate 3 uses self-correspondences if the median is",
@@ -153,6 +153,7 @@ def write_png(curves: dict[str, np.ndarray], path: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/gate3_selfcorr")
@@ -170,7 +171,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "gate_px": GATE_PX, "per_subset": per_subset,
                "runtime_s": runtime}
     (args.out / "selfcorr.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, args.out / "selfcorr.md", sys.argv, runtime)
+    write_md(per_subset, args.out / "selfcorr.md", sys.argv, runtime, label=model_label(args.dump, args.model_label))
     write_png({s: r["err256"][r["gt_vis"]] for s, r in pooled.items()}, args.out / "selfcorr.png")
     print((args.out / "selfcorr.md").read_text())
 

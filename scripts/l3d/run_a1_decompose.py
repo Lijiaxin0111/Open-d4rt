@@ -25,7 +25,7 @@ if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
 from l3d import decompose  # noqa: E402
-from l3d.report import SUBSETS, jsonable  # noqa: E402
+from l3d.report import SUBSETS, jsonable, model_label  # noqa: E402
 from l3d.table import load_table  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
@@ -83,10 +83,10 @@ def _pool(clips: list[dict[str, Any]], pairs: list[dict[str, np.ndarray]]) -> di
 
 
 def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float,
-             errors: list[str]) -> None:
+             errors: list[str], label: str = "OpenD4RT 48CLIP") -> None:
     f = lambda x, p=3: "n/a" if x is None or not np.isfinite(x) else f"{x:.{p}f}"  # noqa: E731
     lines = [
-        "# A1: GT error decomposition (OpenD4RT 48CLIP, clip [0, 48))",
+        f"# A1: GT error decomposition ({label}, clip [0, 48))",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s). Shares are pooled over clips; pair numbers are medians over all",
         "`(t, c)` pairs (absolute values). Scale is each clip's global median scale (design 5 excluded).",
@@ -133,6 +133,7 @@ def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str],
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/a1_decompose")
@@ -165,7 +166,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "per_subset": per_subset, "clips": clips,
                "runtime_s": runtime}
     (args.out / "a1.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, args.out / "a1.md", sys.argv, runtime, errors)
+    write_md(per_subset, args.out / "a1.md", sys.argv, runtime, errors, label=model_label(args.dump, args.model_label))
     print((args.out / "a1.md").read_text())
 
 

@@ -30,7 +30,7 @@ if str(REPO) not in sys.path:
 
 from l3d import check_rows as cr  # noqa: E402
 from l3d.decompose import table_scale  # noqa: E402
-from l3d.report import SUBSETS, fmt, iter_clips, jsonable  # noqa: E402
+from l3d.report import SUBSETS, fmt, iter_clips, jsonable, model_label  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
 LABEL = {"umeyama": "Umeyama", "umeyama_conf": "Umeyama, conf-weighted", "ray_center": "ray center (K fit)",
@@ -66,9 +66,9 @@ def pool(clips: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def write_md(per_subset: dict[str, dict[str, Any]], k_ratio: dict[str, list[float]], path: Path, argv: list[str],
-             runtime_s: float) -> None:
+             runtime_s: float, label: str = "OpenD4RT 48CLIP") -> None:
     lines = [
-        "# A4: pose baselines from the decoded grid (OpenD4RT 48CLIP, design 2, clip [0, 48))",
+        f"# A4: pose baselines from the decoded grid ({label}, design 2, clip [0, 48))",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s). Per grid pair `(t, c)`: a 32x32 pixel grid of frame t decoded in",
         "cameras t and c (`c` in {0, t-4, t+4}), outputs scaled by the clip scale, `T_{t->c}` fitted by each method and",
@@ -114,6 +114,7 @@ def write_md(per_subset: dict[str, dict[str, Any]], k_ratio: dict[str, list[floa
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/a4_pose")
@@ -134,7 +135,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "per_subset": per_subset, "k_fit_ratio": k_ratio,
                "runtime_s": runtime}
     (args.out / "a4_pose.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, k_ratio, args.out / "a4_pose.md", sys.argv, runtime)
+    write_md(per_subset, k_ratio, args.out / "a4_pose.md", sys.argv, runtime, label=model_label(args.dump, args.model_label))
     print((args.out / "a4_pose.md").read_text())
 
 

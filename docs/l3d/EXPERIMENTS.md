@@ -103,6 +103,11 @@ Arrays not listed as optional are required. `M` queries, `N` tracks, `T` frames.
 - T/S/C figure: `results/l3d/a3_tsc/a3_tsc.png` (`run_a3_tsc.py --from-json`). GAUGE baseline (GT anchors, a
   reference): `l3d/gauge.py`, `scripts/l3d/run_gauge.py` -> `results/l3d/gauge/`. Bootstrap 95% CIs of the gate
   numbers over clips: `scripts/l3d/run_bootstrap.py` -> `results/l3d/bootstrap/` (run after the other results).
+- Splits by GT visibility (at `t_t`), motion (`is_static`) and parallax (angle at the GT point between cameras
+  `t_s` and `t_t`; bins 0-1, 1-5, >= 5 degrees): `l3d/splits.py`, `scripts/l3d/run_splits.py` -> `results/l3d/splits/`
+  (tracking APD/EPE, self-frame depth share and T/S/C shares per bin).
+- Report headers name the model from the dump manifest's `run_name` (`l3d.report.model_label`); every runner takes
+  `--model-label` to override it (e.g. for another model's dump).
 - WorldTrack baselines: each model saves `<subset>/<seq>.npz` (`pred_tracks_ref0`, `query_uv`) under
   `output/l3d/baselines/<model>/`; `score_worldtrack_preds.py` scores them with the upstream Gate 0 metric code
   (`--in-image` for ARROW's query rule, `--self-test` for a GT sanity check), and `run_baselines_table.py`

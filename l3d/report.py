@@ -12,6 +12,18 @@ import numpy as np
 from l3d.table import load_table
 
 SUBSETS = ("adt_mini", "po_mini", "pstudio_mini", "ds_mini")
+KNOWN_MODELS = {"OpenD4RT_48CLIP": "OpenD4RT 48CLIP", "flow3r": "flow3r"}  # dump run_name prefix -> report label
+
+
+def model_label(dump: Path, override: str | None = None) -> str:
+    """Report label of the model behind a dump: ``override``, else from its manifest's ``run_name``."""
+    if override:
+        return override
+    try:
+        name = json.loads((Path(dump) / "manifest.json").read_text()).get("run_name") or Path(dump).name
+    except (OSError, ValueError):
+        name = Path(dump).name
+    return next((label for key, label in KNOWN_MODELS.items() if name.startswith(key)), name)
 
 
 def jsonable(x: Any) -> Any:

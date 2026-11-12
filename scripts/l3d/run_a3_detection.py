@@ -29,7 +29,7 @@ if str(REPO) not in sys.path:
 from l3d import check_rows as cr  # noqa: E402
 from l3d import detection as det  # noqa: E402
 from l3d.decompose import table_scale  # noqa: E402
-from l3d.report import SUBSETS, fmt, iter_clips, jsonable  # noqa: E402
+from l3d.report import SUBSETS, fmt, iter_clips, jsonable, model_label  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
 # name -> (description, target component)
@@ -102,9 +102,9 @@ def score_check(rows: dict[str, np.ndarray]) -> dict[str, Any]:
 
 
 def write_md(per_subset: dict[str, dict[str, Any]], k_ratio: dict[str, list[float]], path: Path, argv: list[str],
-             runtime_s: float) -> None:
+             runtime_s: float, label: str = "OpenD4RT 48CLIP") -> None:
     lines = [
-        "# A3: detection by each check vs native confidence (OpenD4RT 48CLIP, clip [0, 48))",
+        f"# A3: detection by each check vs native confidence ({label}, clip [0, 48))",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s). Rows of all clips of a subset are pooled. Error = `|s P - X| / |X|`",
         "of the scored query (mean over the pair for source swap); target = the component Table 1 says the check",
@@ -202,6 +202,7 @@ def write_png(per_subset: dict[str, dict[str, Any]], path: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--out", type=Path, default=REPO / "results/l3d/a3_detection")
@@ -232,7 +233,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "checks": CHECKS, "per_subset": per_subset,
                "k_fit_ratio": k_ratio, "runtime_s": runtime}
     (args.out / "a3_detection.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, k_ratio, args.out / "a3_detection.md", sys.argv, runtime)
+    write_md(per_subset, k_ratio, args.out / "a3_detection.md", sys.argv, runtime, label=model_label(args.dump, args.model_label))
     write_png(jsonable(per_subset), args.out / "risk_coverage.png")
     print((args.out / "a3_detection.md").read_text())
 

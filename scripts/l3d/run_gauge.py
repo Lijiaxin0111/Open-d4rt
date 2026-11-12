@@ -30,7 +30,7 @@ if str(REPO) not in sys.path:
 from l3d import check_rows as cr  # noqa: E402
 from l3d import gauge  # noqa: E402
 from l3d.decompose import group_tracks, table_scale, world_trajectories  # noqa: E402
-from l3d.report import SUBSETS, fmt, iter_clips, jsonable  # noqa: E402
+from l3d.report import SUBSETS, fmt, iter_clips, jsonable, model_label  # noqa: E402
 from l3d.table import select  # noqa: E402
 
 DEFAULT_DUMP = REPO / "output/l3d/dumps/OpenD4RT_48CLIP_9Mix_NoCropAUG_T48"
@@ -98,9 +98,9 @@ def pool(clips: list[dict[str, Any]]) -> dict[str, Any]:
     return out
 
 
-def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float) -> None:
+def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str], runtime_s: float, label: str = "OpenD4RT 48CLIP") -> None:
     lines = [
-        "# GAUGE baseline (GT anchors; a reference, not label-free), OpenD4RT 48CLIP, clip [0, 48)",
+        f"# GAUGE baseline (GT anchors; a reference, not label-free), {label}, clip [0, 48)",
         "",
         f"`{' '.join(argv)}` ({runtime_s:.0f} s). World-frame outputs (design 0, `t_c = 0`) scaled by the clip's global",
         "median scale; GAUGE (`l3d/gauge.py`: per-group per-frame ray scale about the model's camera centers + median",
@@ -134,6 +134,7 @@ def write_md(per_subset: dict[str, dict[str, Any]], path: Path, argv: list[str],
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dump", type=Path, default=DEFAULT_DUMP)
+    ap.add_argument("--model-label", default=None, help="model name in the report (default: from the dump manifest)")
     ap.add_argument("--subsets", default=",".join(SUBSETS))
     ap.add_argument("--limit", type=int, default=0, help="clips per subset (0 = all)")
     ap.add_argument("--seed", type=int, default=0)
@@ -152,7 +153,7 @@ def main() -> None:
     payload = {"args": {k: str(v) for k, v in vars(args).items()}, "per_subset": per_subset, "clips": clips,
                "runtime_s": runtime}
     (args.out / "gauge.json").write_text(json.dumps(jsonable(payload), indent=1))
-    write_md(per_subset, args.out / "gauge.md", sys.argv, runtime)
+    write_md(per_subset, args.out / "gauge.md", sys.argv, runtime, label=model_label(args.dump, args.model_label))
     print((args.out / "gauge.md").read_text())
 
 
