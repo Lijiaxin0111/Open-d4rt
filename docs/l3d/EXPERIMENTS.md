@@ -20,6 +20,7 @@ scipy, pytest, modal, huggingface_hub, gdown). Run tests with
 | A1 | GT error decomposition: image-plane, depth offset/jitter, camera-frame (Sim(3) gauge + non-rigid) | CPU, on dumped tables | `l3d/decompose.py`, `scripts/l3d/run_a1_decompose.py` |
 | A3 | T/S/C split (two-way ANOVA over source x camera frames), S share vs `abs(t_s - t_t)`; Spearman, AUROC, risk-coverage per check vs native confidence | CPU, on dumped tables | `l3d/tsc.py`, `l3d/detection.py`, `l3d/check_rows.py`, `scripts/l3d/run_a3_tsc.py`, `scripts/l3d/run_a3_detection.py` |
 | A4 | Pose baselines: Umeyama, confidence-weighted Umeyama, ray center (adt_mini, po_mini, ds_mini have GT poses; pstudio_mini is a fixed camera) | CPU, on dumped tables | `l3d/checks.py`, `l3d/geometry.py`, `l3d/check_rows.py`, `scripts/l3d/run_a4_pose.py` |
+| B | WorldTrack baselines: OpenD4RT vs ARROW vs TrackEverything on the same queries, under the Gate 0 rule and ARROW's in-image rule | GPU (each model in its own env); scoring on CPU with WorldTrack data | `scripts/l3d/run_opend4rt_worldtrack_preds.py`, `run_arrow_worldtrack_ourqueries.py`, `run_trackeverything_worldtrack.py`, `score_worldtrack_preds.py`, `run_baselines_table.py`; result `results/l3d/baselines/` |
 
 ## 2. Conventions
 
@@ -102,6 +103,11 @@ Arrays not listed as optional are required. `M` queries, `N` tracks, `T` frames.
 - T/S/C figure: `results/l3d/a3_tsc/a3_tsc.png` (`run_a3_tsc.py --from-json`). GAUGE baseline (GT anchors, a
   reference): `l3d/gauge.py`, `scripts/l3d/run_gauge.py` -> `results/l3d/gauge/`. Bootstrap 95% CIs of the gate
   numbers over clips: `scripts/l3d/run_bootstrap.py` -> `results/l3d/bootstrap/` (run after the other results).
+- WorldTrack baselines: each model saves `<subset>/<seq>.npz` (`pred_tracks_ref0`, `query_uv`) under
+  `output/l3d/baselines/<model>/`; `score_worldtrack_preds.py` scores them with the upstream Gate 0 metric code
+  (`--in-image` for ARROW's query rule, `--self-test` for a GT sanity check), and `run_baselines_table.py`
+  -> `results/l3d/baselines/`. Save `query_uv` as float64: a few ds queries project to |u| ~ 1e6 px, where float32
+  rounding fails the scorer's 1e-2 px match check.
 - GT poses: `po_mini` extrinsics are off from orthonormal by up to ~1e-3, so every analysis projects rotations
   to SO(3) (`l3d.geometry.rigidify`, used by `relative_pose`).
 - Large artifacts (decoded tables, cached memory, logs) stay off git:
